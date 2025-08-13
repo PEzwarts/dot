@@ -24,40 +24,42 @@ alias crc "cargo remove"
 alias cc "cargo clean"
 
 function m
-    make
+    if [ -d ../build ]
+        meson compile
+    else
+        cd ./build && meson compile && cd ../
+    end
 end
-
-# Useless
-alias ga "git add "
-alias gaa "git add ."
 
 alias g git
 alias gi "git init -b"
-alias gc "git clone --bare "
-alias grb "git rebase "
 
-alias gf "git fetch "
-alias gp "git pull "
-alias gP "git push "
+alias gb "git branch "
+alias gbb "git branch -b "
+alias gbd "git branch -d "
+
+alias gm "git merge "
+
+alias ga "git add "
 
 alias gcm "git commit -m "
 alias gcma "git commit --amend -m "
 alias gr "git revert "
 
-# alias gm "git merge "
+alias gP "git push "
+alias gp "git pull "
+alias gf "git fetch "
+
+# alias grb "git rebase "
 # alias gs "git switch "
-# alias gb "git branch "
 # alias gr "git reset "
 # alias gR "git restore"
 
+alias gc "git clone "
 alias gd "git diff"
 alias gl "git log --graph --oneline --decorate"
 
 alias gco "git checkout "
-
-alias gb "git branch "
-alias gbb "git branch -b "
-alias gbd "git branch -d "
 
 alias gta "git worktree add"
 alias gtr "git worktree remove"
@@ -65,8 +67,6 @@ alias gtl "git worktree list"
 
 alias grma "git remote add "
 alias grmr "git remote remove "
-
-# alias ss ""
 
 function s
     if count $argv >/dev/null
