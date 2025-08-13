@@ -2,7 +2,13 @@ alias sd sudo
 alias mkd mkdir
 alias mk touch
 
-export EDITOR=neovide
+function s
+    if count $argv >/dev/null
+        exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL $argv
+    else
+        exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink
+    end
+end
 
 alias c clear
 alias x exit
@@ -20,15 +26,29 @@ alias ccr "cargo clean && cargo run"
 alias ccrr "cargo clean && cargo run --release"
 alias cn "cargo new"
 alias ca "cargo add"
-alias crc "cargo remove"
+alias crm "cargo remove"
 alias cc "cargo clean"
 
 function m
-    if [ -d ../build ]
-        meson compile
-    else
-        cd ./build && meson compile && cd ../
+    if [ -f ./meson.build ]
+        if [ -d ../build ]
+            meson compile
+        else
+            cd ./build && meson compile && cd ../
+        end
     end
+
+    # Bunch build systems if needed in the future for jobs at different companies.
+    if [ -f ./xmake.lua ]
+        xmake
+    end
+end
+
+function mn
+    mkdir $argv
+    cd $argv
+    meson init
+    meson setup build
 end
 
 alias g git
@@ -68,16 +88,10 @@ alias gtl "git worktree list"
 alias grma "git remote add "
 alias grmr "git remote remove "
 
-function s
-    if count $argv >/dev/null
-        exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL $argv
-    else
-        exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink
-    end
-end
-
 function multicd
     echo cd (string repeat -n (math (string length -- $argv[1]) -1) ../)
 end
 
 abbr --add dotdot --regex '^\.\.+$' --function multicd
+
+export EDITOR=neovide
