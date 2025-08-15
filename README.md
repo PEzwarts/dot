@@ -1,4 +1,4 @@
-![Alt text](https://github.com/PEzwarts/dot/blob/main/screenshot.png)
+<!-- ![Alt text](https://github.com/PEzwarts/dot/blob/main/screenshot.png) -->
 
 Simple personal dotfiles.
 
