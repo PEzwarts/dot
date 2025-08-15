@@ -15,7 +15,7 @@ vim.keymap.set({ "n", "i", "v" }, "<D-c>", "<cmd>w<CR><esc>", { remap = true })
 
 -- Switch between buffers.
 
-vim.keymap.set({ "n", "i", "v" }, "<D-z>", "<esc>:bn<cr>", { remap = true })
+vim.keymap.set({ "n", "i", "v" }, "<D-z>", "<esc><leader>bb", { remap = true })
 
 -- Close neovim.
 

@@ -1,7 +1,3 @@
-# Dev
-sudo pacman -S --noconfirm ripgrep fzf rustup
-rustup install stable
-
 # Neovim
 sudo pacman -S --noconfirm neovim
 cp -r ./nvim/ ~/.config/
@@ -20,16 +16,25 @@ cp -r ./hypr ~/.config/
 cp -r ./gtk-3.0/ ~/.config/
 cp -r ./gtk-4.0/ ~/.config/
 
+hyprctl reload
+
 if [ ! -f /usr/bin/hyprctl ]; then
+  # Github
+  sudo pacman -S --noconfirm gh
+
+  # Dev
+  yay -S --noconfirm conan
+  sudo pacman -S --noconfirm ripgrep fzf rustup meson
+  rustup install stable
 
   # Hypr
-  sudo pacman -S --noconfirm hyprland
+  sudo pacman -S --noconfirm hyprland gtklock ly wev
 
   # Core
-  sudo pacman -S --noconfirm lxsession pavucontrol
+  sudo pacman -S --noconfirm lxsession pavucontrol dysk
 
   # Rice
-  sudo pacman -S --noconfirm nwg-panel nwg-look rofi gtklock ly
+  sudo pacman -S --noconfirm nwg-panel nwg-look rofi waypaper swaybg
 
   if [ ! -f ~/Downloads/ ]; then
     mkdir ~/Desktop/
@@ -41,8 +46,11 @@ if [ ! -f /usr/bin/hyprctl ]; then
   fi
 
   # Extra
-  sudo pacman -S --noconfirm rofi waypaper hyprpaper
+  sudo pacman -S --noconfirm grim
 
   # Thunar
   sudo pacman -S --noconfirm thunar gvfs
+
+  # Wallpapers
+  git clone https://github.com/elementary/wallpapers ~/Downloads/
 fi

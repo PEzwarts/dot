@@ -2,6 +2,16 @@ alias sd sudo
 alias mkd mkdir
 alias mk touch
 
+alias ps "pacman -Ss"
+alias pi "pacman -S"
+alias pu "pacmab -Syu"
+
+alias cla "wc -l ./**"
+alias cl "wc -l"
+alias d dysk
+alias c clear
+alias x exit
+
 function s
     if count $argv >/dev/null
         exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL $argv
@@ -9,9 +19,6 @@ function s
         exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink
     end
 end
-
-alias c clear
-alias x exit
 
 alias v "neovide --fork; disown; exit"
 
@@ -38,55 +45,66 @@ function m
         end
     end
 
-    # Bunch build systems if needed in the future for jobs at different companies.
-    if [ -f ./xmake.lua ]
-        xmake
-    end
+    # if [ -f ./xmake.lua ]
+    #     xmake $argv
+    # end
 end
 
 function mn
-    mkdir $argv
-    cd $argv
-    meson init
+    mkdir $argv[1]
+    cd $argv[1]
+    meson init -l $argv[2]
     meson setup build
+
+    # if [ "$argv[2]" = cpp ]
+    #     xmake create -l c++ $argv[1]
+    #     cd $argv[1]
+    # else
+    #     xmake create -l $argv[2] $argv[1]
+    #     cd $argv[1]
+    # end
 end
+
+alias mi "meson init"
 
 alias g git
 alias gi "git init -b"
 
-alias gb "git branch "
-alias gbb "git branch -b "
-alias gbd "git branch -d "
+alias gb "git branch"
+alias gbb "git branch -b"
+alias gbd "git branch -d"
 
-alias gm "git merge "
+alias gm "git merge"
 
-alias ga "git add "
+alias ga "git add"
 
-alias gcm "git commit -m "
-alias gcma "git commit --amend -m "
-alias gr "git revert "
+alias gcm "git commit -m"
+alias gcma "git commit --amend -m"
+alias gr "git revert"
 
-alias gP "git push "
-alias gp "git pull "
-alias gf "git fetch "
+alias gP "git push"
+alias gp "git pull"
+alias gf "git fetch"
 
+# Rebase dangerous changes git hashes.
 # alias grb "git rebase "
+
 # alias gs "git switch "
 # alias gr "git reset "
 # alias gR "git restore"
 
-alias gc "git clone "
+alias gc "git clone"
 alias gd "git diff"
 alias gl "git log --graph --oneline --decorate"
 
-alias gco "git checkout "
+alias gco "git checkout"
 
 alias gta "git worktree add"
 alias gtr "git worktree remove"
 alias gtl "git worktree list"
 
-alias grma "git remote add "
-alias grmr "git remote remove "
+alias grma "git remote add"
+alias grmr "git remote remove"
 
 function multicd
     echo cd (string repeat -n (math (string length -- $argv[1]) -1) ../)
