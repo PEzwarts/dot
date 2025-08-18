@@ -16,28 +16,27 @@ cp -r ./hypr ~/.config/
 cp -r ./gtk-3.0/ ~/.config/
 cp -r ./gtk-4.0/ ~/.config/
 
-# Qutebrowser
-cp -r ./qb/ ~/.config/qutebrowser/
-
 hyprctl reload
 
 if [ ! -f /usr/bin/hyprctl ]; then
   # Github
   sudo pacman -S --noconfirm gh
 
+  # Debug
+  sudo pacman -S --noconfirm wev
+
   # Dev
-  yay -S --noconfirm conan
-  sudo pacman -S --noconfirm ripgrep fzf rustup meson
+  sudo pacman -S --noconfirm ripgrep rustup xmake
   rustup install stable
 
   # Hypr
   sudo pacman -S --noconfirm hyprland gtklock ly wev
 
   # Core
-  sudo pacman -S --noconfirm lxsession pavucontrol dysk
+  sudo pacman -S --noconfirm lxsession pavucontrol
 
   # Rice
-  sudo pacman -S --noconfirm nwg-panel nwg-look rofi waypaper swaybg
+  sudo pacman -S --noconfirm nwg-panel rofi waypaper swaybg
 
   if [ ! -f ~/Downloads/ ]; then
     mkdir ~/Desktop/
@@ -49,7 +48,7 @@ if [ ! -f /usr/bin/hyprctl ]; then
   fi
 
   # Extra
-  sudo pacman -S --noconfirm grim qutebrowser python-adblock
+  sudo pacman -S --noconfirm grim dysk
 
   # Thunar
   sudo pacman -S --noconfirm thunar gvfs

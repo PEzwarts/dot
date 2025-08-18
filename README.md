@@ -6,6 +6,5 @@ Simple personal dotfiles.
 * Fish
 * Neovim
 * Zed
-* Qute-browser
-* gtk-3
-* gtk-4
+* GTK-3
+* GTK-4

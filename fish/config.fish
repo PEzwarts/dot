@@ -26,7 +26,8 @@ function s
     end
 end
 
-alias v "neovide --fork; disown; exit"
+# alias v "neovide --fork; disown; exit"
+alias v nvim
 
 alias cb "cargo build"
 alias cbr "cargo build --release"
@@ -43,35 +44,35 @@ alias crm "cargo remove"
 alias cc "cargo clean"
 
 function m
-    if [ -f ./meson.build ]
-        if [ -d ../build ]
-            meson compile
-        else
-            cd ./build && meson compile && cd ../
-        end
-    end
-
-    # if [ -f ./xmake.lua ]
-    #     xmake $argv
+    # if [ -f ./meson.build ]
+    #     if [ -d ../build ]
+    #         meson compile
+    #     else
+    #         cd ./build && meson compile && cd ../
+    #     end
     # end
+
+    if [ -f ./xmake.lua ]
+        xmake $argv
+    end
 end
 
 function mn
-    mkdir $argv[1]
-    cd $argv[1]
-    meson init -l $argv[2]
-    meson setup build
+    # mkdir $argv[1]
+    # cd $argv[1]
+    # meson init -l $argv[2]
+    # meson setup build
 
-    # if [ "$argv[2]" = cpp ]
-    #     xmake create -l c++ $argv[1]
-    #     cd $argv[1]
-    # else
-    #     xmake create -l $argv[2] $argv[1]
-    #     cd $argv[1]
-    # end
+    if [ "$argv[2]" = cpp ]
+        xmake create -l c++ $argv[1]
+        cd $argv[1]
+    else
+        xmake create -l $argv[2] $argv[1]
+        cd $argv[1]
+    end
 end
 
-alias mi "meson init"
+# alias mi "meson init"
 
 alias g git
 alias gi "git init -b"
@@ -92,9 +93,10 @@ alias gP "git push"
 alias gp "git pull"
 alias gf "git fetch"
 
-# Rebase dangerous changes git hashes.
+# Rebase dangerous; changes git hashes.
 # alias grb "git rebase "
 
+# Unknown havent tried yet.
 # alias gs "git switch "
 # alias gr "git reset "
 # alias gR "git restore"
@@ -118,4 +120,4 @@ end
 
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
-export EDITOR=neovide
+export EDITOR=nvim
