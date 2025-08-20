@@ -22,7 +22,7 @@ vim.keymap.set({ "n", "i", "v" }, "<D-z>", "<esc><leader>bb", { remap = true })
 
 -- Close neovim.
 
-vim.keymap.set({ "n", "i", "v" }, "<D-q>", "<esc><leader>qq", { remap = true })
+-- vim.keymap.set({ "n", "i", "v" }, "<D-q>", "<esc><leader>qq", { remap = true })
 
 -- Close an buffer.
 

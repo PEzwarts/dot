@@ -3,8 +3,9 @@
 Simple personal dotfiles.
 
 * Hyprland
-* Fish
 * Neovim
+* Kitty
+* Fish
 * Zed
 * GTK-3
 * GTK-4

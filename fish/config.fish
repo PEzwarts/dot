@@ -43,26 +43,16 @@ alias ca "cargo add"
 alias crm "cargo remove"
 alias cc "cargo clean"
 
-function m
-    # if [ -f ./meson.build ]
-    #     if [ -d ../build ]
-    #         meson compile
-    #     else
-    #         cd ./build && meson compile && cd ../
-    #     end
-    # end
+alias r "xmake && xmake r"
 
+function m
     if [ -f ./xmake.lua ]
+        xmake project -k compile_commands
         xmake $argv
     end
 end
 
 function mn
-    # mkdir $argv[1]
-    # cd $argv[1]
-    # meson init -l $argv[2]
-    # meson setup build
-
     if [ "$argv[2]" = cpp ]
         xmake create -l c++ $argv[1]
         cd $argv[1]
@@ -71,8 +61,6 @@ function mn
         cd $argv[1]
     end
 end
-
-# alias mi "meson init"
 
 alias g git
 alias gi "git init -b"

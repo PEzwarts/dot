@@ -16,6 +16,9 @@ cp -r ./hypr ~/.config/
 cp -r ./gtk-3.0/ ~/.config/
 cp -r ./gtk-4.0/ ~/.config/
 
+# Kitty
+cp -r ./kitty/ ~/.config/
+
 hyprctl reload
 
 if [ ! -f /usr/bin/hyprctl ]; then
@@ -23,10 +26,11 @@ if [ ! -f /usr/bin/hyprctl ]; then
   sudo pacman -S --noconfirm gh
 
   # Debug
-  sudo pacman -S --noconfirm wev
+  sudo pacman -S --noconfirm valgrind
 
   # Dev
-  sudo pacman -S --noconfirm ripgrep rustup xmake
+  yay -S --noconfirm conan
+  sudo pacman -S --noconfirm ripgrep fzf rustup xmake
   rustup install stable
 
   # Hypr
