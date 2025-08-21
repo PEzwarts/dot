@@ -20,9 +20,9 @@ vim.keymap.set({ "n", "i", "v" }, "<D-c>", "<cmd>w<CR><esc>", { remap = true })
 
 vim.keymap.set({ "n", "i", "v" }, "<D-z>", "<esc><leader>bb", { remap = true })
 
--- Close neovim.
+-- Delete word; enter mode.
 
--- vim.keymap.set({ "n", "i", "v" }, "<D-q>", "<esc><leader>qq", { remap = true })
+-- vim.keymap.set({ "n" }, "dw", "i", { remap = false })
 
 -- Close an buffer.
 

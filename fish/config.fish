@@ -18,6 +18,9 @@ alias d "dysk -a"
 alias c clear
 alias x exit
 
+alias f fastfetch
+alias i "./install.sh"
+
 function s
     if count $argv >/dev/null
         exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL $argv

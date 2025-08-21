@@ -1,5 +1,5 @@
 # Neovim
-sudo pacman -S --noconfirm neovim
+sudo pacman -S --noconfirm neovim luarocks
 cp -r ./nvim/ ~/.config/
 
 # Zed
@@ -7,7 +7,7 @@ cp -r ./nvim/ ~/.config/
 # cp -r ./zed/ ~/.config/
 
 # Fish
-sudo pacman -S --noconfirm fish eza
+sudo pacman -S --noconfirm fish
 cp -r ./fish/ ~/.config/
 
 # Hyprland
@@ -18,6 +18,9 @@ cp -r ./gtk-4.0/ ~/.config/
 
 # Kitty
 cp -r ./kitty/ ~/.config/
+
+# Alacritty. Faster but no cursor anitmation. Alacritty devs refused to add it as an feature.
+# cp -r ./alacritty/ ~/.config/
 
 hyprctl reload
 
@@ -52,7 +55,7 @@ if [ ! -f /usr/bin/hyprctl ]; then
   fi
 
   # Extra
-  sudo pacman -S --noconfirm grim dysk
+  sudo pacman -S --noconfirm grim eza dysk fastfetch
 
   # Thunar
   sudo pacman -S --noconfirm thunar gvfs
