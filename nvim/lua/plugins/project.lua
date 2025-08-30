@@ -9,10 +9,11 @@ return {
       projects = {
         "~/*",
         "/run/media/overlord/*/*",
+        "/run/media/overlord/*/*/*",
       },
 
       picker = {
-        type = "snacks",
+        type = "picker",
       },
     },
 

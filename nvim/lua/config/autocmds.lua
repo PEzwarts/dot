@@ -1,2 +1,1 @@
-vim.cmd(":NeovimProjectDiscover")
--- vim.cmd(":TransparentEnable")
+vim.cmd(":ToggleTerm")

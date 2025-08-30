@@ -16,35 +16,44 @@ alias cla "wc -l ./**"
 alias cl "wc -l"
 alias d "dysk -a"
 alias c clear
-alias x exit
+alias x "hyprctl dispatch killactive"
+# alias x exit
 
 alias f fastfetch
 alias i "./install.sh"
 
-function s
-    if count $argv >/dev/null
-        exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL $argv
-    else
-        exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink
-    end
-end
+alias s "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink"
+
+alias s1 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 2"
+alias s2 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 3"
+alias s3 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 4"
+alias s4 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 5"
+alias s5 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 6"
+alias s6 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 7"
+alias s7 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 8"
+alias s8 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 9"
+alias s9 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
+
+# function s
+#     if count $argv >/dev/null
+#         exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL $argv
+#     else
+#         exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink
+#     end
+# end
 
 # alias v "neovide --fork; disown; exit"
-alias v nvim
 
 alias cb "cargo build"
 alias cbr "cargo build --release"
-alias ccb "cargo clean && cargo build"
-alias ccbr "cargo clean && cargo build --release"
 
 alias cr "cargo run"
 alias crr "cargo run --release"
-alias ccr "cargo clean && cargo run"
-alias ccrr "cargo clean && cargo run --release"
+alias cc "cargo clean"
+
 alias cn "cargo new"
 alias ca "cargo add"
 alias crm "cargo remove"
-alias cc "cargo clean"
 
 alias r "xmake && xmake r"
 
@@ -65,6 +74,8 @@ function mn
     end
 end
 
+alias p python
+
 alias g git
 alias gi "git init -b"
 
@@ -75,10 +86,11 @@ alias gbd "git branch -d"
 alias gm "git merge"
 
 alias ga "git add"
+alias gr "git reset"
 
 alias gcm "git commit -m"
 alias gcma "git commit --amend -m"
-alias gr "git revert"
+# alias gr "git revert"
 
 alias gP "git push"
 alias gp "git pull"
@@ -111,4 +123,5 @@ end
 
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
+source ~/venv/bin/activate.fish
 export EDITOR=nvim

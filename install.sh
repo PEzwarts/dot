@@ -1,8 +1,8 @@
 # Neovim
-sudo pacman -S --noconfirm neovim luarocks
+sudo pacman -S --noconfirm neovim neovide luarocks
 cp -r ./nvim/ ~/.config/
 
-# Zed
+# Zed. Not needed.
 # sudo pacman -S --noconfirm zed
 # cp -r ./zed/ ~/.config/
 
@@ -33,7 +33,7 @@ if [ ! -f /usr/bin/hyprctl ]; then
 
   # Dev
   yay -S --noconfirm conan
-  sudo pacman -S --noconfirm ripgrep fzf rustup xmake
+  sudo pacman -S --noconfirm ripgrep fzf rustup xmake python
   rustup install stable
 
   # Hypr
