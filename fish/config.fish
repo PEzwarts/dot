@@ -19,8 +19,11 @@ alias c clear
 alias x "hyprctl dispatch killactive"
 # alias x exit
 
-alias f fastfetch
+alias b bat
+alias ff fastfetch
+alias f fd
 alias i "./install.sh"
+alias u "./update.sh"
 
 alias s "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink"
 
@@ -123,5 +126,7 @@ end
 
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
-source ~/venv/bin/activate.fish
+# source ~/venv/bin/activate.fish
+
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig
 export EDITOR=nvim

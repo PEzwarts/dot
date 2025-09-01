@@ -1,39 +1,13 @@
-# Neovim
-sudo pacman -S --noconfirm neovim neovide luarocks
-cp -r ./nvim/ ~/.config/
-
-# Zed. Not needed.
-# sudo pacman -S --noconfirm zed
-# cp -r ./zed/ ~/.config/
-
-# Fish
-sudo pacman -S --noconfirm fish
-cp -r ./fish/ ~/.config/
-
-# Hyprland
-cp -r ./hypr ~/.config/
-
-cp -r ./gtk-3.0/ ~/.config/
-cp -r ./gtk-4.0/ ~/.config/
-
-# Kitty
-cp -r ./kitty/ ~/.config/
-
-# Alacritty. Faster but no cursor anitmation. Alacritty devs refused to add it as an feature.
-# cp -r ./alacritty/ ~/.config/
-
-hyprctl reload
-
-if [ ! -f /usr/bin/hyprctl ]; then
+if [ -f /usr/bin/hyprctl ]; then
   # Github
-  sudo pacman -S --noconfirm gh
+  sudo pacman -S --noconfirm github-cli
 
   # Debug
   sudo pacman -S --noconfirm valgrind
 
   # Dev
-  yay -S --noconfirm conan
-  sudo pacman -S --noconfirm ripgrep fzf rustup xmake python
+  sudo pacman -S --noconfirm neovim neovide luarocks
+  sudo pacman -S --noconfirm rustup xmake python
   rustup install stable
 
   # Hypr
@@ -43,9 +17,9 @@ if [ ! -f /usr/bin/hyprctl ]; then
   sudo pacman -S --noconfirm lxsession pavucontrol
 
   # Rice
-  sudo pacman -S --noconfirm nwg-panel rofi waypaper swaybg
+  sudo pacman -S --noconfirm nwg-panel rofi waypaper swaybg grim
 
-  if [ ! -f ~/Downloads/ ]; then
+  if [ ! -f ~/Desktop/ ]; then
     mkdir ~/Desktop/
     mkdir ~/Downloads/
     mkdir ~/Documents/
@@ -55,11 +29,11 @@ if [ ! -f /usr/bin/hyprctl ]; then
   fi
 
   # Extra
-  sudo pacman -S --noconfirm grim eza dysk fastfetch
+  sudo pacman -S --noconfirm eza dysk fastfetch bat fd ripgrep fzf
 
   # Thunar
   sudo pacman -S --noconfirm thunar gvfs
 
   # Wallpapers
-  git clone https://github.com/elementary/wallpapers ~/Downloads/
+  git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
 fi
