@@ -46,6 +46,7 @@ alias s9 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL
 # end
 
 # alias v "neovide --fork; disown; exit"
+alias v nvim
 
 alias cb "cargo build"
 alias cbr "cargo build --release"
@@ -66,6 +67,8 @@ function m
         xmake $argv
     end
 end
+
+alias mc "xmake clean"
 
 function mn
     if [ "$argv[2]" = cpp ]

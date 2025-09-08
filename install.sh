@@ -37,3 +37,5 @@ if [ -f /usr/bin/hyprctl ]; then
   # Wallpapers
   git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
 fi
+
+./update.sh
