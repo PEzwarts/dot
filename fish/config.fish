@@ -45,8 +45,11 @@ alias s9 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL
 #     end
 # end
 
-# alias v "neovide --fork; disown; exit"
-alias v nvim
+function v
+    neovide --fork -- -c ":lua vim.g.term = false"
+    disown
+    hyprctl dispatch killactive
+end
 
 alias cb "cargo build"
 alias cbr "cargo build --release"

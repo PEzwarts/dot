@@ -41,11 +41,12 @@ vim.keymap.set("v", "<D-z>", "i", { remap = true })
 vim.keymap.set("t", "<S-Up>", [[<C-\><C-n><S-Up>]], { remap = true })
 vim.keymap.set("n", "<cr>", "a", { remap = true })
 
-vim.keymap.set({ "n", "i", "v", "t" }, "<D-x>", function()
-  vim.cmd(":NeovimProjectDiscover")
+
+if vim.g.term == true then
   vim.keymap.del({ "n", "i", "v", "t" }, "<D-x>")
+else
   vim.keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle<cr>", {remap = true, silent = true})
-end, { remap = false, silent = true })
+end
 
 -- Increment & decrement.
 

@@ -4,7 +4,6 @@ return {
 
     opts = {
       direction = "tab",
-      open_mapping = "<D-x>",
     },
   },
 }

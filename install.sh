@@ -29,13 +29,17 @@ if [ -f /usr/bin/hyprctl ]; then
   fi
 
   # Extra
-  sudo pacman -S --noconfirm eza dysk fastfetch bat fd ripgrep fzf
+  sudo pacman -S --noconfirm fish eza dysk fastfetch bat fd ripgrep fzf
 
   # Thunar
   sudo pacman -S --noconfirm thunar gvfs
 
   # Wallpapers
   git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
-fi
 
-./update.sh
+  ./update.sh
+
+  sudo usermod -aG kvm $(whoami)
+  sudo usermod -aG libvirt $(whoami)
+  sudo usermod -aG input $(whoami)
+fi
