@@ -37,6 +37,9 @@ if [ -f /usr/bin/hyprctl ]; then
   # Wallpapers
   git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
 
+  # Applications
+  sudo pacman -S --noconfirm libreoffice-fresh
+
   ./update.sh
 
   sudo usermod -aG kvm $(whoami)

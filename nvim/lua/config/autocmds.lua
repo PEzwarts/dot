@@ -1,5 +1,3 @@
-if vim.g.term == true then
-  vim.cmd(":ToggleTerm")
-else
+if vim.g.term == false then
   vim.cmd(":NeovimProjectDiscover")
 end

@@ -1,10 +1,3 @@
-alias sd sudo
-
-alias mkd mkdir
-alias rmd "rm -r"
-
-alias mk touch
-
 alias ps "pacman -Ss"
 alias pi "pacman -S"
 alias pu "pacmab -Syu"
@@ -12,21 +5,15 @@ alias pu "pacmab -Syu"
 alias ys "yay -Ss"
 alias yi "yay -S"
 
-alias cla "wc -l ./**"
-alias cl "wc -l"
-alias d "dysk -a"
-alias c clear
-alias x "hyprctl dispatch killactive"
-# alias x exit
+alias sd sudo
 
-alias b bat
-alias ff fastfetch
-alias f fd
-alias i "./install.sh"
-alias u "./update.sh"
+alias mk touch
+alias mkd mkdir
+alias rmd "rm -r"
+
+alias c clear
 
 alias s "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink"
-
 alias s1 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 2"
 alias s2 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 3"
 alias s3 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 4"
@@ -36,6 +23,20 @@ alias s6 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL
 alias s7 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 8"
 alias s8 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 9"
 alias s9 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
+
+alias f fd
+alias b bat
+alias x "hyprctl dispatch killactive"
+alias d "dysk -a"
+alias ff fastfetch
+
+# alias x exit
+
+alias cla "wc -l ./**"
+alias cl "wc -l"
+
+alias i "./install.sh"
+alias u "./update.sh"
 
 # function s
 #     if count $argv >/dev/null
@@ -50,40 +51,6 @@ function v
     disown
     hyprctl dispatch killactive
 end
-
-alias cb "cargo build"
-alias cbr "cargo build --release"
-
-alias cr "cargo run"
-alias crr "cargo run --release"
-alias cc "cargo clean"
-
-alias cn "cargo new"
-alias ca "cargo add"
-alias crm "cargo remove"
-
-alias r "xmake && xmake r"
-
-function m
-    if [ -f ./xmake.lua ]
-        xmake project -k compile_commands
-        xmake $argv
-    end
-end
-
-alias mc "xmake clean"
-
-function mn
-    if [ "$argv[2]" = cpp ]
-        xmake create -l c++ $argv[1]
-        cd $argv[1]
-    else
-        xmake create -l $argv[2] $argv[1]
-        cd $argv[1]
-    end
-end
-
-alias p python
 
 alias g git
 alias gi "git init -b"
@@ -126,13 +93,46 @@ alias gtl "git worktree list"
 alias grma "git remote add"
 alias grmr "git remote remove"
 
+alias cb "cargo build"
+alias cbr "cargo build --release"
+
+alias cr "cargo run"
+alias crr "cargo run --release"
+alias cc "cargo clean"
+
+alias cn "cargo new"
+alias ca "cargo add"
+alias crm "cargo remove"
+
+alias r "xmake && xmake r"
+
+function m
+    if [ -f ./xmake.lua ]
+        xmake project -k compile_commands
+        xmake $argv
+    end
+end
+
+alias mc "xmake clean"
+
+function mn
+    if [ "$argv[2]" = cpp ]
+        xmake create -l c++ $argv[1]
+        cd $argv[1]
+    else
+        xmake create -l $argv[2] $argv[1]
+        cd $argv[1]
+    end
+end
+
+alias p python
+# source ~/venv/bin/activate.fish
+
 function multicd
     echo cd (string repeat -n (math (string length -- $argv[1]) -1) ../)
 end
 
 abbr --add dotdot --regex '^\.\.+$' --function multicd
-
-# source ~/venv/bin/activate.fish
 
 export PKG_CONFIG_PATH=/usr/lib/pkgconfig
 export EDITOR=nvim
