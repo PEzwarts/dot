@@ -25,7 +25,8 @@ alias s8 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL
 alias s9 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
 
 alias f fd
-alias b bat
+alias ct cat
+alias r ranger
 alias x "hyprctl dispatch killactive"
 alias d "dysk -a"
 alias ff fastfetch
@@ -47,8 +48,13 @@ alias u "./update.sh"
 # end
 
 function v
-    neovide --fork -- -c ":lua vim.g.term = false"
-    disown
+    neovide -- -c ":lua vim.g.term = false" & disown
+    hyprctl dispatch killactive
+end
+
+function vb
+    neovide -- -c ":lua vim.g.write = true" & disown
+    librewolf & disown
     hyprctl dispatch killactive
 end
 
@@ -104,7 +110,7 @@ alias cn "cargo new"
 alias ca "cargo add"
 alias crm "cargo remove"
 
-alias r "xmake && xmake r"
+alias mr "xmake && xmake r"
 
 function m
     if [ -f ./xmake.lua ]

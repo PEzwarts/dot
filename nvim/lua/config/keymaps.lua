@@ -41,10 +41,15 @@ vim.keymap.set("v", "<D-z>", "i", { remap = true })
 vim.keymap.set("t", "<S-Up>", [[<C-\><C-n><S-Up>]], { remap = true })
 vim.keymap.set("n", "<cr>", "a", { remap = true })
 
-
 if vim.g.term == true then
-  vim.keymap.del({ "n", "i", "v", "t" }, "<D-x>")
+  if vim.g.write == false then
+    vim.keymap.del({ "n", "i", "v", "t" }, "<D-x>")
+  else
+    vim.cmd(":NeovimProjectDiscover")
+    vim.keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:MarkdownPreview<cr>", {remap = true, silent = true})
+  end
 else
+  vim.cmd(":NeovimProjectDiscover")
   vim.keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle<cr>", {remap = true, silent = true})
 end
 

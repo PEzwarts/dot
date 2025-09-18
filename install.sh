@@ -29,16 +29,13 @@ if [ -f /usr/bin/hyprctl ]; then
   fi
 
   # Extra
-  sudo pacman -S --noconfirm fish eza dysk fastfetch bat fd ripgrep fzf
-
-  # Thunar
-  sudo pacman -S --noconfirm thunar gvfs
+  sudo pacman -S --noconfirm fish eza dysk fastfetch fd ripgrep fzf ranger
 
   # Wallpapers
   git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
 
   # Applications
-  sudo pacman -S --noconfirm libreoffice-fresh
+  sudo pacman -S --noconfirm libreoffice-fresh anki
 
   ./update.sh
 
