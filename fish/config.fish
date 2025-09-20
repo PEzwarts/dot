@@ -49,6 +49,7 @@ alias u "./update.sh"
 
 function v
     neovide -- -c ":lua vim.g.term = false" & disown
+    # hyprctl dispatch resizeactive -150 0
     hyprctl dispatch killactive
 end
 
