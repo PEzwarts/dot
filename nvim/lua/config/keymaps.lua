@@ -39,6 +39,8 @@ vim.keymap.set("v", "<D-z>", "i", { remap = true })
 -- Terminal.
 
 vim.keymap.set("t", "<S-Up>", [[<C-\><C-n><S-Up>]], { remap = true })
+vim.keymap.set("t", "/", [[<C-\><C-n>/]], { remap = true })
+
 vim.keymap.set("n", "<cr>", "a", { remap = true })
 
 if vim.g.term == true then
