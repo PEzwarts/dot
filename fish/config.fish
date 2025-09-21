@@ -13,17 +13,17 @@ alias rmd "rm -r"
 
 alias c clear
 
-alias s "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink"
+alias s "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute"
 
-alias 1 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 2"
-alias 2 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 3"
-alias 3 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 4"
-alias 4 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 5"
-alias 5 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 6"
-alias 6 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 7"
-alias 7 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 8"
-alias 8 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 9"
-alias 9 "exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
+alias 1 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute -TL 2"
+alias 2 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute -TL 3"
+alias 3 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute -TL 4"
+alias 4 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute -TL 5"
+alias 5 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute -TL 6"
+alias 6 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute -TL 7"
+alias 7 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute -TL 8"
+alias 8 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute -TL 9"
+alias 9 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink --absolute -TL 10"
 
 alias f fd
 alias ct cat
