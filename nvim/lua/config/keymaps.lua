@@ -42,7 +42,7 @@ vim.keymap.set("v", "<D-z>", "i", { remap = true })
 
 -- Neotree.
 
-vim.keymap.set("t", "<Right>", "<cr>", { remap = true })
+-- vim.keymap.set("t", "<Right>", "<cr>", { remap = true })
 
 -- Terminal.
 
