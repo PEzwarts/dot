@@ -40,10 +40,14 @@ vim.keymap.set("v", "<D-z>", "i", { remap = true })
 -- vim.keymap.set("i", "<A>", "<esc>", { remap = true })
 -- vim.keymap.set("v", "<A>", "i", { remap = true })
 
+-- Neotree.
+
+vim.keymap.set("t", "<Right>", "<cr>", { remap = true })
+
 -- Terminal.
 
 vim.keymap.set("t", "<S-Up>", [[<C-\><C-n><S-Up>]], { remap = true })
--- vim.keymap.set("t", "/", [[<C-\><C-n>/]], { remap = true })
+vim.keymap.set("t", "<D-/>", [[<C-\><C-n>/]], { remap = true })
 vim.keymap.set("t", "<S-bs>", "<C-bs>", { remap = true })
 
 vim.keymap.set("n", "<cr>", "a", { remap = true })
