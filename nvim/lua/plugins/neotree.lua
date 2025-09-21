@@ -8,6 +8,12 @@ return {
         filtered_items = {
           hide_dotfiles = false,
         },
+
+        window = {
+          mappings = {
+            ["<Right>"] = "open",
+          }
+        }
       },
     },
   },
