@@ -11,6 +11,8 @@ alias mk touch
 alias mkd mkdir
 alias rmd "rm -r"
 
+alias c.. "cd .."
+
 function c
     if [ "$argv[1]" = "" ]
         clear
@@ -45,14 +47,6 @@ alias cl "wc -l"
 
 alias i "./install.sh"
 alias u "./update.sh"
-
-# function s
-#     if count $argv >/dev/null
-#         exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink -TL $argv
-#     else
-#         exa -lagohHM --icons --follow-symlinks --show-symlinks --hyperlink
-#     end
-# end
 
 function v
     neovide -- -c ":lua vim.g.term = false" & disown
@@ -141,13 +135,6 @@ function mn
 end
 
 alias p python
-# source ~/venv/bin/activate.fish
-
-function multicd
-    echo cd (string repeat -n (math (string length -- $argv[1]) -1) ../)
-end
-
-abbr --add dotdot --regex '^\.\.+$' --function multicd
 
 export PKG_CONFIG_PATH=/usr/lib/pkgconfig
 export EDITOR=nvim

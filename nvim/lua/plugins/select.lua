@@ -13,7 +13,7 @@ return {
       },
 
       picker = {
-        type = "picker",
+        type = "snacks",
       },
     },
 
