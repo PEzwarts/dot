@@ -11,7 +11,7 @@ alias mk touch
 alias mkd mkdir
 alias rmd "rm -r"
 
-alias c.. "cd .."
+alias . "cd .."
 
 function c
     if [ "$argv[1]" = "" ]
