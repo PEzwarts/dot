@@ -11,7 +11,13 @@ alias mk touch
 alias mkd mkdir
 alias rmd "rm -r"
 
-alias c clear
+function c
+    if [ "$argv[1]" = "" ]
+        clear
+    else
+        cd $argv[1]
+    end
+end
 
 alias s "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink"
 
