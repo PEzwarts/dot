@@ -52,13 +52,13 @@ alias u "./update.sh"
 
 function v
     neovide -- -c ":lua vim.g.term = false" & disown
-    bash -c "sleep 0.1 && hyprctl dispatch resizeactive -450 0" & disown
+    bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
     hyprctl dispatch killactive
 end
 
 function vb
     neovide -- -c ":lua vim.g.write = true" & disown
-    bash -c "sleep 0.1 && hyprctl dispatch resizeactive -450 0" & disown
+    bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
     librewolf & disown
     hyprctl dispatch killactive
 end
