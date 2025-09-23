@@ -1,4 +1,4 @@
-vim.g.autoformat = true
+vim.g.autoformat = false
 
 -- vim.g.neovide_remember_window_size = true
 -- vim.g.neovide_cursor_hack = true

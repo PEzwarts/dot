@@ -12,6 +12,8 @@ alias mkd mkdir
 alias rmd "rm -r"
 
 alias . "cd .."
+alias .. "cd ../.."
+alias ... "cd ../../.."
 
 function c
     if [ "$argv[1]" = "" ]
