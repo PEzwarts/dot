@@ -14,7 +14,7 @@ primary.background = "#000000"
 style = {shape = "Block", blinking = "On"}
 
 [font]
-size = 6
+size = 10
 normal = {family = "monospace", style = "Bold"}
 
 [mouse]
