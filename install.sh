@@ -6,7 +6,7 @@ if [ -f /usr/bin/hyprctl ]; then
   sudo pacman -S --noconfirm valgrind
 
   # Dev
-  sudo pacman -S --noconfirm neovim neovide luarocks
+  sudo pacman -S --noconfirm neovim neovide luarocks alacritty
   sudo pacman -S --noconfirm rustup xmake python
   rustup install stable
 
