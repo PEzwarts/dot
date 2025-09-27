@@ -8,8 +8,7 @@ return {
 
       projects = {
         "~/*",
-        "/run/media/overlord/*/*",
-        "/run/media/overlord/*/*/*",
+        "/run/media/overlord/*",
       },
 
       picker = {
