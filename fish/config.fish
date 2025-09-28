@@ -1,9 +1,7 @@
-alias ps "pacman -Ss"
-alias pi "pacman -S"
-alias pu "pacmab -Syu"
-
-alias ys "yay -Ss"
-alias yi "yay -S"
+alias bs "brew search"
+alias bi "brew install"
+alias br "brew remove"
+alias bu "brew update && brew upgrade"
 
 alias sd sudo
 
