@@ -56,7 +56,7 @@ else
   # settings="/Applications/System Settings.app"
   # neovide="/opt/homebrew/Cellar/neovide/0.15.2/Neovide.app"
 
-  declare -a apps=("/Applications/Min.app" "/opt/homebrew/Cellar/neovide/0.15.2/Neovide.app")
+  declare -a apps=("/Applications/Min.app" "/Applications/Alacritty.app" "/Applications/System Settings.app")
 
   for app in ${apps[@]}; do
     defaults write com.apple.dock persistent-apps -array-add "
