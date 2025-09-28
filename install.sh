@@ -56,10 +56,22 @@ else
   # settings="/Applications/System Settings.app"
   # neovide="/opt/homebrew/Cellar/neovide/0.15.2/Neovide.app"
 
-  declare -a apps=("/Applications/System Settings.app" "/opt/homebrew/Cellar/neovide/0.15.2/Neovide.app")
+  declare -a apps=("/Applications/Min.app" "/opt/homebrew/Cellar/neovide/0.15.2/Neovide.app")
 
   for app in ${apps[@]}; do
-    defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+    defaults write com.apple.dock persistent-apps -array-add "
+    <dict>
+      <key>tile-data</key>
+      <dict>
+        <key>file-data</key>
+        <dict>
+          <key>_CFURLString</key>
+          <string>$app</string>
+          <key>_CFURLStringType</key>
+          <integer>0</integer>
+        </dict>
+      </dict>
+    </dict>"
   done
 
   killall Dock
