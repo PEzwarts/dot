@@ -56,8 +56,7 @@ else
   declare -a apps=("/opt/homebrew/Cellar/neovide/0.15.2/Neovide")
 
   for app in "${apps[@]}"; do
-    if [ -d "/Applications/${app}.icon"]; then
-      defaults write com.apple.dock persistent-apps -array-add "
+    defaults write com.apple.dock persistent-apps -array-add "
       <dict>
         <dict>
           <key>tile-data</key>
@@ -70,7 +69,6 @@ else
         </dict>
       </dict>
       "
-    fi
   done
 
   killall Dock
