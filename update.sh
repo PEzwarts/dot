@@ -1,23 +1,24 @@
-# Neovim
+# Neovim.
 cp -r ./nvim/ ~/.config/
 
-# sudo pacman -S --noconfirm zed
+# Zed.
 # cp -r ./zed/ ~/.config/
 
-# Fish
-sudo pacman -S --noconfirm fish
+# Fish.
 cp -r ./fish/ ~/.config/
 
-# Hyprland
-cp -r ./hypr/ ~/.config/
+if [ "$(uname)" == "Linux" ]; then
+  # Kitty.
+  cp -r ./kitty/ ~/.config/
 
-cp -r ./gtk-3.0/ ~/.config/
-cp -r ./gtk-4.0/ ~/.config/
+  # Alacritty.
+  cp -r ./alacritty/ ~/.config/
 
-# Kitty.
-# cp -r ./kitty/ ~/.config/
+  # Hyprland
+  cp -r ./hypr/ ~/.config/
 
-# Alacritty.
-cp -r ./alacritty/ ~/.config/
+  cp -r ./gtk-3.0/ ~/.config/
+  cp -r ./gtk-4.0/ ~/.config/
 
-hyprctl reload
+  hyprctl reload
+fi
