@@ -23,17 +23,17 @@ function c
     end
 end
 
-alias s "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink"
+alias s "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink"
 
-alias 1 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 2"
-alias 2 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 3"
-alias 3 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 4"
-alias 4 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 5"
-alias 5 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 6"
-alias 6 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 7"
-alias 7 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 8"
-alias 8 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 9"
-alias 9 "exa -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
+alias 1 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 2"
+alias 2 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 3"
+alias 3 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 4"
+alias 4 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 5"
+alias 5 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 6"
+alias 6 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 7"
+alias 7 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 8"
+alias 8 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 9"
+alias 9 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
 
 alias f fd
 alias ct cat
