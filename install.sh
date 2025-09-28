@@ -49,6 +49,9 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
+  defaults write com.apple.dock persistent-apps -array
+  killall Dock
+
   # Github
   brew install --noconfirm github-cli
 
