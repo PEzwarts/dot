@@ -53,6 +53,8 @@ else
   defaults write com.apple.dock persistent-apps -array
   defaults write com.apple.dock recents-apps -array
 
+  killall Dock
+
   declare -a apps=("/opt/homebrew/Cellar/neovide/0.15.2/Neovide")
 
   for app in "${apps[@]}"; do
@@ -70,8 +72,6 @@ else
       </dict>
       "
   done
-
-  killall Dock
 
   # Github
   brew install github-cli
