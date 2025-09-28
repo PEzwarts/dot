@@ -1,6 +1,9 @@
 ![Alt text](https://github.com/PEzwarts/dot/blob/main/screenshot.png)
 
-Simple personal dotfiles.
+Personal dotfiles.
+
+* OSX support
+* Linux support
 
 * Hyprland
 * Neovim
