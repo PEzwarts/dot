@@ -53,7 +53,7 @@ else
   defaults write com.apple.dock persistent-apps -array
   defaults write com.apple.dock recents-apps -array
 
-  declare -a apps=("/Applications/Alacritty.app" "/Applications/Min.app", "Applications/Chess.app")
+  declare -a apps=("/Applications/Alacritty.app" "/Applications/Min.app")
 
   for app in ${apps[@]}; do
     defaults write com.apple.dock persistent-apps -array-add "
