@@ -49,14 +49,19 @@ alias cl "wc -l"
 alias i "./install.sh"
 alias u "./update.sh"
 
+set t1 neovide
+set t2 alacritty
+
 function v
-    neovide -- -c ":lua vim.g.term = false" & disown
+    # $t1 -- -c ":lua vim.g.term = false" & disown
+    $t2 --command nvim -c ":lua vim.g.term = false" & disown
     bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
     hyprctl dispatch killactive
 end
 
 function vb
-    neovide -- -c ":lua vim.g.write = true" & disown
+    # neovide -- -c ":lua vim.g.write = true" & disown
+    $t2 --command nvim -c ":lua vim.g.write = true" & disown
     bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
     librewolf & disown
     hyprctl dispatch killactive
