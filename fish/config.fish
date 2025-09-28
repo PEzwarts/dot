@@ -37,17 +37,10 @@ alias f fd
 alias ct cat
 alias r ranger
 
-function x
-    if [ "$(uname)" = Linux ]
-        alias x "hyprctl dispatch killactive"
-    else
-        kill neovide
-    end
-end
-
 alias d "dysk -a"
 alias ff fastfetch
 
+alias x "hyprctl dispatch killactive"
 # alias x exit
 
 alias cla "wc -l ./**"
