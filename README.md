@@ -2,8 +2,8 @@
 
 Personal dotfiles.
 
-* OSX support
-* Linux support
+OSX support
+Linux support
 
 * Hyprland
 * Neovim
