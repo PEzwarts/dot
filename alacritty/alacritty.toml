@@ -3,7 +3,7 @@ live_config_reload = true
 ipc_socket = false
 
 [window]
-opacity = 0.8
+opacity = 1
 blur = true
 
 [colors]
@@ -15,7 +15,7 @@ style = {shape = "Block", blinking = "On"}
 
 [font]
 size = 10
-normal = {family = "monospace", style = "Bold"}
+# normal = {family = "monospace", style = "Bold"}
 
 [mouse]
 hide_when_typing = true
