@@ -35,9 +35,9 @@ else
 
   # Kitty.
   sudo rm -r ~/.config/kitty/
-  cp -r ./kitty/ ~/.config/kitty/
+  # cp -r ./kitty/ ~/.config/kitty/
 
   # Alacritty.
   sudo rm -r ~/.config/alacritty/
-  cp -r ./alacritty/ ~/.config/alacritty/
+  # cp -r ./alacritty/ ~/.config/alacritty/
 fi
