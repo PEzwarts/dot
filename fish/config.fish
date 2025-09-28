@@ -36,7 +36,15 @@ alias 9 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
 alias f fd
 alias ct cat
 alias r ranger
-alias x "hyprctl dispatch killactive"
+
+function x
+    if [ "$(uname)" = Linux ]
+        alias x "hyprctl dispatch killactive"
+    else
+        pkill neovide
+    end
+end
+
 alias d "dysk -a"
 alias ff fastfetch
 
