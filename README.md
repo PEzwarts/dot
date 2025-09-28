@@ -1,6 +1,6 @@
 ![Alt text](https://github.com/PEzwarts/dot/blob/main/screenshot.png)
 
-Personal dotfiles.
+# Personal dotfiles.
 
 OSX support
 
