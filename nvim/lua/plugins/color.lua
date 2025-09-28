@@ -4,12 +4,16 @@ return {
 
     opts = {
       colorscheme = "base16-3024",
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent"
+      }
     },
   },
 
-  {
-    "RRethy/base16-nvim",
-  },
+  { "folke/tokyonight.nvim" },
 
+  -- { "RRethy/base16-nvim" },
   -- { "xiyaowong/transparent.nvim" }
 }
