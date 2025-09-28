@@ -41,7 +41,7 @@ function x
     if [ "$(uname)" = Linux ]
         alias x "hyprctl dispatch killactive"
     else
-        pkill neovide
+        kill neovide
     end
 end
 
