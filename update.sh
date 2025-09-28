@@ -23,22 +23,19 @@ if [ "$(uname)" == "Linux" ]; then
   hyprctl reload
 else
   rm -r ~/.config/*
+
   # Neovim.
-  # sudo rm -r ~/.config/nvim/
   cp -r ./nvim/ ~/.config/nvim/
 
   # Zed.
   # cp -r ./zed/ ~/.config/
 
   # Fish.
-  # sudo rm -r ~/.config/fish/
   cp -r ./fish/ ~/.config/fish/
 
   # Kitty.
-  # sudo rm -r ~/.config/kitty/
   # cp -r ./kitty/ ~/.config/kitty/
 
   # Alacritty.
-  # sudo rm -r ~/.config/alacritty/
   # cp -r ./alacritty/ ~/.config/alacritty/
 fi
