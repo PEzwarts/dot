@@ -22,7 +22,9 @@ cp -r ./gtk-4.0/ ~/.config/
 hyprctl reload
 
 if [ "$(uname)" == "Linux" ]; then
+  echo test
 else
+  echo test
   # # Neovim.
   # sudo rm -r ~/.config/nvim/
   # cp -r ./nvim/ ~/.config/nvim/
