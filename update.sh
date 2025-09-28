@@ -1,43 +1,44 @@
+# Neovim.
+cp -r ./nvim/ ~/.config/
+
+# Zed.
+# cp -r ./zed/ ~/.config/
+
+# Fish.
+cp -r ./fish/ ~/.config/
+
+# Kitty.
+cp -r ./kitty/ ~/.config/
+
+# Alacritty.
+cp -r ./alacritty/ ~/.config/
+
+# Hyprland
+cp -r ./hypr/ ~/.config/
+
+cp -r ./gtk-3.0/ ~/.config/
+cp -r ./gtk-4.0/ ~/.config/
+
+hyprctl reload
+
 if [ "$(uname)" == "Linux" ]; then
-  # Neovim.
-  cp -r ./nvim/ ~/.config/
-
-  # Zed.
-  # cp -r ./zed/ ~/.config/
-
-  # Fish.
-  cp -r ./fish/ ~/.config/
-
-  # Kitty.
-  cp -r ./kitty/ ~/.config/
-
-  # Alacritty.
-  cp -r ./alacritty/ ~/.config/
-
-  # Hyprland
-  cp -r ./hypr/ ~/.config/
-
-  cp -r ./gtk-3.0/ ~/.config/
-  cp -r ./gtk-4.0/ ~/.config/
-
-  hyprctl reload
 else
-  # Neovim.
-  sudo rm -r ~/.config/nvim/
-  cp -r ./nvim/ ~/.config/nvim/
-
-  # Zed.
-  # cp -r ./zed/ ~/.config/
-
-  # Fish.
-  sudo rm -r ~/.config/fish/
-  cp -r ./fish/ ~/.config/fish/
-
-  # Kitty.
-  sudo rm -r ~/.config/kitty/
-  cp -r ./kitty/ ~/.config/kitty/
-
-  # Alacritty.
-  sudo rm -r ~/.config/alacritty/
-  cp -r ./alacritty/ ~/.config/alacritty/
+  # # Neovim.
+  # sudo rm -r ~/.config/nvim/
+  # cp -r ./nvim/ ~/.config/nvim/
+  #
+  # # Zed.
+  # # cp -r ./zed/ ~/.config/
+  #
+  # # Fish.
+  # sudo rm -r ~/.config/fish/
+  # cp -r ./fish/ ~/.config/fish/
+  #
+  # # Kitty.
+  # sudo rm -r ~/.config/kitty/
+  # cp -r ./kitty/ ~/.config/kitty/
+  #
+  # # Alacritty.
+  # sudo rm -r ~/.config/alacritty/
+  # cp -r ./alacritty/ ~/.config/alacritty/
 fi

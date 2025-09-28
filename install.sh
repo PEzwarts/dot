@@ -49,7 +49,10 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
+  # declare -a apps=()
+
   defaults write com.apple.dock persistent-apps -array
+  defaults write com.apple.dock recents-apps -array
   killall Dock
 
   # Github
