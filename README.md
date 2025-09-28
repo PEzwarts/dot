@@ -3,6 +3,7 @@
 Personal dotfiles.
 
 OSX support
+
 Linux support
 
 * Hyprland
