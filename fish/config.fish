@@ -40,7 +40,14 @@ alias r ranger
 alias d "dysk -a"
 alias ff fastfetch
 
-alias x "hyprctl dispatch killactive"
+function x
+    if [ "$(uname)" = Linux ]
+        hyprctl dispatch killactive
+    else
+        killall alacritty
+    end
+end
+
 # alias x exit
 
 alias cla "wc -l ./**"
