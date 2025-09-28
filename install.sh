@@ -53,7 +53,7 @@ else
   killall Dock
 
   # Github
-  brew install --noconfirm github-cli
+  brew install github-cli
 
   # Debug
   brew install valgrind
