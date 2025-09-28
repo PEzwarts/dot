@@ -53,6 +53,9 @@ else
   defaults write com.apple.dock persistent-apps -array
   defaults write com.apple.dock recents-apps -array
 
+  defaults write com.apple.dock tilesize -int 40
+  defaults write com.apple.dock orientation -string bottom
+
   declare -a apps=("/Applications/Alacritty.app" "/Applications/Safari.app")
 
   for app in ${apps[@]}; do
@@ -72,6 +75,8 @@ else
   done
 
   killall Dock
+
+  brew install amethyst
 
   # Github
   brew install github-cli
