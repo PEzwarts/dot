@@ -49,11 +49,30 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
-  declare -a apps=("")
-
   defaults write com.apple.dock persistent-others -array
   defaults write com.apple.dock persistent-apps -array
   defaults write com.apple.dock recents-apps -array
+
+  declare -a apps=("/opt/homebrew/Cellar/neovide/0.15.2/Neovide")
+
+  for app in "${apps[@]}"; do
+    if [ -d "/Applications/${app}.icon"]; then
+      defaults write com.apple.dock persistent-apps -array-add "
+      <dict>
+        <dict>
+          <key>tile-data</key>
+          <dict>
+            <key>_CFURLString</key>
+            <string>${app}.app</string>
+            <key>_CFURLStringType</key>
+            <integer>0</integer>
+          </dict>
+        </dict>
+      </dict>
+      "
+    fi
+  done
+
   killall Dock
 
   # Github
