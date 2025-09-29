@@ -98,5 +98,8 @@ else
 
   killall Dock
 
+  /Applications/Amethyst.app
+  /Applications/Alacritty.app
+
   ./update.sh
 fi
