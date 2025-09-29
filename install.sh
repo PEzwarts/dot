@@ -98,7 +98,10 @@ else
 
   killall Dock
 
-  /Applications/Amethyst.app/Contents/MacOS/Amethyst
+  /Applications/Amethyst.app/Contents/MacOS/Amethyst &
+  disown
+
+  /opt/homebrew/bin/alacritty
 
   ./update.sh
 fi
