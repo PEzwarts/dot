@@ -98,8 +98,8 @@ else
 
   killall Dock
 
-  /Applications/Amethyst.app
-  /Applications/Alacritty.app
+  /Applications/Amethyst.app/Contents/MacOS/Amethyst
+  /Applications/Alacritty.app/Contents/MacOS/alacritty
 
   ./update.sh
 fi
