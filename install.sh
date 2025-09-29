@@ -49,6 +49,28 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
+  brew install amethyst
+
+  # Github
+  brew install github-cli
+
+  # Debug
+  brew install valgrind
+
+  # Dev
+  brew install neovim neovide luarocks alacritty
+  brew install rustup xmake python
+  rustup install stable
+
+  # Extra
+  brew install fish eza dysk fastfetch fd ripgrep fzf ranger
+
+  # Wallpapers
+  git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
+
+  # Applications
+  brew install libreoffice
+
   defaults write com.apple.dock persistent-others -array
   defaults write com.apple.dock persistent-apps -array
   defaults write com.apple.dock recents-apps -array
@@ -75,28 +97,6 @@ else
   done
 
   killall Dock
-
-  brew install amethyst
-
-  # Github
-  brew install github-cli
-
-  # Debug
-  brew install valgrind
-
-  # Dev
-  brew install neovim neovide luarocks alacritty
-  brew install rustup xmake python
-  rustup install stable
-
-  # Extra
-  brew install fish eza dysk fastfetch fd ripgrep fzf ranger
-
-  # Wallpapers
-  git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
-
-  # Applications
-  brew install libreoffice-fresh anki
 
   ./update.sh
 fi
