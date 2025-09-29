@@ -99,7 +99,6 @@ else
   killall Dock
 
   /Applications/Amethyst.app/Contents/MacOS/Amethyst
-  /opt/homebrew/bin/alacritty
 
   ./update.sh
 fi
