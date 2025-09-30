@@ -57,7 +57,7 @@ if vim.g.term == true then
   end
 else
   vim.cmd(":NeovimProjectDiscover")
-  vim.keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle<cr>", {remap = true, silent = true})
+  vim.keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle direction=tab<cr>", {remap = true, silent = true})
 end
 
 -- Increment & decrement.
