@@ -44,8 +44,8 @@ function x
     if [ "$(uname)" = Linux ]
         hyprctl dispatch killactive
     else
-        killall neovide
-        # killall alacritty
+        # killall neovide
+        killall alacritty
     end
 end
 
