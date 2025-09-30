@@ -1,7 +1,8 @@
+
 set t1 neovide
 set t2 alacritty
 
-set t = 0
+set t 0
 
 alias bs "brew search"
 alias bi "brew install"
