@@ -63,7 +63,7 @@ alias u "./update.sh"
 set t1 neovide
 set t2 alacritty
 
-set $t = 0
+set t = 0
 
 function v
     if [ "$(uname)" = Linux ]
