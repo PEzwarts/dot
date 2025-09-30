@@ -44,7 +44,7 @@ function x
     if [ "$(uname)" = Linux ]
         hyprctl dispatch killactive
     else
-        if [ $t = 0 ]
+        if [ $t = 0 ];
           killall $t1
         else
           killall $t2
