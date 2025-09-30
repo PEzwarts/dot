@@ -44,8 +44,8 @@ function x
     if [ "$(uname)" = Linux ]
         hyprctl dispatch killactive
     else
-        killall neovide
-        # killall alacritty
+        # killall $t1
+        killall $t2
     end
 end
 
@@ -62,30 +62,30 @@ set t2 alacritty
 
 function v
     if [ "$(uname)" = Linux ]
-        $t1 -- -c ":lua vim.g.term = false" & disown
-        # $t2 --command nvim -c ":lua vim.g.term = false" & disown
+        # $t1 -- -c ":lua vim.g.term = false" & disown
+        $t2 --command nvim -c ":lua vim.g.term = false" & disown
         bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
         hyprctl dispatch killactive
     else
-        killall $t1
-        # killall $t2
-        $t1 -- -c ":lua vim.g.term = false" & disown
-        # $t2 --command nvim -c ":lua vim.g.term = false" & disown
+        # killall $t1
+        killall $t2
+        # $t1 -- -c ":lua vim.g.term = false" & disown
+        $t2 --command nvim -c ":lua vim.g.term = false" & disown
     end
 end
 
 function vb
     if [ "$(uname)" = Linux ]
-        $t1 -- -c ":lua vim.g.write = true" & disown
-        # $t2 --command nvim -c ":lua vim.g.write = true" & disown
+        # $t1 -- -c ":lua vim.g.write = true" & disown
+        $t2 --command nvim -c ":lua vim.g.write = true" & disown
         bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
         librewolf & disown
         hyprctl dispatch killactive
     else
-        killall $t1
-        # killall $t2
-        $t1 -- -c ":lua vim.g.write = true" & disown
-        # $t2 --command nvim -c ":lua vim.g.write = true" & disown
+        # killall $t1
+        killall $t2
+        # $t1 -- -c ":lua vim.g.write = true" & disown
+        $t2 --command nvim -c ":lua vim.g.write = true" & disown
     end
 end
 

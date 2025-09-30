@@ -1,7 +1,7 @@
--- return {
---   {
---     "karb94/neoscroll.nvim",
---
---     opts = {},
---   }
--- }
+return {
+  {
+    "karb94/neoscroll.nvim",
+
+    opts = {},
+  }
+}
