@@ -1,7 +1,9 @@
-return {
-  {
-    "karb94/neoscroll.nvim",
+if not vim.g.neovide then
+  return {
+    {
+      "karb94/neoscroll.nvim",
 
-    opts = {},
+      opts = {},
+    }
   }
-}
+end
