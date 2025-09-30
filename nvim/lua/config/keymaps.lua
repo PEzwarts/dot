@@ -44,7 +44,7 @@ vim.keymap.set("v", "<D-z>", "i", { remap = true })
 
 vim.keymap.set("t", "<S-Up>", [[<C-\><C-n><S-Up>]], { remap = true })
 vim.keymap.set("t", "<D-/>", [[<C-\><C-n>/]], { remap = true })
-vim.keymap.set("t", "<S-bs>", "<C-bs>", { remap = true })
+vim.keymap.set({ "t", "n" }, "<S-bs>", "<C-bs>", { remap = true })
 
 vim.keymap.set("n", "<cr>", "a", { remap = true })
 

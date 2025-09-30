@@ -44,7 +44,8 @@ function x
     if [ "$(uname)" = Linux ]
         hyprctl dispatch killactive
     else
-        killall alacritty
+        killall neovide
+        # killall alacritty
     end
 end
 
@@ -61,26 +62,28 @@ set t2 alacritty
 
 function v
     if [ "$(uname)" = Linux ]
-        # $t1 -- -c ":lua vim.g.term = false" & disown
-        $t2 --command nvim -c ":lua vim.g.term = false" & disown
+        $t1 -- -c ":lua vim.g.term = false" & disown
+        # $t2 --command nvim -c ":lua vim.g.term = false" & disown
         bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
         hyprctl dispatch killactive
     else
         killall alacritty
-        $t2 --command nvim -c ":lua vim.g.term = false" & disown
+        $t1 -- -c ":lua vim.g.term = false" & disown
+        # $t2 --command nvim -c ":lua vim.g.term = false" & disown
     end
 end
 
 function vb
     if [ "$(uname)" = Linux ]
-        # neovide -- -c ":lua vim.g.write = true" & disown
-        $t2 --command nvim -c ":lua vim.g.write = true" & disown
+        $t1 -- -c ":lua vim.g.term = true" & disown
+        # $t2 --command nvim -c ":lua vim.g.write = true" & disown
         bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
         librewolf & disown
         hyprctl dispatch killactive
     else
         killall alacritty
-        $t2 --command nvim -c ":lua vim.g.write = true" & disown
+        $t1 -- -c ":lua vim.g.term = true" & disown
+        # $t2 --command nvim -c ":lua vim.g.write = true" & disown
     end
 end
 
@@ -113,14 +116,14 @@ alias gf "git fetch"
 # alias gR "git restore"
 
 alias gc "git clone"
-alias gd "git diff"
-alias gl "git log --graph --oneline --decorate"
+alias gd "git diff | cat"
+alias gl "git log --graph --oneline --decorate | cat"
 
 alias gco "git checkout"
 
-alias gta "git worktree add"
-alias gtr "git worktree remove"
-alias gtl "git worktree list"
+# alias gta "git worktree add"
+# alias gtr "git worktree remove"
+# alias gtl "git worktree list"
 
 alias grma "git remote add"
 alias grmr "git remote remove"
