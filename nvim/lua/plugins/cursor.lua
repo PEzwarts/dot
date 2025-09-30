@@ -7,5 +7,11 @@ return {
       trailing_stiffness = 0.5,
       never_draw_over_target = false
     },
+
+    -- opts = {
+    --   stiffness = 0.5,
+    --   trailing_stiffness = 0.5,
+    --   matrix_pixel_threshold = 0.5,
+    -- },
   }
 }
