@@ -67,7 +67,8 @@ function v
         bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
         hyprctl dispatch killactive
     else
-        killall alacritty
+        killall $t1
+        # killall $t2
         $t1 -- -c ":lua vim.g.term = false" & disown
         # $t2 --command nvim -c ":lua vim.g.term = false" & disown
     end
@@ -81,7 +82,8 @@ function vb
         librewolf & disown
         hyprctl dispatch killactive
     else
-        killall alacritty
+        killall $t1
+        # killall $t2
         $t1 -- -c ":lua vim.g.write = true" & disown
         # $t2 --command nvim -c ":lua vim.g.write = true" & disown
     end
