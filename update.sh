@@ -46,8 +46,8 @@ else
   defaults write com.apple.dock tilesize -int 40
   defaults write com.apple.dock orientation -string bottom
 
-  # declare -a apps=("/opt/homebrew/Cellar/Neovide/0.15.2/Neovide.app" "/Applications/Safari.app")
-  declare -a apps=("/Applications/Alacritty.app" "/Applications/Safari.app")
+  declare -a apps=("/opt/homebrew/Cellar/Neovide/0.15.2/Neovide.app" "/Applications/Safari.app")
+  # declare -a apps=("/Applications/Alacritty.app" "/Applications/Safari.app")
 
   for app in ${apps[@]}; do
     defaults write com.apple.dock persistent-apps -array-add "

@@ -44,8 +44,11 @@ function x
     if [ "$(uname)" = Linux ]
         hyprctl dispatch killactive
     else
-        # killall $t1
-        killall $t2
+        if [ $t = 0 ]
+          killall $t1
+        else
+          killall $t2
+        end
     end
 end
 
@@ -60,32 +63,48 @@ alias u "./update.sh"
 set t1 neovide
 set t2 alacritty
 
+set $t = 0
+
 function v
     if [ "$(uname)" = Linux ]
-        # $t1 -- -c ":lua vim.g.term = false" & disown
-        $t2 --command nvim -c ":lua vim.g.term = false" & disown
+        if [ $t = 0 ]
+          $t1 -- -c ":lua vim.g.term = false" & disown
+        else
+          $t2 --command nvim -c ":lua vim.g.term = false" & disown
+        end
+
         bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
         hyprctl dispatch killactive
     else
-        # killall $t1
-        killall $t2
-        # $t1 -- -c ":lua vim.g.term = false" & disown
-        $t2 --command nvim -c ":lua vim.g.term = false" & disown
+        if [ $t = 0 ]
+          killall $t1
+          $t1 -- -c ":lua vim.g.term = false" & disown
+        else
+          killall $t2
+          $t2 --command nvim -c ":lua vim.g.term = false" & disown
+        end
     end
 end
 
 function vb
     if [ "$(uname)" = Linux ]
-        # $t1 -- -c ":lua vim.g.write = true" & disown
-        $t2 --command nvim -c ":lua vim.g.write = true" & disown
+        if [ $t = 0 ]
+          $t1 -- -c ":lua vim.g.write = true" & disown
+        else
+          $t2 --command nvim -c ":lua vim.g.write = true" & disown
+        end
+
         bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
         librewolf & disown
         hyprctl dispatch killactive
     else
-        # killall $t1
-        killall $t2
-        # $t1 -- -c ":lua vim.g.write = true" & disown
-        $t2 --command nvim -c ":lua vim.g.write = true" & disown
+        if [ $t = 0 ]
+          killall $t1
+          $t1 -- -c ":lua vim.g.write = true" & disown
+        else
+          killall $t2
+          $t2 --command nvim -c ":lua vim.g.write = true" & disown
+        end
     end
 end
 
