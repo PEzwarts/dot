@@ -1,3 +1,8 @@
+set t1 neovide
+set t2 alacritty
+
+set t = 0
+
 alias bs "brew search"
 alias bi "brew install"
 alias br "brew remove"
@@ -44,7 +49,7 @@ function x
     if [ "$(uname)" = Linux ]
         hyprctl dispatch killactive
     else
-        if [ $t = 0 ];
+        if [ $t = 0 ]
           killall $t1
         else
           killall $t2
@@ -59,11 +64,6 @@ alias cl "wc -l"
 
 alias i "./install.sh"
 alias u "./update.sh"
-
-set t1 neovide
-set t2 alacritty
-
-set t = 0
 
 function v
     if [ "$(uname)" = Linux ]
