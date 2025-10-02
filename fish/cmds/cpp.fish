@@ -4,7 +4,7 @@ function m
     #     xmake $argv
     # end
 
-    for file in (find . -maxdepth 1 -type f);
+    for file in (find . -maxdepth 2 -type f);
         if [ (file $file | grep "ELF") ];
             $file
         end
