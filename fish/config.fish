@@ -3,7 +3,7 @@ set t1 alacritty
 
 set t 0
 
-source ~/.config/fish/cmds/brew.sh
+source ~/.config/fish/cmds/brew.fish
 source ~/.config/fish/cmds/cpp.fish
 source ~/.config/fish/cmds/git.fish
 source ~/.config/fish/cmds/gnu.fish
