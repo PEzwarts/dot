@@ -11,6 +11,9 @@ vim.g.neovide_scroll_animation_length = 0.1
 vim.g.term = true
 vim.g.write = false
 
+vim.opt.confirm = false
+vim.opt.termguicolors = true
+
 vim.api.nvim_create_autocmd("User", {
   pattern = "SessionLoadPost",
   callback = function()
