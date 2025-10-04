@@ -12,7 +12,6 @@ vim.g.term = true
 vim.g.write = false
 
 vim.opt.confirm = false
-vim.opt.termguicolors = true
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "SessionLoadPost",
