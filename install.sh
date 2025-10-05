@@ -33,7 +33,8 @@ if [ "$(uname)" == "Linux" ]; then
     sudo pacman -S --noconfirm fish eza dysk fastfetch fd ripgrep fzf ranger
 
     # Wallpapers
-    git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
+    cp -r ./wall/ ~/Desktop/
+    # git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
 
     # Applications
     sudo pacman -S --noconfirm libreoffice-fresh anki
