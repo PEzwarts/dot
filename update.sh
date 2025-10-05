@@ -9,10 +9,10 @@ if [ "$(uname)" == "Linux" ]; then
   cp -r ./fish/ ~/.config/
 
   # Kitty.
-  # cp -r ./kitty/ ~/.config/
+  cp -r ./kitty/ ~/.config/
 
   # Alacritty.
-  cp -r ./alacritty/ ~/.config/
+  # cp -r ./alacritty/ ~/.config/
 
   # Hyprland
   cp -r ./hypr/ ~/.config/
