@@ -6,7 +6,7 @@ function v
           $t1 --command nvim -c ":lua vim.g.term = false" & disown
         end
 
-        bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
+        bash -c "sleep 0.1 && hyprctl dispatch resizeactive -450 0" & disown
         hyprctl dispatch killactive
     else
         if [ $t = 0 ]
@@ -27,7 +27,7 @@ function vb
           $t1 --command nvim -c ":lua vim.g.write = true" & disown
         end
 
-        bash -c "sleep 0.1 && hyprctl dispatch resizeactive 450 0" & disown
+        bash -c "sleep 0.1 && hyprctl dispatch resizeactive -450 0" & disown
         librewolf & disown
         hyprctl dispatch killactive
     else
