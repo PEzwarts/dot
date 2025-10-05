@@ -1,7 +1,7 @@
 set t0 neovide
 set t1 alacritty
 
-set t 1
+set t 0
 
 source ~/.config/fish/cmds/brew.fish
 source ~/.config/fish/cmds/cpp.fish
