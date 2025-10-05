@@ -12,11 +12,23 @@ function m
 end
 
 function ma
-    meson wrap install $argv[1]
+    if [ ! $(pwd | grep "subprojects") ];
+        if [ ! -d ./subprojects ];
+            mkdir ./subprojects
+        end
+    end
+
+    cd ./subprojects
+    touch $argv[2].wrap
+
+    echo "
+[wrap-git]
+url = https://github.com/$argv[1].git
+revision = head
+" > ./$argv[2].wrap
 end
 
 function mr
-    meson wrap uninstall $argv[1]
 end
 
 function mc
