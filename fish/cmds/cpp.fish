@@ -11,6 +11,14 @@ function m
     end
 end
 
+function ma
+    meson wrap install $argv[1]
+end
+
+function mr
+    meson wrap uninstall $argv[1]
+end
+
 function mc
     # xmake clean
 
