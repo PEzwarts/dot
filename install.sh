@@ -18,7 +18,7 @@ if [ "$(uname)" == "Linux" ]; then
     sudo pacman -S --noconfirm lxsession pavucontrol
 
     # Rice
-    sudo pacman -S --noconfirm nwg-panel rofi waypaper swaybg grim
+    sudo pacman -S --noconfirm nwg-panel rofi waypaper swww grim
 
     if [ ! -f ~/Desktop/ ]; then
       mkdir ~/Desktop/
