@@ -13,6 +13,13 @@ vim.keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:w<cr>", { remap = true })
 
 vim.keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", { remap = true })
 
+-- vim.keymap.set({ "n", "i", "v" }, "<D-d>", function ()
+--   if vim.fn.bufnr("$") < 1 then
+--     vim.cmd(":bd")
+--     vim.cmd(":Neotree")
+--   end
+-- end, { remap = true })
+
 -- Move around buffers.
 
 vim.keymap.set({ "n", "i", "v" }, "<A-Left>", "<esc><cmd>:bp<cr>", { remap = true })
@@ -29,6 +36,10 @@ vim.keymap.set({ "n", "i" }, "<D-Down>", "<esc>:MoveLine(1)<cr>", { remap = true
 
 vim.keymap.set("v", "<D-Up>", ":MoveBlock(-1)<cr>", { remap = true, silent = true })
 vim.keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", { remap = true, silent = true })
+
+-- Delete word.
+
+vim.keymap.set({ "n" }, "<S-bs>", "caw", { remap = true })
 
 -- Switch between modes.
 
