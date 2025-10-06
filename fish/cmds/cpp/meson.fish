@@ -1,9 +1,4 @@
 function m
-    # if [ -f ./xmake.lua ]
-    #     xmake project -k compile_commands
-    #     xmake $argv
-    # end
-
     for file in (find . -maxdepth 2 -type f);
         if [ (file $file | grep "ELF") ];
             $file
@@ -34,34 +29,10 @@ function mr
 end
 
 function mc
-    # xmake clean
-
     meson compile -C build
 end
 
 function mn
-#     if [ "$argv[2]" = cpp ]
-#         xmake create -l c++ $argv[1]
-#         cd $argv[1]
-#
-#         echo "
-# target('$argv[1]')
-# set_kind('binary')
-# add_files('src/*.cpp')
-# " > ./xmake.lua
-#     else
-#         xmake create -l $argv[2] $argv[1]
-#         cd $argv[1]
-#
-#         echo "
-# target('$argv[1]')
-# set_kind('binary')
-# add_files('src/*.c')
-# " > ./xmake.lua
-#     end
-#
-#     echo "int main() {}" > ./src/main.$argv[2]
-
     mkdir $argv[1]
     cd $argv[1]
 
