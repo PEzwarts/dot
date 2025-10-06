@@ -18,14 +18,16 @@ function ma
         end
     end
 
-    cd ./subprojects
-    touch $argv[2].wrap
+    meson wrap install $argv[1]
 
-    echo "
-[wrap-git]
-url = https://github.com/$argv[1].git
-revision = head
-" > ./$argv[2].wrap
+#     cd ./subprojects
+#     touch $argv[2].wrap
+#
+#     echo "
+# [wrap-git]
+# url = https://github.com/$argv[1].git
+# revision = head
+# " > ./$argv[2].wrap
 end
 
 function mr
