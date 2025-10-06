@@ -41,5 +41,3 @@ function mn
 
     echo "int main() {}" > ./$argv[1].$argv[2]
 end
-
-# export PKG_CONFIG_PATH=/usr/lib/pkgconfig
