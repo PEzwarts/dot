@@ -3,9 +3,8 @@
 # Personal dotfiles.
 
 * Hyprland
-* Neovim
 * Alacritty
+* Neovim
 * Fish
-* Zed
 * GTK-3
 * GTK-4
