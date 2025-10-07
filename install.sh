@@ -32,8 +32,7 @@ if [ -f /usr/bin/hyprctl ]; then
   sudo pacman -S --noconfirm fish eza dysk fastfetch fd ripgrep fzf ranger
 
   # Wallpapers
-  cp -r ./wall/ ~/Desktop/
-  # git clone https://github.com/elementary/wallpapers ~/Downloads/wallpapers/
+  git clone https://github.com/PEzwarts/wall ~/Desktop/wall/
 
   # Applications
   sudo pacman -S --noconfirm libreoffice-fresh anki
