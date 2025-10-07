@@ -2,13 +2,9 @@
 
 # Personal dotfiles.
 
-OSX support
-
-Linux support
-
 * Hyprland
 * Neovim
-* Kitty
+* Alacritty
 * Fish
 * Zed
 * GTK-3
