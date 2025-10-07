@@ -13,7 +13,7 @@ function mr
 end
 
 function mc
-  cmake .
+    cmake --build ./build/
 end
 
 function mn
@@ -25,6 +25,8 @@ function mn
 
     touch ./CMakeLists.txt
     touch ./src/main.$argv[2]
+
+    cmake -B ./build/ -S .
 
     echo "
 cmake_minimum_required(VERSION 3.5)
