@@ -17,7 +17,7 @@ if [ -f /usr/bin/hyprctl ]; then
   sudo pacman -S --noconfirm lxsession pavucontrol
 
   # Rice
-  sudo pacman -S --noconfirm nwg-panel rofi waypaper swww grim
+  sudo pacman -S --noconfirm nwg-panel rofi waypaper swaybg grim
 
   if [ ! -f ~/Desktop/ ]; then
     mkdir ~/Desktop/
