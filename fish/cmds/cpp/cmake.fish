@@ -13,7 +13,23 @@ function mr
 end
 
 function mc
+  cmake .
 end
 
 function mn
+    mkdir $argv[1]
+    cd $argv[1]
+
+    mkdir build
+    mkdir src
+
+    touch ./CMakeLists.txt
+    touch ./src/main.$argv[2]
+
+    echo "
+cmake_minimum_required(VERSION 3.5)
+project($argv[1])
+add_executable($argv[1] ./src/main.$argv[2])" > ./CMakeLists.txt
+
+    echo "int main() {}" > ./src/main.$argv[2]
 end

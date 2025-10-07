@@ -3,9 +3,9 @@ set t1 alacritty
 
 set t 0
 
-source ~/.config/fish/cmds/cpp/meson.fish
+source ~/.config/fish/cmds/cpp/cmake.fish
+# source ~/.config/fish/cmds/cpp/meson.fish
 # source ~/.config/fish/cmds/cpp/xmake.fish
-# source ~/.config/fish/cmds/cpp/cmake.fish
 
 source ~/.config/fish/cmds/rst.fish
 
