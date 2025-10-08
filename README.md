@@ -2,6 +2,9 @@
 
 # Personal dotfiles.
 
+* OSX
+* Arch X86/ARM
+
 * Hyprland
 * Alacritty
 * Neovim
