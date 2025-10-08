@@ -7,11 +7,10 @@ cp -r ./fish/ ~/.config/
 # Alacritty
 cp -r ./alacritty/ ~/.config/
 
-if [ $(uname | grep "Linux") ]; then
-  cp -r ./hypr/ ~/.config/
+# Hyprland
+cp -r ./hypr/ ~/.config/
 
-  cp -r ./gtk-3.0/ ~/.config/
-  cp -r ./gtk-4.0/ ~/.config/
+cp -r ./gtk-3.0/ ~/.config/
+cp -r ./gtk-4.0/ ~/.config/
 
-  hyprctl reload
-fi
+hyprctl reload
