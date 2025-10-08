@@ -1,4 +1,4 @@
-if [ -f /usr/bin/hyprctl ]; then
+if [[ -f /usr/bin/hyprctl ]]; then
   # Github
   sudo pacman -S --noconfirm github-cli
 
@@ -19,7 +19,7 @@ if [ -f /usr/bin/hyprctl ]; then
   # Rice
   sudo pacman -S --noconfirm nwg-panel rofi waypaper swaybg grim
 
-  if [ ! -f ~/Desktop/ ]; then
+  if [[ ! -f ~/Desktop/ ]]; then
     mkdir ~/Desktop/
     mkdir ~/Downloads/
     mkdir ~/Documents/
