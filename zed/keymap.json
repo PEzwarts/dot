@@ -37,21 +37,21 @@
   {
     "context": "vim_mode == normal",
     "bindings": {
-      "Alt-a": ["vim::SwitchMode", "Insert"]
+      "Alt-z": ["vim::SwitchMode", "Insert"]
     }
   },
 
   {
     "context": "vim_mode == insert",
     "bindings": {
-      "Alt-a": ["vim::SwitchMode", "Normal"]
+      "Alt-z": ["vim::SwitchMode", "Normal"]
     }
   },
 
   {
     "context": "vim_mode == visual",
     "bindings": {
-      "Alt-a": ["vim::SwitchMode", "Normal"]
+      "Alt-z": ["vim::SwitchMode", "Normal"]
     }
   }
 ]
