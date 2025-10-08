@@ -1,4 +1,4 @@
-if [ $(uname -a | grep "asahi") ]; then
+if [ $( $(uname -a) | grep "asahi") ]; then
   ./scripts/arm.sh
 else
   ./scripts/lin.sh

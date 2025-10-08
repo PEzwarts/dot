@@ -13,7 +13,7 @@ if [ $(whoami | grep "root") ]; then
   sed -i "s/# Defaults targetpw/ALL ALL=(ALL:ALL) ALL/g"
   sed -i "s/# ALL ALL=(ALL:ALL) ALL/ALL ALL=(ALL:ALL) ALL/g"
 
-  reboot
+  exit
 fi
 
 if [ -f /usr/bin/hyprctl ]; then
