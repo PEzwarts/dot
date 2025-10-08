@@ -1,16 +1,18 @@
 [
   {
     "bindings": {
-      "Alt-Left": "workspace::ActivatePaneLeft",
-      "Alt-Right": "workspace::ActivatePaneRight",
-      "Alt-x": "workspace::ToggleBottomDock",
-      "Alt-c": "workspace::Save",
-      "Alt-z": "pane::ActivateNextItem",
-      "Alt-d": "pane::CloseActiveItem",
-      "Alt-q": "zed::Quit",
+      "cmd-Left": "workspace::ActivatePaneLeft",
+      "cmd-Right": "workspace::ActivatePaneRight",
+      "cmd-x": "workspace::ToggleBottomDock",
+      "cmd-c": "workspace::Save",
+      "cmd-d": "pane::CloseActiveItem",
+      "cmd-q": "zed::Quit",
 
-      "Alt-Up": "editor::MoveLineUp",
-      "Alt-Down": "editor::MoveLineDown",
+      "Alt-Left": "pane::ActivateNextItem",
+      "Alt-Right": "pane::ActivatePreviousItem",
+
+      "cmd-Up": "editor::MoveLineUp",
+      "cmd-Down": "editor::MoveLineDown",
 
       "Shift-Up": "editor::MovePageUp",
       "Shift-Down": "editor::MovePageDown",
