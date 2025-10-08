@@ -1,6 +1,9 @@
 if [ $(whoami | grep "root") ]; then
   read user
+  read passwd
+
   useradd -m -G users -s /bin/bash $user
+  (echo "$passwd"; echo "$passwd") | passwd $user
 
 #   echo "
 # Defaults targetpw
