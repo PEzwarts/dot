@@ -1,9 +1,6 @@
 # Neovim
 cp -r ./nvim/ ~/.config/
 
-# Zed
-cp -r ./dot/zed ~/.config/
-
 # Fish
 cp -r ./fish/ ~/.config/
 
