@@ -20,4 +20,10 @@ return {
       { "Shatur/neovim-session-manager" },
     },
   },
+
+  {
+    "stevearc/oil.nvim",
+
+    opts = {}
+  }
 }
