@@ -63,13 +63,13 @@ end
 
 -- Increment & decrement
 
--- keymap.set({ "n", "i", "v" }, "<A-Up>", function ()
---   require("dial.map").manipulate("increment", "normal")
--- end, opts)
---
--- keymap.set({ "n", "i", "v" }, "<A-Down>", function ()
---   require("dial.map").manipulate("decrement", "normal")
--- end, opts)
+keymap.set({ "n", "i", "v" }, "<A-Right>", function ()
+  require("dial.map").manipulate("increment", "normal")
+end, opts)
+
+keymap.set({ "n", "i", "v" }, "<A-Left>", function ()
+  require("dial.map").manipulate("decrement", "normal")
+end, opts)
 
 -- Annoying
 
