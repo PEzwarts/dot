@@ -14,10 +14,7 @@ end
 vim.opt.rtp:prepend(path)
 
 require("lazy").setup({
-  {
-    "LazyVim/LazyVim",
-    import = "lazyvim.plugins",
-  },
-
+  { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   { import = "plugins" },
 })
