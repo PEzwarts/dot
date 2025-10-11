@@ -3,7 +3,7 @@
 local keymap = vim.keymap
 local opts = { remap = true, silent = true }
 
-keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><cmd>:Neotree toggle position=float<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
 
 -- vim.keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><C-h>", { remap = true })
 -- vim.keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><C-l>", { remap = true })
