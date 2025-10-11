@@ -1,14 +1,9 @@
--- Move around in neo-tree in normal mode
-
 local keymap = vim.keymap
 local opts = { remap = true, silent = true }
 
-keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
+-- Neotree
 
--- vim.keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><C-h>", { remap = true })
--- vim.keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><C-l>", { remap = true })
--- vim.keymap.set({ "n", "i", "v" }, "<D-Up>", "<esc><C-i>", { remap = true })
--- vim.keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><C-k>", { remap = true })
+keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
 
 -- Save file
 
