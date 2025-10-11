@@ -24,7 +24,7 @@ function mn
 target('$argv[1]')
 set_kind('binary')
 add_files('src/*.cpp')
-" > ./xmake.lua
+" >./xmake.lua
     else
         xmake create -l $argv[2] $argv[1]
         cd $argv[1]
@@ -33,8 +33,8 @@ add_files('src/*.cpp')
 target('$argv[1]')
 set_kind('binary')
 add_files('src/*.c')
-" > ./xmake.lua
+" >./xmake.lua
     end
 
-    echo "int main() {}" > ./src/main.$argv[2]
+    echo "int main() {}" >./src/main.$argv[2]
 end

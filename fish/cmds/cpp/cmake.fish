@@ -1,6 +1,7 @@
 function m
-    for file in (find . -maxdepth 2 -type f);
-        if [ (file $file | grep "ELF") ];
+    for file in (find . -maxdepth 2 -type f)
+        if [ (file $file | grep "ELF") ]
+
             $file
         end
     end
@@ -31,7 +32,7 @@ function mn
     echo "
 cmake_minimum_required(VERSION 3.5)
 project($argv[1])
-add_executable($argv[1] ./src/main.$argv[2])" > ./CMakeLists.txt
+add_executable($argv[1] ./src/main.$argv[2])" >./CMakeLists.txt
 
-    echo "int main() {}" > ./src/main.$argv[2]
+    echo "int main() {}" >./src/main.$argv[2]
 end

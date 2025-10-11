@@ -1,6 +1,7 @@
 function m
-    for file in (find . -maxdepth 2 -type f);
-        if [ (file $file | grep "ELF") ];
+    for file in (find . -maxdepth 2 -type f)
+        if [ (file $file | grep "ELF") ]
+
             $file
         end
     end
@@ -13,7 +14,7 @@ function ma
     #     end
     # end
 
-    if [ ! -f ./conanfile.txt ];
+    if [ ! -f ./conanfile.txt ]
         touch conanfile.txt
     else
         conan install . --output-folder=./build --build=missing
@@ -21,21 +22,26 @@ function ma
 
     # meson wrap install $argv[1]
 
-#     cd ./subprojects
-#     touch $argv[2].wrap
-#
-#     echo "
-# [wrap-git]
-# url = https://github.com/$argv[1].git
-# revision = head
-# " > ./$argv[2].wrap
+    #     cd ./subprojects
+    #     touch $argv[2].wrap
+    #
+    #     echo "
+    # [wrap-git]
+    # url = https://github.com/$argv[1].git
+    # revision = head
+    # " > ./$argv[2].wrap
 end
 
 function mr
 end
 
 function mc
-    meson compile -C build
+    if [ ! -f ./build/conan_meson_native.ini ]
+        meson setup --native-file conan_meson_native.ini build
+        meson compile -C build
+    else
+        meson compile -C build
+    end
 end
 
 function mn
@@ -43,7 +49,8 @@ function mn
     cd $argv[1]
 
     meson init --language=$argv[2] --name=$argv[1]
-    meson setup --native-file ./build/conan_meson_native.ini build
+    meson setup build
+    meson compile -C build
 
-    echo "int main() {}" > ./$argv[1].$argv[2]
+    echo "int main() {}" >./$argv[1].$argv[2]
 end
