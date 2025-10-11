@@ -7,16 +7,14 @@ function m
 end
 
 function ma
-    if [ ! $(pwd | grep "subprojects") ];
-        if [ ! -d ./subprojects ];
-            mkdir ./subprojects
-        end
-    end
+    # if [ ! $(pwd | grep "subprojects") ];
+    #     if [ ! -d ./subprojects ];
+    #         mkdir ./subprojects
+    #     end
+    # end
 
-    if [ ! "./conanfile.txt" ];
+    if [ ! -f ./conanfile.txt ];
         touch conanfile.txt
-        conan setup --native-file ./build/conan_meson_native.ini ./build
-        meson compile -C build
     else
         conan install . --output-folder=./build --build=missing
     end
@@ -45,7 +43,7 @@ function mn
     cd $argv[1]
 
     meson init --language=$argv[2] --name=$argv[1]
-    meson setup build
+    meson setup --native-file ./build/conan_meson_native.ini build
 
     echo "int main() {}" > ./$argv[1].$argv[2]
 end
