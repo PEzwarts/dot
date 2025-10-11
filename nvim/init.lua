@@ -1,9 +1,15 @@
 require("config.lazy")
 
-vim.api.nvim_create_autocmd("User", {
-  pattern = "SessionLoadPost",
-
+vim.api.nvim_create_autocmd("SessionLoadPost", {
   callback = function ()
     vim.cmd(":Neotree action=show position=current")
+  end
+})
+
+vim.api.nvim_create_autocmd("BufDelete", {
+  callback = function ()
+    if vim.fn.bufnr('$') < 3 then
+      vim.cmd(":Neotree action=show position=current")
+    end
   end
 })
