@@ -3,7 +3,7 @@
 local keymap = vim.keymap
 local opts = { remap = true, silent = true }
 
-keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><cmd>:Neotree position=float toggle<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><cmd>:Neotree position=float<cr>", opts)
 
 -- vim.keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><C-h>", { remap = true })
 -- vim.keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><C-l>", { remap = true })
@@ -68,13 +68,13 @@ end
 
 -- Increment & decrement
 
-keymap.set({ "n", "i", "v" }, "<A-Up>", function ()
-  require("dial.map").manipulate("increment", "normal")
-end, opts)
-
-keymap.set({ "n", "i", "v" }, "<A-Down>", function ()
-  require("dial.map").manipulate("decrement", "normal")
-end, opts)
+-- keymap.set({ "n", "i", "v" }, "<A-Up>", function ()
+--   require("dial.map").manipulate("increment", "normal")
+-- end, opts)
+--
+-- keymap.set({ "n", "i", "v" }, "<A-Down>", function ()
+--   require("dial.map").manipulate("decrement", "normal")
+-- end, opts)
 
 -- Annoying
 
