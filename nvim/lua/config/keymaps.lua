@@ -3,10 +3,10 @@
 local keymap = vim.keymap
 local opts = { remap = true, silent = true }
 
--- keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><leader-leader>", opts)
+keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><leader>fF", opts)
 
-vim.keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><C-h>", { remap = true })
-vim.keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><C-l>", { remap = true })
+-- vim.keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><C-h>", { remap = true })
+-- vim.keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><C-l>", { remap = true })
 -- vim.keymap.set({ "n", "i", "v" }, "<D-Up>", "<esc><C-i>", { remap = true })
 -- vim.keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><C-k>", { remap = true })
 
@@ -20,8 +20,9 @@ keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", opts)
 
 -- Move around buffers
 
-keymap.set({ "n", "i", "v" }, "<A-Left>", "<esc><cmd>:bp<cr>", opts)
-keymap.set({ "n", "i", "v" }, "<A-Right>", "<esc><cmd>:bn<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><cmd>:bp<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><cmd>:bn<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-Up>", "<esc><cmd>:bn<cr>", opts)
 
 -- Select all
 
@@ -29,11 +30,11 @@ keymap.set({ "n", "i", "v" }, "<D-s>", "<esc>gg<S-v>G", opts)
 
 -- Move an line or char
 
-keymap.set({ "n", "i" }, "<D-Up>", "<esc>:MoveLine(-1)<cr>", opts)
-keymap.set({ "n", "i" }, "<D-Down>", "<esc>:MoveLine(1)<cr>", opts)
+keymap.set({ "n", "i" }, "<A-Up>", "<esc>:MoveLine(-1)<cr>", opts)
+keymap.set({ "n", "i" }, "<A-Down>", "<esc>:MoveLine(1)<cr>", opts)
 
-keymap.set("v", "<D-Up>", ":MoveBlock(-1)<cr>", opts)
-keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", opts)
+keymap.set("v", "<A-Up>", ":MoveBlock(-1)<cr>", opts)
+keymap.set("v", "<A-Down>", ":MoveBlock(1)<cr>", opts)
 
 -- Delete word
 
