@@ -36,8 +36,14 @@ function mr
 end
 
 function mc
+    if [ ! -f ./conanfile.txt ]
+        touch conanfile.txt
+    else
+        conan install . --output-folder=./build --build=missing
+    end
+
     if [ ! -f ./build/conan_meson_native.ini ]
-        meson setup --native-file conan_meson_native.ini build
+        meson setup --reconfigure --native-file conan_meson_native.ini build
         meson compile -C build
     else
         meson compile -C build

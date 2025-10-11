@@ -30,7 +30,7 @@ function mn
     cmake -B ./build/ -S .
 
     echo "
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 4.1)
 project($argv[1])
 add_executable($argv[1] ./src/main.$argv[2])" >./CMakeLists.txt
 
