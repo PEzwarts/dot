@@ -1,5 +1,10 @@
 -- Move around in neo-tree in normal mode
 
+local keymap = vim.keymap
+local opts = { remap = true, silent = true }
+
+-- keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><leader-leader>", opts)
+
 vim.keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><C-h>", { remap = true })
 vim.keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><C-l>", { remap = true })
 -- vim.keymap.set({ "n", "i", "v" }, "<D-Up>", "<esc><C-i>", { remap = true })
@@ -7,70 +12,70 @@ vim.keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><C-l>", { remap = true })
 
 -- Save file
 
-vim.keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:w<cr>", { remap = true })
+keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:w<cr>", opts)
 
 -- Close an buffer
 
-vim.keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", { remap = true })
+keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", opts)
 
 -- Move around buffers
 
-vim.keymap.set({ "n", "i", "v" }, "<A-Left>", "<esc><cmd>:bp<cr>", { remap = true })
-vim.keymap.set({ "n", "i", "v" }, "<A-Right>", "<esc><cmd>:bn<cr>", { remap = true })
+keymap.set({ "n", "i", "v" }, "<A-Left>", "<esc><cmd>:bp<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<A-Right>", "<esc><cmd>:bn<cr>", opts)
 
 -- Select all
 
-vim.keymap.set({ "n", "i", "v" }, "<D-s>", "<esc>gg<S-v>G", { remap = true })
+keymap.set({ "n", "i", "v" }, "<D-s>", "<esc>gg<S-v>G", opts)
 
 -- Move an line or char
 
-vim.keymap.set({ "n", "i" }, "<D-Up>", "<esc>:MoveLine(-1)<cr>", { remap = true, silent = true })
-vim.keymap.set({ "n", "i" }, "<D-Down>", "<esc>:MoveLine(1)<cr>", { remap = true, silent = true })
+keymap.set({ "n", "i" }, "<D-Up>", "<esc>:MoveLine(-1)<cr>", opts)
+keymap.set({ "n", "i" }, "<D-Down>", "<esc>:MoveLine(1)<cr>", opts)
 
-vim.keymap.set("v", "<D-Up>", ":MoveBlock(-1)<cr>", { remap = true, silent = true })
-vim.keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", { remap = true, silent = true })
+keymap.set("v", "<D-Up>", ":MoveBlock(-1)<cr>", opts)
+keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", opts)
 
 -- Delete word
 
-vim.keymap.set({ "n" }, "<S-bs>", "caw", { remap = true })
+-- keymap.set({ "n" }, "<S-bs>", "caw", opts)
 
 -- Switch between modes
 
-vim.keymap.set("n", "<D-z>", "i", { remap = true })
-vim.keymap.set("i", "<D-z>", "<esc>", { remap = true })
-vim.keymap.set("v", "<D-z>", "i", { remap = true })
+keymap.set("n", "<D-z>", "i", opts)
+keymap.set("i", "<D-z>", "<esc>", opts)
+keymap.set("v", "<D-z>", "i", opts)
 
 -- Terminal
 
-vim.keymap.set("t", "<S-Up>", [[<C-\><C-n><S-Up>]], { remap = true })
-vim.keymap.set("t", "<D-/>", [[<C-\><C-n>/]], { remap = true })
-vim.keymap.set({ "t", "n" }, "<S-bs>", "<C-bs>", { remap = true })
+keymap.set("t", "<S-Up>", [[<C-\><C-n><S-Up>]], opts)
+keymap.set("t", "<D-/>", [[<C-\><C-n>/]], opts)
+keymap.set({ "t", "n" }, "<S-bs>", "<C-bs>", opts)
 
-vim.keymap.set("n", "<cr>", "a", { remap = true })
+keymap.set("n", "<cr>", "a", opts)
 
 if vim.g.term == true then
   if vim.g.write == false then
-    vim.keymap.del({ "n", "i", "v", "t" }, "<D-x>")
+    keymap.del({ "n", "i", "v", "t" }, "<D-x>")
   else
     vim.cmd(":NeovimProjectDiscover")
-    vim.keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:MarkdownPreview<cr>", {remap = true, silent = true})
+    keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:MarkdownPreview<cr>", opts)
   end
 else
   vim.cmd(":NeovimProjectDiscover")
-  vim.keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle direction=tab<cr>", {remap = true, silent = true})
+  keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle direction=tab<cr>", opts)
 end
 
 -- Increment & decrement
 
-vim.keymap.set({ "n", "i", "v" }, "<A-Up>", function ()
+keymap.set({ "n", "i", "v" }, "<A-Up>", function ()
   require("dial.map").manipulate("increment", "normal")
-end, { remap = true })
+end, opts)
 
-vim.keymap.set({ "n", "i", "v" }, "<A-Down>", function ()
+keymap.set({ "n", "i", "v" }, "<A-Down>", function ()
   require("dial.map").manipulate("decrement", "normal")
-end, { remap = true })
+end, opts)
 
 -- Annoying
 
-vim.keymap.set({ "n", "i", "v" }, "qq", "", { remap = true })
-vim.keymap.set({ "n", "i", "v" }, "<D-r>", "", { remap = true })
+vim.keymap.set({ "n", "i", "v" }, "qq", "", opts)
+vim.keymap.set({ "n", "i", "v" }, "<D-r>", "", opts)
