@@ -13,7 +13,15 @@ function ma
         end
     end
 
-    meson wrap install $argv[1]
+    if [ ! "./conanfile.txt" ];
+        touch conanfile.txt
+        conan setup --native-file ./build/conan_meson_native.ini ./build
+        meson compile -C build
+    else
+        conan install . --output-folder=./build --build=missing
+    end
+
+    # meson wrap install $argv[1]
 
 #     cd ./subprojects
 #     touch $argv[2].wrap
