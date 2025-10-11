@@ -1,22 +1,23 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
+if not (vim.uv or vim.loop).fs_stat(path) then
   vim.fn.system({
     "git",
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable",
-    lazypath,
+    path,
   })
 end
 
-vim.opt.rtp:prepend(lazypath)
+vim.opt.rtp:prepend(path)
 
 require("lazy").setup({
   {
     "LazyVim/LazyVim",
     import = "lazyvim.plugins",
   },
+
   { import = "plugins" },
 })
