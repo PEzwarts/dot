@@ -40,9 +40,9 @@ function x
         hyprctl dispatch killactive
     else
         if [ $t = 0 ]
-          killall $t0
+            killall $t0
         else
-          killall $t1
+            killall $t1
         end
     end
 end
@@ -50,5 +50,5 @@ end
 alias cla "wc -l ./**"
 alias cl "wc -l"
 
-alias i "./install.sh"
-alias u "./update.sh"
+alias i "./shell/install.sh"
+alias u "./shell/update.sh"
