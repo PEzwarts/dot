@@ -16,11 +16,7 @@ if [[ -f /usr/bin/hyprctl ]]; then
   sudo pacman -S --noconfirm python pipx
 
   # C/C++
-  sudo pacman -S cmake
-  pipx install cmake-init
-
-  fish_add_path ~/.local/bin/
-  fish_add_path ~/.cargo/bin/
+  sudo pacman -S
 
   # Hypr
   sudo pacman -S --noconfirm hyprland gtklock ly wev
