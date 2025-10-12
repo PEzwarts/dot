@@ -3,11 +3,11 @@ local opts = { remap = true, silent = true }
 
 -- Neotree
 
-keymap.set({ "n", "i", "v" }, "<D-Down>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
 
 -- Save file
 
-keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:w<cr>", opts)
+-- keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:w<cr>", opts)
 
 -- Close an buffer
 
@@ -24,11 +24,11 @@ keymap.set({ "n", "i", "v" }, "<D-s>", "<esc>gg<S-v>G", opts)
 
 -- Move an line or char
 
-keymap.set({ "n", "i" }, "<A-Up>", "<esc>:MoveLine(-1)<cr>", opts)
-keymap.set({ "n", "i" }, "<A-Down>", "<esc>:MoveLine(1)<cr>", opts)
+keymap.set({ "n", "i" }, "<D-Up>", "<esc>:MoveLine(-1)<cr>", opts)
+keymap.set({ "n", "i" }, "<D-Down>", "<esc>:MoveLine(1)<cr>", opts)
 
-keymap.set("v", "<A-Up>", ":MoveBlock(-1)<cr>", opts)
-keymap.set("v", "<A-Down>", ":MoveBlock(1)<cr>", opts)
+keymap.set("v", "<D-Up>", ":MoveBlock(-1)<cr>", opts)
+keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", opts)
 
 -- Delete word
 
@@ -50,29 +50,29 @@ keymap.set("n", "<cr>", "a", opts)
 
 if vim.g.term == true then
   if vim.g.write == false then
-    keymap.del({ "n", "i", "v", "t" }, "<D-Up>")
+    keymap.del({ "n", "i", "v", "t" }, "<D-x>")
   else
     vim.cmd(":NeovimProjectDiscover")
-    keymap.set({"n", "i", "v", "t"}, "<D-Up>", "<cmd>:MarkdownPreview<cr>", opts)
+    keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:MarkdownPreview<cr>", opts)
   end
 else
   vim.cmd(":NeovimProjectDiscover")
-  keymap.set({"n", "i", "v", "t"}, "<D-Up>", "<cmd>:ToggleTerm toggle direction=tab<cr>", opts)
+  keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle direction=tab<cr>", opts)
 end
 
 -- True <-> False
 
-keymap.set({ "n", "i", "v" }, "<A-Right>", function ()
-  require("nvim-toggler").toggle()
-end, opts)
+-- keymap.set({ "n", "i", "v" }, "<A->", function ()
+--   require("nvim-toggler").toggle()
+-- end, opts)
 
 -- Increment & decrement
 
-keymap.set({ "n", "i", "v" }, "<A-Right>", function ()
+keymap.set({ "n", "i", "v" }, "<D-Shift>Up", function ()
   require("dial.map").manipulate("increment", "normal")
 end, opts)
 
-keymap.set({ "n", "i", "v" }, "<A-Left>", function ()
+keymap.set({ "n", "i", "v" }, "<D-Shift>Down", function ()
   require("dial.map").manipulate("decrement", "normal")
 end, opts)
 
