@@ -5,10 +5,22 @@ if [[ -f /usr/bin/hyprctl ]]; then
   # Debug
   sudo pacman -S --noconfirm valgrind
 
-  # Dev
+  # Neovim
   sudo pacman -S --noconfirm neovim neovide luarocks alacritty
-  sudo pacman -S --noconfirm rustup xmake python
+
+  # Rust
+  sudo pacman -S --noconfirm rustup
   rustup install stable
+
+  # Python
+  sudo pacman -S --noconfirm python pipx
+
+  # C/C++
+  sudo pacman -S cmake
+  pipx install cmake-init
+
+  fish_add_path ~/.local/bin/
+  fish_add_path ~/.cargo/bin/
 
   # Hypr
   sudo pacman -S --noconfirm hyprland gtklock ly wev
