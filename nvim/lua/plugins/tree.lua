@@ -1,9 +1,10 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
-    enabled = true,
 
     opts = {
+      enabled = true,
+
       filesystem = {
         filtered_items = {
           visible = true

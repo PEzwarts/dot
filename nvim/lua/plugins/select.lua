@@ -1,7 +1,6 @@
 return {
   {
     "coffebar/neovim-project",
-    lazy = false,
 
     opts = {
       last_session_on_startup = false,
@@ -13,12 +12,12 @@ return {
 
       picker = {
         type = "snacks",
-      },
+      }
     },
 
     dependencies = {
       { "Shatur/neovim-session-manager" },
-    },
+    }
   },
 
   {

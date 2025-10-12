@@ -2,6 +2,6 @@ return {
   {
     "fedepujol/move.nvim",
 
-    opts = {},
-  },
+    opts = {}
+  }
 }
