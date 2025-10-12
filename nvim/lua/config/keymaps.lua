@@ -17,7 +17,6 @@ keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", opts)
 
 keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><cmd>:bp<cr>", opts)
 keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><cmd>:bn<cr>", opts)
-keymap.set({ "n", "i", "v" }, "<D-Up>", "<esc><cmd>:bn<cr>", opts)
 
 -- Select all
 
@@ -51,15 +50,21 @@ keymap.set("n", "<cr>", "a", opts)
 
 if vim.g.term == true then
   if vim.g.write == false then
-    keymap.del({ "n", "i", "v", "t" }, "<D-x>")
+    keymap.del({ "n", "i", "v", "t" }, "<D-Up>")
   else
     vim.cmd(":NeovimProjectDiscover")
-    keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:MarkdownPreview<cr>", opts)
+    keymap.set({"n", "i", "v", "t"}, "<D-Up>", "<cmd>:MarkdownPreview<cr>", opts)
   end
 else
   vim.cmd(":NeovimProjectDiscover")
-  keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle direction=tab<cr>", opts)
+  keymap.set({"n", "i", "v", "t"}, "<D-Up>", "<cmd>:ToggleTerm toggle direction=tab<cr>", opts)
 end
+
+-- True <-> False
+
+keymap.set({ "n", "i", "v" }, "<A-Right>", function ()
+  require("nvim-toggler").toggle()
+end, opts)
 
 -- Increment & decrement
 
