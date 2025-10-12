@@ -3,7 +3,7 @@ local opts = { remap = true, silent = true }
 
 -- Neotree
 
-keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-z>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
 
 -- Save file
 
@@ -36,9 +36,9 @@ keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", opts)
 
 -- Switch between modes
 
-keymap.set("n", "<D-z>", "i", opts)
-keymap.set("i", "<D-z>", "<esc>", opts)
-keymap.set("v", "<D-z>", "i", opts)
+keymap.set("n", "<D-c>", "i", opts)
+keymap.set("i", "<D-c>", "<esc>", opts)
+keymap.set("v", "<D-c>", "i", opts)
 
 -- Terminal
 
