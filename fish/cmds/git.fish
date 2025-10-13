@@ -7,6 +7,7 @@ alias gbd "git branch -d"
 
 alias gm "git merge"
 
+alias ga. "git add ."
 alias ga "git add"
 alias gr "git reset"
 
