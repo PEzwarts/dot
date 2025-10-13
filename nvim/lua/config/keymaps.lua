@@ -3,7 +3,7 @@ local opts = { remap = true, silent = true }
 
 -- Neotree
 
-keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:wincmd w<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-c>", "<cmd>:Neotree toggle position=float<cr>", opts)
 
 -- Save file
 
