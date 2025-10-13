@@ -3,7 +3,7 @@ local opts = { remap = true, silent = true }
 
 -- Neotree
 
-keymap.set({ "n", "i", "v" }, "<D-z>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:wincmd w<cr>", opts)
 
 -- Save file
 
@@ -36,9 +36,9 @@ keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", opts)
 
 -- Switch between modes
 
-keymap.set("n", "<D-c>", "i", opts)
-keymap.set("i", "<D-c>", "<esc>", opts)
-keymap.set("v", "<D-c>", "i", opts)
+keymap.set("n", "<D-z>", "i", opts)
+keymap.set("i", "<D-z>", "<esc>", opts)
+keymap.set("v", "<D-z>", "i", opts)
 
 -- Terminal
 
@@ -60,19 +60,11 @@ else
   keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle direction=tab<cr>", opts)
 end
 
--- True <-> False
-
--- keymap.set({ "n", "i", "v" }, "<A->", function ()
---   require("nvim-toggler").toggle()
--- end, opts)
-
--- Increment & decrement
-
-keymap.set({ "n", "i", "v" }, "<D-Shift>Up", function ()
+keymap.set({ "n", "i", "v" }, "<A-Up>", function ()
   require("dial.map").manipulate("increment", "normal")
 end, opts)
 
-keymap.set({ "n", "i", "v" }, "<D-Shift>Down", function ()
+keymap.set({ "n", "i", "v" }, "<A-Down>", function ()
   require("dial.map").manipulate("decrement", "normal")
 end, opts)
 
