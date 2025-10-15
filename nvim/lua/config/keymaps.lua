@@ -3,7 +3,7 @@ local opts = { remap = true, silent = true }
 
 -- Neotree
 
-keymap.set({ "n", "i", "v" }, "<D-c>", "<cmd>:Neotree toggle position=float<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-c>", "<cmd>:Neotree toggle position=current<cr>", opts)
 
 -- Save file
 
@@ -15,8 +15,18 @@ keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", opts)
 
 -- Move around buffers
 
-keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><cmd>:bp<cr>", opts)
-keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><cmd>:bn<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-Left>", function ()
+  vim.cmd(":w")
+  vim.cmd(":bp")
+end, opts)
+
+keymap.set({ "n", "i", "v" }, "<D-Right>", function ()
+  vim.cmd(":w")
+  vim.cmd(":bn")
+end, opts)
+
+-- keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><cmd>:w<cr><cmd>:bp<cr>", opts)
+-- keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><cmd>:w<cr><cmd>:bn<cr>", opts)
 
 -- Select all
 
