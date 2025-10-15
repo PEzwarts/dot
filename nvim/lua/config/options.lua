@@ -7,5 +7,6 @@ vim.g.neovide_scroll_animation_length = 0.1
 
 vim.g.term = true
 vim.g.write = false
+vim.g.zen = false
 
 vim.opt.confirm = false

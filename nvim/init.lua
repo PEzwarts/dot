@@ -4,6 +4,7 @@ vim.api.nvim_create_autocmd("SessionLoadPost", {
   callback = function ()
     if vim.api.nvim_win_get_width(0) > 300 then
       vim.cmd(":TZAtaraxis")
+      vim.g.zen = true
     end
   end
 })

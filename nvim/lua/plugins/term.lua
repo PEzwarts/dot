@@ -3,10 +3,10 @@ return {
     "akinsho/toggleterm.nvim",
 
     opts = {
-      direction = "float",
+      direction = "tab",
 
       float_opts = {
-        width = vim.api.nvim_win_get_width(0),
+        width = 120,
         height = vim.api.nvim_win_get_height(0)
       }
     }

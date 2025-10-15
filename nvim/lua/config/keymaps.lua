@@ -64,7 +64,12 @@ else
 
   keymap.set({"n", "i", "v", "t"}, "<D-x>", function ()
     vim.cmd(":Neotree action=close")
-    vim.cmd(":ToggleTerm toggle direction=tab")
+
+    if vim.g.zen == true then
+      vim.cmd(":ToggleTerm toggle direction=float")
+    else
+      vim.cmd(":ToggleTerm toggle direction=tab")
+    end
   end, opts)
 end
 

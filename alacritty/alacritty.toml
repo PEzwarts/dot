@@ -13,7 +13,7 @@ primary.background = "#060200"
 style = { shape = "Block", blinking = "On" }
 
 [font]
-size = 10
+size = 8
 
 [mouse]
 hide_when_typing = true
