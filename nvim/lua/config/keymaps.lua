@@ -5,10 +5,6 @@ local opts = { remap = true, silent = true }
 
 keymap.set({ "n", "i", "v" }, "<D-c>", "<cmd>:Neotree toggle position=current<cr>", opts)
 
--- Save file
-
--- keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:w<cr>", opts)
-
 -- Close an buffer
 
 keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", opts)
@@ -24,9 +20,6 @@ keymap.set({ "n", "i", "v" }, "<D-Right>", function ()
   vim.cmd(":w")
   vim.cmd(":bn")
 end, opts)
-
--- keymap.set({ "n", "i", "v" }, "<D-Left>", "<esc><cmd>:w<cr><cmd>:bp<cr>", opts)
--- keymap.set({ "n", "i", "v" }, "<D-Right>", "<esc><cmd>:w<cr><cmd>:bn<cr>", opts)
 
 -- Select all
 
@@ -63,11 +56,16 @@ if vim.g.term == true then
     keymap.del({ "n", "i", "v", "t" }, "<D-x>")
   else
     vim.cmd(":NeovimProjectDiscover")
+
     keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:MarkdownPreview<cr>", opts)
   end
 else
   vim.cmd(":NeovimProjectDiscover")
-  keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:ToggleTerm toggle direction=tab<cr>", opts)
+
+  keymap.set({"n", "i", "v", "t"}, "<D-x>", function ()
+    vim.cmd(":Neotree action=close")
+    vim.cmd(":ToggleTerm toggle direction=tab")
+  end, opts)
 end
 
 keymap.set({ "n", "i", "v" }, "<A-Up>", function ()
