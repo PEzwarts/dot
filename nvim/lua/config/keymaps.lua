@@ -65,7 +65,7 @@ else
   keymap.set({"n", "i", "v", "t"}, "<D-x>", function ()
     vim.cmd(":Neotree action=close")
 
-    vim.cmd(":ToggleTerm toggle direction=tab")
+    vim.cmd(":ToggleTerm")
   end, opts)
 end
 
