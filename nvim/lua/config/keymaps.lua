@@ -17,11 +17,13 @@ keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", opts)
 -- Move around buffers
 
 keymap.set({ "n", "i", "v" }, "<D-Left>", function ()
+  vim.cmd(":Neotree action=close")
   vim.cmd(":w")
   vim.cmd(":bp")
 end, opts)
 
 keymap.set({ "n", "i", "v" }, "<D-Right>", function ()
+  vim.cmd(":Neotree action=close")
   vim.cmd(":w")
   vim.cmd(":bn")
 end, opts)
