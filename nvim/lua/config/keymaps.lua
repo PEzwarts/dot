@@ -3,7 +3,12 @@ local opts = { remap = true, silent = true }
 
 -- Neotree
 
-keymap.set({ "n", "i", "v" }, "<D-c>", "<cmd>:Neotree toggle position=current<cr>", opts)
+-- keymap.set({ "n", "i", "v" }, "<D-c>", "<cmd>:Neotree toggle position=current<cr>", opts)
+
+keymap.set({ "n", "i", "v" }, "<D-c>", function ()
+  vim.cmd(":Neotree toggle position=current")
+  vim.cmd(":wincmd w")
+end, opts)
 
 -- Close an buffer
 
