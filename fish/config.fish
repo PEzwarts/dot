@@ -1,4 +1,3 @@
-set t0 neovide
 set t1 alacritty
 
 set t 1

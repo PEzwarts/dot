@@ -1,7 +1,6 @@
 github-cli
 
 neovim
-neovide
 luarocks
 alacritty
 
