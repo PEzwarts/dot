@@ -4,7 +4,7 @@ return {
 
     opts = {
       scroll = {
-        enabled = true
+        enabled = false
       },
 
       cursor = {
