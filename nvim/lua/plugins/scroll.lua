@@ -2,6 +2,14 @@ return {
   {
     "nvim-mini/mini.animate",
 
-    opts = {}
+    opts = {
+      scroll = {
+        enabled = true
+      },
+
+      cursor = {
+        enabled = false
+      }
+    }
   }
 }

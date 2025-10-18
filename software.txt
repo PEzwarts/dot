@@ -7,10 +7,8 @@ alacritty
 rustup
 
 python
-pipx
 
-clang
-build2
+cmake
 valgrind
 
 hyprland
@@ -21,7 +19,6 @@ wev
 lxsession
 pavucontrol
 
-nwg-panel
 rofi
 waypaper
 swaybg
@@ -33,8 +30,6 @@ dysk
 fastfetch
 fd
 ripgrep
-fzf
 ranger
 
-libreoffice-fresh
 anki
