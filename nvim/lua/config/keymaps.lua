@@ -46,9 +46,9 @@ keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", opts)
 
 -- Switch between modes
 
-keymap.set("n", "<D-z>", "i", opts)
+keymap.set("n", "<D-z>", "<esc>i", opts)
 keymap.set("i", "<D-z>", "<esc>", opts)
-keymap.set("v", "<D-z>", "i", opts)
+keymap.set("v", "<D-z>", "<esc>i", opts)
 
 -- Terminal
 
