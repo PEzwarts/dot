@@ -1,3 +1,3 @@
-for pkg in $(cat ./software.txt); do
+for pkg in $(cat ./shell/arm/software.txt); do
   sudo apt install -y $pkg
 done
