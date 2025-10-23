@@ -1,8 +1,8 @@
-if [ $(uname -a | grep "Debian") ]; then
+if [[ $(uname -a | grep "Debian") ]]; then
   ./shell/arm/software.sh
 else
-  if [ -f /usr/bin/hyprctl ]; then
-    if [ ! -f ~/Desktop/ ]; then
+  if [[ -f /usr/bin/hyprctl ]]; then
+    if [[ ! -f ~/Desktop/ ]]; then
       mkdir ~/Desktop/
       mkdir ~/Downloads/
       mkdir ~/Documents/
