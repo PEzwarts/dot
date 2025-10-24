@@ -32,3 +32,4 @@ ripgrep
 ranger
 
 anki
+librewolf

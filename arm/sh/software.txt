@@ -28,3 +28,5 @@ fastfetch
 fd-find
 ripgrep
 ranger
+
+firefox
