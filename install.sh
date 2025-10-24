@@ -1,5 +1,6 @@
 if [[ $(uname -a | grep "Debian") ]]; then
-  ./shell/arm/software.sh
+  ./arm/shell/software.sh
+  ./arm/shell/update.sh
 else
   if [[ -f /usr/bin/hyprctl ]]; then
     if [[ ! -f ~/Desktop/ ]]; then
@@ -11,7 +12,8 @@ else
       mkdir ~/Videos/
     fi
 
-    ./shell/x86/software.sh
+    ./x86/shell/software.sh
+    ./x86/shell/update.sh
 
     sudo usermod -aG kvm $(whoami)
     sudo usermod -aG libvirt $(whoami)
@@ -19,4 +21,7 @@ else
   fi
 fi
 
-./shell/update.sh
+if [[ $(uname -a | grep "Debian") ]]; then
+  ./osx/shell/software.sh
+  ./osx/shell/update.sh
+fi
