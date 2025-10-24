@@ -8,6 +8,19 @@ python
 cmake
 valgrind
 
+hyprland
+gtklock
+ly
+wev
+
+lxsession
+pavucontrol
+
+rofi
+waypaper
+swaybg
+grim
+
 fish
 eza
 dysk
@@ -15,3 +28,5 @@ fastfetch
 fd
 ripgrep
 ranger
+
+anki
