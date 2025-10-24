@@ -26,7 +26,7 @@ else
   cp -r ./all/alacritty/ ~/.config/
 
   # Hyprland
-  cp -r ./x86/hypr/ ~/.config/
+  cp -r ./all/hypr/ ~/.config/
 
   cp -r ./all/gtk-3.0/ ~/.config/
   cp -r ./all/gtk-4.0/ ~/.config/
