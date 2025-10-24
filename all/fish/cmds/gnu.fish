@@ -50,5 +50,5 @@ end
 alias cla "wc -l ./**"
 alias cl "wc -l"
 
-alias i "./shell/install.sh"
-alias u "./shell/update.sh"
+alias i "./install.sh"
+alias u "./update.sh"
