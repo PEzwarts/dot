@@ -1,3 +1,5 @@
+github-cli
+
 neovim
 alacritty
 
@@ -25,6 +27,8 @@ fish
 eza
 dysk
 fastfetch
-fd-find
+fd
 ripgrep
 ranger
+
+anki
