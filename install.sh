@@ -22,6 +22,10 @@ else
 fi
 
 if [[ $(uname -a | grep "Darwin") ]]; then
+  if [[ ! -f /opt/homebrew/bin/brew ]]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
   ./osx/sh/software.sh
   ./update.sh
 
