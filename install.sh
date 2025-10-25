@@ -1,5 +1,6 @@
 if [[ $(uname -a | grep "Debian") ]]; then
   ./arm/sh/software.sh
+  ./arm/sh/fish.sh
   ./update.sh
 else
   if [[ -f /usr/bin/hyprctl ]]; then
@@ -10,9 +11,12 @@ else
       mkdir ~/Music/
       mkdir ~/Pictures/
       mkdir ~/Videos/
+
+      git clone https://github.com/PEzwarts/wall ~/Desktop/wall/
     fi
 
     ./x86/sh/software.sh
+    ./x86/sh/fish.sh
     ./update.sh
 
     sudo usermod -aG kvm $(whoami)
@@ -27,6 +31,7 @@ if [[ $(uname -a | grep "Darwin") ]]; then
   fi
 
   ./osx/sh/software.sh
+  ./osx/sh/fish.sh
   ./update.sh
 
   defaults write com.apple.dock persistent-others -array
