@@ -1,16 +1,19 @@
 github-cli
 
 neovim
+ttf-jetbrains-mono-nerd
 alacritty
 
 rustup
 
 python
+python-virtualenv
 
 cmake
 valgrind
 
 hyprland
+nwg-panel
 gtklock
 ly
 wev
