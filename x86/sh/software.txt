@@ -33,6 +33,7 @@ fastfetch
 fd
 ripgrep
 ranger
+btop
 
 anki
 librewolf
