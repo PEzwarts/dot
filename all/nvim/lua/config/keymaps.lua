@@ -3,7 +3,8 @@ local opts = { remap = true, silent = true }
 
 -- Neotree
 
-keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
+-- keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:wincmd w<cr>", opts)
 
 -- keymap.set({ "n", "i", "v" }, "<D-c>", function ()
 --   vim.cmd(":Neotree toggle position=current")
@@ -16,14 +17,12 @@ keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", opts)
 
 -- Move around buffers
 
-keymap.set({ "n", "i", "v" }, "<D-Left>", function ()
-  vim.cmd(":Neotree action=close")
+keymap.set({ "n", "i", "v" }, "<D-Left>", function()
   vim.cmd(":w")
   vim.cmd(":bp")
 end, opts)
 
-keymap.set({ "n", "i", "v" }, "<D-Right>", function ()
-  vim.cmd(":Neotree action=close")
+keymap.set({ "n", "i", "v" }, "<D-Right>", function()
   vim.cmd(":w")
   vim.cmd(":bn")
 end, opts)
@@ -64,21 +63,21 @@ if vim.g.term == true then
   else
     vim.cmd(":NeovimProjectDiscover")
 
-    keymap.set({"n", "i", "v", "t"}, "<D-x>", "<cmd>:MarkdownPreview<cr>", opts)
+    keymap.set({ "n", "i", "v", "t" }, "<D-x>", "<cmd>:MarkdownPreview<cr>", opts)
   end
 else
   vim.cmd(":NeovimProjectDiscover")
 
-  keymap.set({"n", "i", "v", "t"}, "<D-x>", function ()
+  keymap.set({ "n", "i", "v", "t" }, "<D-x>", function()
     vim.cmd(":ToggleTerm")
   end, opts)
 end
 
-keymap.set({ "n", "i", "v" }, "<A-Up>", function ()
+keymap.set({ "n", "i", "v" }, "<A-Up>", function()
   require("dial.map").manipulate("increment", "normal")
 end, opts)
 
-keymap.set({ "n", "i", "v" }, "<A-Down>", function ()
+keymap.set({ "n", "i", "v" }, "<A-Down>", function()
   require("dial.map").manipulate("decrement", "normal")
 end, opts)
 
