@@ -13,7 +13,6 @@ cmake
 valgrind
 
 hyprland
-nwg-panel
 gtklock
 ly
 wev
