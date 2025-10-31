@@ -4,7 +4,12 @@ local opts = { remap = true, silent = true }
 -- Neotree
 
 -- keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
-keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:wincmd w<cr>", opts)
+-- keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:wincmd w<cr>", opts)
+
+keymap.set({ "n", "i", "v" }, "<D-c>", function()
+  vim.cmd(":wincmd w")
+  require("neo-tree.sources.filesystem.commands").refresh(require("neo-tree.sources.manager").get_state("filesystem"))
+end, opts)
 
 -- keymap.set({ "n", "i", "v" }, "<D-c>", function ()
 --   vim.cmd(":Neotree toggle position=current")
@@ -52,6 +57,8 @@ keymap.set("v", "<D-z>", "<esc>i", opts)
 -- Terminal
 
 keymap.set("t", "<S-Up>", [[<C-\><C-n><S-Up>]], opts)
+keymap.set("t", "<S-Down>", [[<C-\><C-n>]], opts)
+
 keymap.set("t", "<D-/>", [[<C-\><C-n>/]], opts)
 keymap.set({ "t", "n" }, "<S-bs>", "<C-bs>", opts)
 
