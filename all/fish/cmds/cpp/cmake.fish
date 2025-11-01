@@ -51,4 +51,6 @@ include_directories($argv[1] PRIVATE ./deps/)
 add_executable($argv[1] ./src/main.$argv[2])" >./CMakeLists.txt
 
     echo "int main() {}" >./src/main.$argv[2]
+
+    cd ..
 end
