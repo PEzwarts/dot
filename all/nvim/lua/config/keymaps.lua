@@ -15,6 +15,7 @@ local opts = { remap = true, silent = true }
 keymap.set({ "n", "i", "v" }, "<D-c>", function()
   vim.cmd(":Neotree toggle position=current")
   vim.cmd(":wincmd w")
+  vim.cmd(":stopinsert")
 end, opts)
 
 -- Close an buffer
