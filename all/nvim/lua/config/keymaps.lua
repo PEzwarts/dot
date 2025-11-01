@@ -20,7 +20,7 @@ end, opts)
 
 -- Close an buffer
 
-keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr><esc>", opts)
 
 -- Move around buffers
 
