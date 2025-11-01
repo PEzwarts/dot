@@ -13,7 +13,7 @@ local opts = { remap = true, silent = true }
 -- end, opts)
 
 keymap.set({ "n", "i", "v" }, "<D-c>", function()
-  vim.cmd(":Neotree toggle position=current")
+  vim.cmd(":Neotree toggle position=float")
   vim.cmd(":wincmd w")
   vim.cmd(":stopinsert")
 end, opts)
