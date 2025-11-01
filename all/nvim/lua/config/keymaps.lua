@@ -6,16 +6,16 @@ local opts = { remap = true, silent = true }
 -- keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
 -- keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:wincmd w<cr>", opts)
 
-keymap.set({ "n", "i", "v" }, "<D-c>", function()
-  vim.cmd(":stopinsert")
-  vim.cmd(":wincmd w")
-  require("neo-tree.sources.filesystem.commands").refresh(require("neo-tree.sources.manager").get_state("filesystem"))
-end, opts)
-
--- keymap.set({ "n", "i", "v" }, "<D-c>", function ()
---   vim.cmd(":Neotree toggle position=current")
+-- keymap.set({ "n", "i", "v" }, "<D-c>", function()
+--   vim.cmd(":stopinsert")
 --   vim.cmd(":wincmd w")
+--   require("neo-tree.sources.filesystem.commands").refresh(require("neo-tree.sources.manager").get_state("filesystem"))
 -- end, opts)
+
+keymap.set({ "n", "i", "v" }, "<D-c>", function()
+  vim.cmd(":Neotree toggle position=current")
+  vim.cmd(":wincmd w")
+end, opts)
 
 -- Close an buffer
 
