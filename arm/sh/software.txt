@@ -22,11 +22,16 @@ swaybg
 grim
 
 fish
-eza
-dysk
+
 fastfetch
-fd-find
+dysk
+btop
+
 ripgrep
+bat
+
+fd-find
+eza
 ranger
 
 firefox

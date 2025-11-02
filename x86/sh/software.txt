@@ -26,13 +26,17 @@ swaybg
 grim
 
 fish
-eza
-dysk
+
 fastfetch
-fd
-ripgrep
-ranger
+dysk
 btop
+
+ripgrep
+bat
+
+fd
+eza
+ranger
 
 anki
 librewolf
