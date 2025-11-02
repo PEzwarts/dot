@@ -13,7 +13,7 @@ primary.background = "#060200"
 style = { shape = "Block", blinking = "On" }
 
 [font]
-normal.family = "JetBrainsMono Nerd Font"
+# normal.family = "JetBrainsMono Nerd Font"
 size = 10
 
 [mouse]
