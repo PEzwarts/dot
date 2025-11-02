@@ -33,8 +33,8 @@ alias gf "git fetch"
 # alias gtl "git worktree list"
 
 alias gc "git clone"
-alias gd "git diff | cat"
-alias gl "git log --graph --oneline --decorate | cat"
+alias gd "git diff | bat --pager=none"
+alias gl "git log --graph --oneline --decorate | bat --pager=none"
 
 alias gco "git checkout"
 
