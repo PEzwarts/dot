@@ -29,7 +29,7 @@ alias 8 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 9"
 alias 9 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
 
 alias f fd
-alias ct "bat --pager=none"
+alias b "bat --pager=none"
 alias r ranger
 
 alias d "dysk -a"
