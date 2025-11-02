@@ -3,7 +3,7 @@ return {
     "sphamba/smear-cursor.nvim",
 
     opts = {
-      smear_between_buffers = true,
+      smear_between_buffers = false,
 
       scroll_buffer_space = true,
 
