@@ -19,9 +19,6 @@ else
     ./x86/sh/fish.sh
     ./update.sh
 
-    # tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time=No --rainbow_prompt_separators=Angled --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat --powerline_prompt_style='One line' --prompt_spacing=Compact --icons='Many icons' --transient=No
-    tide configure --auto --style=Classic --prompt_colors='True color' --classic_prompt_color=Darkest --show_time=No --classic_prompt_separators=Angled --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat --powerline_prompt_style='One line' --prompt_spacing=Compact --icons='Many icons' --transient=No
-
     sudo usermod -aG kvm $(whoami)
     sudo usermod -aG libvirt $(whoami)
     sudo usermod -aG input $(whoami)
