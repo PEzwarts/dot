@@ -42,5 +42,5 @@ if [[ $(uname -a | grep "Darwin") ]]; then
   cp -r ./all/fish/ ~/.config/
 
   # Alacritty
-  cp -r ./all/alacritty/ ~/.config/
+  cp -r ./arm/alacritty/ ~/.config/
 fi
