@@ -5,13 +5,18 @@ return {
     opts = {
       last_session_on_startup = false,
 
+      picker = {
+        type = "snacks",
+      },
+
       projects = {
         "~/*",
         "/run/media/overlord/*",
       },
 
-      picker = {
-        type = "snacks",
+      session_manager_opts = {
+        "~/*",
+        "/run/media/overlord/*"
       }
     },
 
