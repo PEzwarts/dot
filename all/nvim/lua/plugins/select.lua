@@ -14,12 +14,12 @@ return {
         "/run/media/overlord/*",
       },
 
-      session_manager_opts = {
-        autosave_ignore_dirs = {
-          "~/*",
-          "/run/media/overlord/*"
-        }
-      }
+      -- session_manager_opts = {
+      --   autosave_ignore_dirs = {
+      --     "~/*",
+      --     "/run/media/overlord/*"
+      --   }
+      -- }
     },
 
     dependencies = {
