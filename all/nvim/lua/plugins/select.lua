@@ -15,8 +15,10 @@ return {
       },
 
       session_manager_opts = {
-        "~/*",
-        "/run/media/overlord/*"
+        autosave_ignore_dirs = {
+          "~/*",
+          "/run/media/overlord/*"
+        }
       }
     },
 
