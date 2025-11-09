@@ -2,7 +2,7 @@ alias sd sudo
 
 alias mk touch
 alias mkd mkdir
-alias rmd "rm -r"
+alias rmd "rm -rf"
 
 alias . "cd .."
 alias .. "cd ../.."
