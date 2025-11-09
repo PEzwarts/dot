@@ -2,7 +2,7 @@ return {
   {
     "chrisgrieser/nvim-early-retirement",
 
-    opts = {
+    defaultOpts = {
       deleteBufferWhenFileDeleted = true
     }
   }
