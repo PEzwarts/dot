@@ -12,6 +12,20 @@ return {
   {
     "neovim/nvim-lspconfig",
 
+    config = function ()
+      local settings = require("mason.settings")
+
+      require("nvim-lspconfig.rust-analyzer").setup{(
+        settings {
+          ["rust-analyzer"] = {
+            cmd_env = {
+              CARGO_TARGET_DIR = "/tmp/rust-analyzer"
+            }
+          }
+        }
+      )}
+    end,
+
     dependencies = {
       { "mason-org/mason.nvim" },
       { "mason-org/mason-lspconfig.nvim" }
@@ -46,7 +60,7 @@ return {
         "lemminx",
 
         "lua-language-server",
-        "stylua"
+    "stylua"
       },
     },
 
