@@ -33,7 +33,10 @@ alias gft "git fetch --tags"
 # alias gtr "git worktree remove"
 # alias gtl "git worktree list"
 
-alias gc "git clone"
+function gc
+  git clone https://github.com/$argv[1]/$argv[2].git
+end
+
 alias gd "git diff | bat --pager=none"
 alias gl "git log --graph --oneline --decorate | bat --pager=none"
 alias gt "git tag"
