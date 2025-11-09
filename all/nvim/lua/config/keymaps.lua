@@ -62,7 +62,7 @@ keymap.set("t", "<S-Down>", [[<C-\><C-n>]], opts)
 keymap.set("t", "<D-/>", [[<C-\><C-n>/]], opts)
 keymap.set({ "t", "n" }, "<S-bs>", "<C-bs>", opts)
 
-keymap.set("n", "<cr>", "a", opts)
+keymap.set("n", "<cr>", "<esc>a", opts)
 
 if vim.g.term == true then
   if vim.g.write == false then
