@@ -7,6 +7,8 @@ if [[ $(uname -a | grep "Darwin") ]]; then
 
   # Alacritty
   cp -r ./arm/alacritty/ ~/.config/
+
+  exit
 fi
 
 if [[ $(uname -a | grep "Debian") ]]; then
