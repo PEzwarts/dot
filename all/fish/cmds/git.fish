@@ -36,6 +36,7 @@ alias gft "git fetch --tags"
 alias gc "git clone"
 alias gd "git diff | bat --pager=none"
 alias gl "git log --graph --oneline --decorate | bat --pager=none"
+alias gt "git tag"
 
 alias gco "git checkout"
 
