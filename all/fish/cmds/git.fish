@@ -16,10 +16,11 @@ alias gcma "git commit --amend -m"
 # alias gr "git revert"
 
 alias gph "git reset --hard && git pull"
+alias gp "git pull"
 
 alias gP "git push"
-alias gp "git pull"
 alias gf "git fetch"
+alias gft "git fetch --tags"
 
 # Rebase dangerous; changes git hashes.
 # alias grb "git rebase"
