@@ -1,13 +1,15 @@
 return {
+  { "Kaikacy/Lemons.nvim" },
+
   {
     "LazyVim/LazyVim",
 
     opts = {
-      colorscheme = "base16-3024",
+      colorscheme = "lemons",
     }
   },
 
-  { "RRethy/base16-nvim" },
+  -- { "RRethy/base16-nvim" },
 
   -- { "xiyaowong/transparent.nvim" }
 }
