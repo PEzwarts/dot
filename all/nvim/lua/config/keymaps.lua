@@ -1,10 +1,11 @@
 local keymap = vim.keymap
 local opts = { remap = true, silent = true }
 
--- Neotree
+-- Fuzzy
 
--- keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:Neotree toggle position=current<cr>", opts)
--- keymap.set({ "n", "i", "v" }, "<D-c>", "<esc><cmd>:wincmd w<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-f>", "<esc><cmd>:FZF<cr>", opts)
+
+-- Neotree
 
 keymap.set({ "n", "i", "v" }, "<D-c>", function()
   vim.cmd(":stopinsert")
