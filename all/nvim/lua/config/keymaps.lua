@@ -3,7 +3,7 @@ local opts = { remap = true, silent = true }
 
 -- Fuzzy
 
-keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:FZF<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:Telescope fd<cr>", opts)
 
 -- Neotree
 

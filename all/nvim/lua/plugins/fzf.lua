@@ -1,3 +1,3 @@
 return {
-  { "junegunn/fzf" }
+  { "nvim-telescope/telescope.nvim" }
 }
