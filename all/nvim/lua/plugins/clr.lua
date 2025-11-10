@@ -3,13 +3,15 @@ return {
     "LazyVim/LazyVim",
 
     opts = {
-      colorscheme = "devel",
+      colorscheme = "base16-3024",
     }
   },
 
-  -- { "RRethy/base16-nvim" },
+  { "RRethy/base16-nvim" },
 
-  -- { "Kaikacy/Lemons.nvim" },
+  { "Kaikacy/Lemons.nvim" },
+
+  { "morhetz/gruvbox" },
 
   { "makestatic/devel.nvim" }
 
