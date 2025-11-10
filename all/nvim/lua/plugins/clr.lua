@@ -11,8 +11,6 @@ return {
 
   { "Kaikacy/Lemons.nvim" },
 
-  { "morhetz/gruvbox" },
-
   { "makestatic/devel.nvim" }
 
   -- { "xiyaowong/transparent.nvim" }
