@@ -3,7 +3,7 @@ local opts = { remap = true, silent = true }
 
 -- Fuzzy
 
-keymap.set({ "n", "i", "v" }, "<D-f>", "<esc><cmd>:FZF<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:FZF<cr>", opts)
 
 -- Neotree
 
@@ -35,7 +35,7 @@ end, opts)
 
 -- Select all
 
-keymap.set({ "n", "i", "v" }, "<D-s>", "<esc>gg<S-v>G", opts)
+keymap.set({ "n", "i", "v" }, "<D-a>", "<esc>gg<S-v>G", opts)
 
 -- Move an line or char
 
