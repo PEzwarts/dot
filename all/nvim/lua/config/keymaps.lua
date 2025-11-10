@@ -77,6 +77,7 @@ else
 
   keymap.set({ "n", "i", "v", "t" }, "<D-x>", function()
     vim.cmd(":ToggleTerm")
+    require("neo-tree.sources.filesystem.commands").refresh(require("neo-tree.sources.manager").get_state("filesystem"))
   end, opts)
 end
 
