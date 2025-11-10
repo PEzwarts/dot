@@ -10,8 +10,8 @@ return {
       },
 
       projects = {
-        "~/*",
         "/run/media/overlord/*",
+        "~/*",
       },
 
       -- session_manager_opts = {
