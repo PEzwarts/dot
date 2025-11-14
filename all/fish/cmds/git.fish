@@ -37,7 +37,11 @@ function gc
   git clone https://github.com/$argv[1]/$argv[2].git
 end
 
-alias gd "git diff | bat --pager=none"
+function gd
+  git diff | bat --pager=none
+  git diff --name-status | bat --pager=none
+end
+
 alias gl "git log --graph --oneline --decorate | bat --pager=none"
 alias gt "git tag"
 

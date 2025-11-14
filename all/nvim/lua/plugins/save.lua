@@ -5,7 +5,7 @@ return {
     opts = {
       enabled = true,
 
-      trigger_events = { "InsertLeave" }
+      trigger_events = { "InsertLeave", "TextChanged" }
     }
   }
 }
