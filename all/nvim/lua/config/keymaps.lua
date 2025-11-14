@@ -8,9 +8,7 @@ keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:Telescope fd<cr>", opts)
 -- Neotree
 
 keymap.set({ "n", "i", "v" }, "<D-c>", function()
-  vim.cmd(":stopinsert")
-  vim.cmd(":wincmd w")
-  require("neo-tree.sources.filesystem.commands").refresh(require("neo-tree.sources.manager").get_state("filesystem"))
+  require("ranger-nvim").open()
 end, opts)
 
 -- keymap.set({ "n", "i", "v" }, "<D-c>", function()
@@ -26,10 +24,12 @@ keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr><esc>", opts)
 -- Move around buffers
 
 keymap.set({ "n", "i", "v" }, "<D-Left>", function()
+  vim.cmd(":w")
   vim.cmd(":bp")
 end, opts)
 
 keymap.set({ "n", "i", "v" }, "<D-Right>", function()
+  vim.cmd(":w")
   vim.cmd(":bn")
 end, opts)
 
@@ -65,20 +65,13 @@ keymap.set({ "t", "n" }, "<S-bs>", "<C-bs>", opts)
 
 keymap.set("n", "<cr>", "<esc>a", opts)
 
-if vim.g.term == true then
-  if vim.g.write == false then
-    keymap.del({ "n", "i", "v", "t" }, "<D-x>")
-  else
-    vim.cmd(":NeovimProjectDiscover")
-
-    keymap.set({ "n", "i", "v", "t" }, "<D-x>", "<cmd>:MarkdownPreview<cr>", opts)
-  end
-else
+if vim.g.term == false then
   vim.cmd(":NeovimProjectDiscover")
 
   keymap.set({ "n", "i", "v", "t" }, "<D-x>", function()
     vim.cmd(":ToggleTerm")
-    -- require("neo-tree.sources.filesystem.commands").refresh(require("neo-tree.sources.manager").get_state("filesystem"))
+    vim.cmd(":NoNeckPain")
+    vim.cmd(":startinsert")
   end, opts)
 end
 
