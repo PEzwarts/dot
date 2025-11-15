@@ -2,7 +2,7 @@ require("config.lazy")
 
 vim.api.nvim_create_autocmd("SessionLoadPost", {
   callback = function()
-    vim.cmd(":NoNeckPain")
+    -- vim.cmd(":NoNeckPain")
   end
 })
 
