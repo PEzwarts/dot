@@ -8,8 +8,7 @@ keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:Telescope fd<cr>", opts)
 -- Neotree
 
 keymap.set({ "n", "i", "v" }, "<D-c>", function()
-  require("ranger-nvim").open()
-  -- vim.cmd(":Neotree toggle position=float")
+  vim.cmd(":Neotree toggle position=current")
 end, opts)
 
 -- keymap.set({ "n", "i", "v" }, "<D-c>", function()
