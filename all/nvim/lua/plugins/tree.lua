@@ -1,17 +1,17 @@
 return {
-  -- { "kelly-lin/ranger.nvim" }
+  { "kelly-lin/ranger.nvim" }
 
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-
-    opts = {
-      enabled = true,
-
-      filesystem = {
-        filtered_items = {
-          visible = true
-        }
-      }
-    }
-  }
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --
+  --   opts = {
+  --     enabled = true,
+  --
+  --     filesystem = {
+  --       filtered_items = {
+  --         visible = true
+  --       }
+  --     }
+  --   }
+  -- }
 }
