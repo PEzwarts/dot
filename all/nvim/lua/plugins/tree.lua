@@ -7,8 +7,6 @@ return {
         width = 1,
         height = 1,
 
-        -- choosefile_path = "/tmp/ranger_file_path",
-        -- servername_path = "/tmp/nvim_servername",
         border = "solid"
       })
     end

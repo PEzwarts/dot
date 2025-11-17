@@ -11,12 +11,6 @@ keymap.set({ "n", "i", "v", "t" }, "<D-c>", function()
   require("neoranger").toggleFloat()
 end, opts)
 
--- keymap.set({ "n", "i", "v" }, "<D-c>", function()
---   vim.cmd(":Neotree toggle position=current")
---   vim.cmd(":stopinsert")
---   vim.cmd(":wincmd w")
--- end, opts)
-
 -- Close an buffer
 
 keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr><esc>", opts)
@@ -70,8 +64,6 @@ if vim.g.term == false then
 
   keymap.set({ "n", "i", "v", "t" }, "<D-x>", function()
     vim.cmd(":ToggleTerm")
-    -- vim.cmd(":NoNeckPain")
-    -- vim.cmd(":startinsert")
   end, opts)
 end
 
