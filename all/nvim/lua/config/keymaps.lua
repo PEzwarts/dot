@@ -7,8 +7,8 @@ keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:Telescope fd<cr>", opts)
 
 -- Neotree
 
-keymap.set({ "n", "i", "v" }, "<D-c>", function()
-  vim.cmd(":Neotree toggle position=current")
+keymap.set({ "n", "i", "v", "t" }, "<D-c>", function()
+  require("neoranger").toggleFloat()
 end, opts)
 
 -- keymap.set({ "n", "i", "v" }, "<D-c>", function()
@@ -24,12 +24,12 @@ keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr><esc>", opts)
 -- Move around buffers
 
 keymap.set({ "n", "i", "v" }, "<D-Left>", function()
-  vim.cmd(":w")
+  -- vim.cmd(":w")
   vim.cmd(":bp")
 end, opts)
 
 keymap.set({ "n", "i", "v" }, "<D-Right>", function()
-  vim.cmd(":w")
+  -- vim.cmd(":w")
   vim.cmd(":bn")
 end, opts)
 
