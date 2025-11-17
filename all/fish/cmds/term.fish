@@ -1,25 +1,16 @@
 function v
     if [ "$(uname)" = Linux ]
-        neovide -- -c ":lua vim.g.term = false" & disown
+        if [ (hyprctl -j activeworkspace | jq -r '.windows') = 1 ]
+            neovide -- -c ":lua vim.g.term = false vim.g.neovide_padding_left = 500 vim.g.neovide_padding_right = 500" & disown
+        else if [ (hyprctl -j activeworkspace | jq -r '.windows') > 1 ]
+            neovide -- -c ":lua vim.g.term = false vim.g.neovide_padding_left = 0 vim.g.neovide_padding_right = 0" & disown
+        end
 
         bash -c "sleep 0.1 && hyprctl dispatch resizeactive -450 0" & disown
         hyprctl dispatch killactive
     else
         killall neovide
         neovide -- -c ":lua vim.g.term = false" & disown
-    end
-end
-
-function vb
-    if [ "$(uname)" = Linux ]
-        neovide -- -c ":lua vim.g.write = true" & disown
-
-        bash -c "sleep 0.1 && hyprctl dispatch resizeactive -450 0" & disown
-        librewolf & disown
-        hyprctl dispatch killactive
-    else
-        killall neovide
-        neovide -- -c ":lua vim.g.write = true" & disown
     end
 end
 

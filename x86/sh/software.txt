@@ -1,7 +1,7 @@
 github-cli
 
 neovim
-ttf-jetbrains-mono-nerd
+jq
 alacritty
 
 rustup
