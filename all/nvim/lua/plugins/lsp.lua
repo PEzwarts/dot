@@ -60,7 +60,7 @@ return {
         "lemminx",
 
         "lua-language-server",
-    "stylua"
+        "stylua"
       },
     },
 
