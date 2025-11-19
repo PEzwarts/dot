@@ -8,6 +8,9 @@ vim.opt.smarttab = true
 vim.opt.expandtab = true
 vim.opt.confirm = false
 
+vim.opt.hidden = false
+vim.opt.swapfile = false
+
 vim.wo.relativenumber = false
 
 vim.g.neovide_scale_factor = 0.7
