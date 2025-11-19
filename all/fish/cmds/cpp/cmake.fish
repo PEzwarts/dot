@@ -31,6 +31,14 @@ function mc
 end
 
 function mn
+    if [ ! $argv[1] ]
+        return 0
+    end
+
+    if [ ! $argv[2] ]
+        return 0
+    end
+
     mkdir $argv[1]
     cd $argv[1]
 

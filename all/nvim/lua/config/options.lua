@@ -1,4 +1,11 @@
 vim.g.autoformat = false
+vim.g.term = true
+
+vim.opt.autoindent = true
+vim.opt.breakindent = true
+vim.opt.smartindent = true
+vim.opt.smarttab = true
+vim.opt.expandtab = true
 vim.opt.confirm = false
 
 vim.wo.relativenumber = false
@@ -16,5 +23,3 @@ vim.g.neovide_scroll_animation_far_lines = 0
 
 vim.g.neovide_padding_left = 500
 vim.g.neovide_padding_right = 500
-
-vim.g.term = true

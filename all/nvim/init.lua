@@ -6,10 +6,8 @@ vim.api.nvim_create_autocmd("SessionLoadPost", {
   end
 })
 
--- vim.api.nvim_create_autocmd("BufDelete", {
---   callback = function()
---     if vim.fn.bufnr("$") < 1 then
---       vim.cmd(":Neotree action=show position=current")
---     end
---   end
--- })
+vim.api.nvim_create_autocmd("InsertLeave", {
+  callback = function()
+    vim.cmd(":LazyFormat")
+  end
+})
