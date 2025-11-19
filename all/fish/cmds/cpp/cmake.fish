@@ -14,9 +14,11 @@ function ma
 
         cd ./deps
 
-        wget https://github.com/$argv[1]/archive/refs/tags/$argv[2].tar.gz
-        tar xf ./$argv[2].tar.gz
-        rm $argv[2].tar.gz
+        # wget https://github.com/$argv[1]/archive/refs/tags/$argv[2].tar.gz
+        # tar xf ./$argv[2].tar.gz
+        # rm $argv[2].tar.gz
+
+        git clone https://github.com/$argv[1]/$argv[2]
 
         cd ..
     end
