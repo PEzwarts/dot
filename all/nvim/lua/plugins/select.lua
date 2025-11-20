@@ -14,13 +14,6 @@ return {
       projects = {
         "/run/media/overlord/d0/*",
       },
-
-      -- session_manager_opts = {
-      --   autosave_ignore_dirs = {
-      --     "~/*",
-      --     "/run/media/overlord/*"
-      --   }
-      -- }
     },
 
     dependencies = {
