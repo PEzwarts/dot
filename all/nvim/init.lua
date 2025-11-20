@@ -6,8 +6,8 @@ vim.api.nvim_create_autocmd("SessionLoadPost", {
   end
 })
 
-vim.api.nvim_create_autocmd("InsertLeave", {
-  callback = function()
-    vim.cmd(":LazyFormat")
-  end
-})
+-- vim.api.nvim_create_autocmd("InsertLeave", {
+--   callback = function()
+--     vim.cmd(":LazyFormat")
+--   end
+-- })
