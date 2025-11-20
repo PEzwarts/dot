@@ -6,7 +6,7 @@ return {
       last_session_on_startup = false,
 
       picker = {
-        type = "snacks",
+        type = "telescope",
       },
 
       projects = {
