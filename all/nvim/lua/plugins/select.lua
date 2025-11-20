@@ -1,4 +1,6 @@
 return {
+  { "nvim-telescope/telescope.nvim" },
+
   {
     "coffebar/neovim-project",
 
