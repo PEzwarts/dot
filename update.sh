@@ -8,6 +8,9 @@ if [[ $(uname -a | grep "Darwin") ]]; then
   # Alacritty
   cp -r ./arm/alacritty/ ~/.config/
 
+  # Ghostty
+  cp -r ./all/ghostty/ ~/.config/
+
   exit
 fi
 
@@ -20,6 +23,9 @@ if [[ $(uname -a | grep "Debian") ]]; then
 
   # Alacritty
   cp -r ./all/alacritty/ ~/.config/
+
+  # Ghostty
+  cp -r ./all/ghostty/ ~/.config/
 
   # Hyprland
   cp -r ./arm/hypr/ ~/.config/
@@ -37,6 +43,9 @@ else
 
   # Alacritty
   cp -r ./all/alacritty/ ~/.config/
+
+  # Ghostty
+  cp -r ./all/ghostty/ ~/.config/
 
   # Hyprland
   cp -r ./all/hypr/ ~/.config/
