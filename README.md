@@ -11,8 +11,12 @@
 * GTK-4
 
 * Alacritty
-* Ghostty
+* Ghostty; with shaders!
+* Neovide
 * Kitty
+
+* Ranger
+* Ueberzug++
 
 * Neovim
 * Fish
