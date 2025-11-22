@@ -8,11 +8,11 @@ end
 
 function ma
     if [ -f ./CMakeLists.txt ]
-        if [ ! -d ./deps/ ]
-            mkdir deps
+        if [ ! -d ./lib/ ]
+            mkdir lib
         end
 
-        cd ./deps
+        cd ./lib
 
         # wget https://github.com/$argv[1]/archive/refs/tags/$argv[2].tar.gz
         # tar xf ./$argv[2].tar.gz
@@ -25,7 +25,7 @@ function ma
 end
 
 function mr
-    rm -r ./deps/$argv[1]
+    rm -r ./lib/$argv[1]
 end
 
 function mc
@@ -57,7 +57,7 @@ project($argv[1])
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-include_directories($argv[1] PRIVATE ./deps/)
+include_directories($argv[1] PRIVATE ./lib/)
 add_executable($argv[1] ./src/main.$argv[2])" >./CMakeLists.txt
 
     echo "int main() {}" >./src/main.$argv[2]
