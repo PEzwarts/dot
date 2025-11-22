@@ -5,6 +5,11 @@ local opts = { remap = true, silent = true }
 
 keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:NeovimProjectDiscover<cr>", opts)
 
+keymap.set({ "t" }, "<D-s>", function()
+  vim.cmd(":ToggleTerm")
+  vim.cmd(":NeovimProjectDiscover")
+end, opts)
+
 -- Neotree
 
 keymap.set({ "n", "i", "v", "t" }, "<D-c>", function()
@@ -62,7 +67,12 @@ keymap.set("n", "<cr>", "<esc>a", opts)
 if vim.g.term == false then
   vim.cmd(":NeovimProjectDiscover")
 
-  keymap.set({ "n", "i", "v", "t" }, "<D-x>", function()
+  keymap.set({ "i" }, "<D-x>", function()
+    vim.cmd(":NeovimProjectDiscover")
+    vim.cmd(":ToggleTerm")
+  end, opts)
+
+  keymap.set({ "n", "v", "t" }, "<D-x>", function()
     vim.cmd(":ToggleTerm")
   end, opts)
 end

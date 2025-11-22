@@ -9,6 +9,8 @@ return {
     }
   },
 
+  { "code-biscuits/nvim-biscuits" },
+
   {
     "neovim/nvim-lspconfig",
 
