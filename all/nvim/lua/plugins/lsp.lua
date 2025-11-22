@@ -9,7 +9,19 @@ return {
     }
   },
 
-  { "code-biscuits/nvim-biscuits" },
+  -- {
+  --   "code-biscuits/nvim-biscuits",
+  --
+  --   dependencies = { "nvim-treesitter/nvim-treesitter" },
+  --
+  --   config = function()
+  --     require("nvim-biscuits").setup({
+  --       default_config = {
+  --         min_length = 5,
+  --       }
+  --     })
+  --   end
+  -- },
 
   {
     "neovim/nvim-lspconfig",
