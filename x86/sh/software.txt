@@ -1,7 +1,7 @@
 github-cli
 
 neovim
-jq
+neovide
 alacritty
 
 rustup
@@ -26,6 +26,8 @@ swaybg
 grim
 
 fish
+
+torsocks
 
 fastfetch
 dysk
