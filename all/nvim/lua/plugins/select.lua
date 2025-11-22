@@ -13,6 +13,7 @@ return {
 
       projects = {
         "/run/media/overlord/d0/*",
+        "~/Desktop/*"
       },
     },
 
