@@ -12,7 +12,7 @@ else
       mkdir ~/Pictures/
       mkdir ~/Videos/
 
-      git clone https://github.com/PEzwarts/wall ~/Desktop/wall/
+      git clone https://github.com/PEzwarts/wall ~/wall/
     fi
 
     ./x86/sh/software.sh
