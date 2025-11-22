@@ -2,8 +2,6 @@
 
 ![Alt text](https://github.com/PEzwarts/dot/blob/main/screenshots/nvim1.png)
 
-![Alt text](https://github.com/PEzwarts/dot/blob/main/screenshots/nvim2.png)
-
 # Personal dotfiles.
 
 * Hyprland
