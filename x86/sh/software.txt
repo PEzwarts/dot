@@ -37,6 +37,7 @@ bat
 fd
 eza
 ranger
+ueberzugpp
 
 anki
 librewolf

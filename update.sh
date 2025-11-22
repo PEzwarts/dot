@@ -11,6 +11,9 @@ if [[ $(uname -a | grep "Darwin") ]]; then
   # Ghostty
   cp -r ./all/ghostty/ ~/.config/
 
+  # Ranger
+  cp -r ./all/ranger/ ~/.config/
+
   exit
 fi
 
@@ -26,6 +29,9 @@ if [[ $(uname -a | grep "Debian") ]]; then
 
   # Ghostty
   cp -r ./all/ghostty/ ~/.config/
+
+  # Ranger
+  cp -r ./all/ranger/ ~/.config/
 
   # Hyprland
   cp -r ./arm/hypr/ ~/.config/
@@ -46,6 +52,9 @@ else
 
   # Ghostty
   cp -r ./all/ghostty/ ~/.config/
+
+  # Ranger
+  cp -r ./all/ranger/ ~/.config/
 
   # Hyprland
   cp -r ./all/hypr/ ~/.config/
