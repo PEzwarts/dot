@@ -18,14 +18,14 @@ function ma
         # tar xf ./$argv[2].tar.gz
         # rm $argv[2].tar.gz
 
-        git clone https://github.com/$argv[1]/$argv[2]
+        git submodule add https://github.com/$argv[1]/$argv[2] ./lib/$argv[2]
 
         cd ..
     end
 end
 
 function mr
-    rm -r ./lib/$argv[1]
+    git rm ./lib/$argv[1]
 end
 
 function mc
