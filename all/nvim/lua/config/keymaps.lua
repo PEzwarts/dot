@@ -3,12 +3,14 @@ local opts = { remap = true, silent = true }
 
 -- Fuzzy
 
-keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:NeovimProjectDiscover<cr>", opts)
+if vim.g.term == false then
+  keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:NeovimProjectDiscover<cr>", opts)
 
-keymap.set({ "t" }, "<D-s>", function()
-  vim.cmd(":ToggleTerm")
-  vim.cmd(":NeovimProjectDiscover")
-end, opts)
+  keymap.set({ "t" }, "<D-s>", function()
+    vim.cmd(":ToggleTerm")
+    vim.cmd(":NeovimProjectDiscover")
+  end, opts)
+end
 
 -- Neotree
 
