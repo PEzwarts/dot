@@ -15,7 +15,7 @@ alias gcm "git commit -m"
 alias gcma "git commit --amend -m"
 # alias gr "git revert"
 
-alias gph "git reset --hard && git pull"
+alias gph "git reset --hard HEAD && git pull"
 alias gp "git pull"
 
 alias gP "git push"
