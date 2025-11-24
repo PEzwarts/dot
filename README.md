@@ -1,6 +1,6 @@
 ![Alt text](https://github.com/PEzwarts/dot/blob/main/screenshots/wm.png)
 
-![Alt text](https://github.com/PEzwarts/dot/blob/main/screenshots/nvim1.png)
+![Alt text](https://github.com/PEzwarts/dot/blob/main/screenshots/nvim.png)
 
 # Personal dotfiles.
 

@@ -12,15 +12,11 @@ function ma
             mkdir lib
         end
 
-        cd ./lib
-
         # wget https://github.com/$argv[1]/archive/refs/tags/$argv[2].tar.gz
         # tar xf ./$argv[2].tar.gz
         # rm $argv[2].tar.gz
 
         git submodule add https://github.com/$argv[1]/$argv[2] ./lib/$argv[2]
-
-        cd ..
     end
 end
 
