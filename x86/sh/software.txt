@@ -1,5 +1,6 @@
 github-cli
 
+ttf-jetbrains-mono-nerd
 neovim
 neovide
 alacritty
@@ -20,7 +21,7 @@ wev
 lxsession
 pavucontrol
 
-rofi
+fuzzel
 waypaper
 swaybg
 grim
