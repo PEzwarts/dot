@@ -9,7 +9,7 @@
 * GTK-4
 
 * Alacritty
-* Ghostty; with shaders!
+* Ghostty
 * Neovide
 * Kitty
 
