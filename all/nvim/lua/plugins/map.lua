@@ -1,3 +1,3 @@
 return {
-  { "Isrothy/neominimap.nvim" }
+  -- { "Isrothy/neominimap.nvim" }
 }
