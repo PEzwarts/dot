@@ -12,6 +12,9 @@ return {
       distance_stop_animating = 0.5,
 
       legacy_computing_symbols_support = true,
+      legacy_computing_symbols_support_vertical_bars = true,
+      use_diagonally_blocks = true,
+
       smear_between_buffers = false,
 
       smear_vertically = false,
