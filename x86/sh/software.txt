@@ -37,6 +37,9 @@ btop
 ripgrep
 bat
 
+zip
+unzip
+
 fd
 eza
 ranger

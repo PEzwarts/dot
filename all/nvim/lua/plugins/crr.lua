@@ -16,7 +16,7 @@ return {
 
       smear_vertically = false,
       smear_horizontally = true,
-      smear_diagonally = true
+      smear_diagonally = false
     }
   }
 }
