@@ -18,7 +18,7 @@ return {
       smear_between_buffers = false,
 
       smear_vertically = false,
-      smear_horizontally = false,
+      smear_horizontally = true,
       smear_diagonally = true
     }
   }
