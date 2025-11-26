@@ -15,7 +15,7 @@ style = { shape = "Block", blinking = "On" }
 
 [font]
 normal.family = "JetBrainsMono Nerd Font"
-size = 10
+size = 8
 
 [mouse]
 hide_when_typing = true

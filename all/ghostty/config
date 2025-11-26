@@ -1,6 +1,6 @@
 custom-shader = ~/.config/ghostty/bettercrt.glsl
 
-font-size = 10
+font-size = 8
 font-thicken = true
 cursor-style = "block"
 
