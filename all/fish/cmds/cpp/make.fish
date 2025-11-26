@@ -42,18 +42,10 @@ function mn
     mkdir build
     mkdir src
 
-    touch ./CMakeLists.txt
+    touch ./Makefile
     touch ./src/main.$argv[2]
 
-    # cmake -B ./build/ -S .
-#
-#     echo "cmake_minimum_required(VERSION 4.1)
-# project($argv[1])
-#
-# set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-#
-# include_directories($argv[1] PRIVATE ./lib/)
-# add_executable($argv[1] ./src/main.$argv[2])" >./CMakeLists.txt
+    echo "" >./Makefile
 
     echo "int main() {}" >./src/main.$argv[2]
 
