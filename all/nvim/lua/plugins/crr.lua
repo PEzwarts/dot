@@ -19,7 +19,7 @@ return {
 
       smear_vertically = false,
       smear_horizontally = true,
-      smear_diagonally = false
+      smear_diagonally = true
     }
   }
 }
