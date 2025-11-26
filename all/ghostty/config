@@ -1,4 +1,4 @@
-custom-shader = ~/.config/ghostty/bettercrt.glsl
+custom-shader = ~/.config/ghostty/retro-terminal.glsl
 
 font-size = 8
 font-thicken = true
