@@ -1,5 +1,5 @@
 /** Size of TFT "pixels" */
-float resolution = 4.0;
+float resolution = 1.0;
 
 /** Strength of effect */
 float strength = 0.5;
