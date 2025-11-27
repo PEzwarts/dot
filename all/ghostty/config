@@ -3,7 +3,7 @@ custom-shader = ~/.config/ghostty/bettercrt.glsl
 # custom-shader = ~/.config/ghostty/glitchy.glsl
 # custom-shader = ~/.config/ghostty/dither.glsl
 
-font-size = 8
+font-size = 10
 font-thicken = true
 cursor-style = "block"
 
