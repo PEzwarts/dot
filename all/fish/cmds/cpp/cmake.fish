@@ -53,7 +53,9 @@ project($argv[1])
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-include_directories($argv[1] PRIVATE ./lib/)
+# include_directories($argv[1] PRIVATE ./lib/)
+add_subdirectory()
+
 add_executable($argv[1] ./src/main.$argv[2])" >./CMakeLists.txt
 
     echo "int main() {}" >./src/main.$argv[2]
