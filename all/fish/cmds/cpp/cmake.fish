@@ -25,7 +25,7 @@ function mr
 end
 
 function mc
-    cmake --build ./build/ --parallel $argv[1]
+    cmake --build ./build/ -j $argv[1]
 end
 
 function mn
