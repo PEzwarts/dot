@@ -53,8 +53,11 @@ project($argv[1])
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+find_package()
+target_link_libraries()
+
 # include_directories($argv[1] PRIVATE ./lib/)
-add_subdirectory()
+# add_subdirectory()
 
 add_executable($argv[1] ./src/main.$argv[2])" >./CMakeLists.txt
 
