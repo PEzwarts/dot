@@ -38,6 +38,19 @@ return {
           }
         }
       })
+
+      require("nvim-lspconfig.clangd").setup({
+        settings = {
+          ["clangd"] = {
+            cmd = {
+              "clangd",
+              "-log=error",
+              "--background-index",
+              "completion-style=bundled"
+            }
+          }
+        }
+      })
     end,
 
     dependencies = {
