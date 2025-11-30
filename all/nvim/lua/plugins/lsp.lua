@@ -29,7 +29,7 @@ return {
     config = function ()
       local settings = require("mason.settings")
 
-      require("nvim-lspconfig.rust-analyzer").setup{(
+      require("nvim-lspconfig.rust-analyzer").setup({
         settings {
           ["rust-analyzer"] = {
             cmd_env = {
@@ -37,7 +37,7 @@ return {
             }
           }
         }
-      )}
+      })
     end,
 
     dependencies = {
