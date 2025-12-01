@@ -42,7 +42,7 @@ return {
       require("nvim-lspconfig.clangd").setup({
         ["clangd"] = {
           settings = {
-            cmd = { "/usr/bin/clangd" },
+            cmd = { "/usr/bin/clangd" }
 
             root_dir = {
               root_pattern = {
