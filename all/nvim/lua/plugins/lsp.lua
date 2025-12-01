@@ -30,40 +30,29 @@ return {
       local lspconfig = require("lspconfig")
       local settings = require("mason.settings")
 
-      -- lspconfig.rust_analyzer.setup({
-      --   ["rust-analyzer"] = {
-      --     settings {
-      --       cmd_env = {
-      --         CARGO_TARGET_DIR = "/tmp/rust-analyzer"
-      --       }
-      --     }
-      --   }
-      -- })
+      lspconfig.rust_analyzer.setup({
+        cmd_env = {
+          CARGO_TARGET_DIR = "/tmp/rust-analyzer"
+        }
+      })
 
-      -- require("nvim-lspconfig.clangd").setup({
-      --   ["clangd"] = {
-      --     settings = {
-      --       cmd = { "/usr/bin/clangd" },
-      --
-      --       filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-      --
-      --       root_dir = {
-      --         root_pattern = {
-      --           ".clangd",
-      --           ".clang-tidy",
-      --           ".clang-format",
-      --           ".compile_commands.json",
-      --           "compile_flags.txt",
-      --           "configure.ac",
-      --           ".git"
-      --         }
-      --       }
-      --     }
-      --   }
-      -- })
+      lspconfig.clangd.setup({
+        filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
 
-      lspconfig.rust_analyzer.setup({})
-      lspconfig.clangd.setup({})
+        root_dir = {
+          root_pattern = {
+            ".clangd",
+            ".clang-tidy",
+            ".clang-format",
+            ".compile_commands.json"
+            "compile_flags.txt",
+            "configure.ac",
+            ".git"
+          }
+        }
+
+        single_file_support = true,
+      })
     end,
 
     dependencies = {
