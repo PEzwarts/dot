@@ -28,7 +28,6 @@ return {
 
     config = function()
       local lspconfig = require("lspconfig")
-      local settings = require("mason.settings")
 
       lspconfig.rust_analyzer.setup({
         cmd_env = {
@@ -44,12 +43,12 @@ return {
             ".clangd",
             ".clang-tidy",
             ".clang-format",
-            ".compile_commands.json"
+            ".compile_commands.json",
             "compile_flags.txt",
             "configure.ac",
             ".git"
           }
-        }
+        },
 
         single_file_support = true,
       })
