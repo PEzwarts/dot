@@ -91,3 +91,4 @@ end, opts)
 
 vim.keymap.set({ "n", "i", "v" }, "qq", "", opts)
 vim.keymap.set({ "n", "i", "v" }, "<D-r>", "", opts)
+vim.keymap.set({ "n" }, "x", "", opts)
