@@ -28,8 +28,9 @@ return {
 
     config = function()
       local lspconfig = require("lspconfig")
+      local settings = require("mason.settings")
 
-      lspconfig.rust-analyzer.setup({
+      lspconfig.rust_analyzer.setup({
         ["rust-analyzer"] = {
           settings {
             cmd_env = {
