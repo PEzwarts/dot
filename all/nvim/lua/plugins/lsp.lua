@@ -30,31 +30,35 @@ return {
       local settings = require("mason.settings")
 
       require("nvim-lspconfig.rust-analyzer").setup({
-        settings {
-          cmd_env = {
-            CARGO_TARGET_DIR = "/tmp/rust-analyzer"
+        ["rust-analyzer"] = {
+          settings {
+            cmd_env = {
+              CARGO_TARGET_DIR = "/tmp/rust-analyzer"
+            }
           }
         }
       })
 
       require("nvim-lspconfig.clangd").setup({
-        settings = {
-          cmd = {
-            "clangd",
-            "-log=error",
-            "--background-index",
-            "completion-style=bundled"
-          },
+        ["clangd"] = {
+          settings = {
+            cmd = {
+              "clangd",
+              "-log=error",
+              "--background-index",
+              "completion-style=bundled"
+            }
 
-          root_dir = {
-            root_pattern = {
-              ".clangd",
-              ".clang-tidy",
-              ".clang-format",
-              ".compile_commands.json",
-              "compile_flags.txt",
-              "configure.ac",
-              ".git"
+            root_dir = {
+              root_pattern = {
+                ".clangd",
+                ".clang-tidy",
+                ".clang-format",
+                ".compile_commands.json",
+                "compile_flags.txt",
+                "configure.ac",
+                ".git"
+              }
             }
           }
         }
