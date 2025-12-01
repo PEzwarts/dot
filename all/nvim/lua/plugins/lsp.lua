@@ -30,15 +30,15 @@ return {
       local lspconfig = require("lspconfig")
       local settings = require("mason.settings")
 
-      lspconfig.rust_analyzer.setup({
-        ["rust-analyzer"] = {
-          settings {
-            cmd_env = {
-              CARGO_TARGET_DIR = "/tmp/rust-analyzer"
-            }
-          }
-        }
-      })
+      -- lspconfig.rust_analyzer.setup({
+      --   ["rust-analyzer"] = {
+      --     settings {
+      --       cmd_env = {
+      --         CARGO_TARGET_DIR = "/tmp/rust-analyzer"
+      --       }
+      --     }
+      --   }
+      -- })
 
       -- require("nvim-lspconfig.clangd").setup({
       --   ["clangd"] = {
@@ -62,6 +62,7 @@ return {
       --   }
       -- })
 
+      lspconfig.rust_analyzer.setup({})
       lspconfig.clangd.setup({})
     end,
 
