@@ -31,34 +31,30 @@ return {
 
       require("nvim-lspconfig.rust-analyzer").setup({
         settings {
-          ["rust-analyzer"] = {
-            cmd_env = {
-              CARGO_TARGET_DIR = "/tmp/rust-analyzer"
-            }
+          cmd_env = {
+            CARGO_TARGET_DIR = "/tmp/rust-analyzer"
           }
         }
       })
 
       require("nvim-lspconfig.clangd").setup({
         settings = {
-          ["clangd"] = {
-            cmd = {
-              "clangd",
-              "-log=error",
-              "--background-index",
-              "completion-style=bundled"
-            }
+          cmd = {
+            "clangd",
+            "-log=error",
+            "--background-index",
+            "completion-style=bundled"
+          },
 
-            root_dir = {
-              root_pattern = {
-                ".clangd",
-                ".clang-tidy",
-                ".clang-format",
-                ".compile_commands.json",
-                "compile_flags.txt",
-                "configure.ac",
-                ".git"
-              }
+          root_dir = {
+            root_pattern = {
+              ".clangd",
+              ".clang-tidy",
+              ".clang-format",
+              ".compile_commands.json",
+              "compile_flags.txt",
+              "configure.ac",
+              ".git"
             }
           }
         }
