@@ -41,6 +41,8 @@ return {
 
       require("nvim-lspconfig.clangd").setup({
         ["clangd"] = {
+          cmd = { "/usr/bin/clangd" },
+
           settings = {
             filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
 
@@ -54,9 +56,7 @@ return {
                 "configure.ac",
                 ".git"
               }
-            },
-
-            cmd = { "/usr/bin/clangd" }
+            }
           }
         }
       })
