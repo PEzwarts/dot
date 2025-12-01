@@ -95,7 +95,7 @@ return {
         -- XML formatter.
         "lemminx",
 
-        "lua-language-server",
+        -- "lua-language-server",
         "stylua"
       },
     },
