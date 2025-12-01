@@ -26,10 +26,10 @@ return {
   {
     "neovim/nvim-lspconfig",
 
-    config = function ()
-      local settings = require("mason.settings")
+    config = function()
+      local lspconfig = require("lspconfig")
 
-      require("nvim-lspconfig.rust-analyzer").setup({
+      lspconfig.rust-analyzer.setup({
         ["rust-analyzer"] = {
           settings {
             cmd_env = {
@@ -39,27 +39,29 @@ return {
         }
       })
 
-      require("nvim-lspconfig.clangd").setup({
-        ["clangd"] = {
-          settings = {
-            cmd = { "/usr/bin/clangd" },
+      -- require("nvim-lspconfig.clangd").setup({
+      --   ["clangd"] = {
+      --     settings = {
+      --       cmd = { "/usr/bin/clangd" },
+      --
+      --       filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+      --
+      --       root_dir = {
+      --         root_pattern = {
+      --           ".clangd",
+      --           ".clang-tidy",
+      --           ".clang-format",
+      --           ".compile_commands.json",
+      --           "compile_flags.txt",
+      --           "configure.ac",
+      --           ".git"
+      --         }
+      --       }
+      --     }
+      --   }
+      -- })
 
-            filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-
-            root_dir = {
-              root_pattern = {
-                ".clangd",
-                ".clang-tidy",
-                ".clang-format",
-                ".compile_commands.json",
-                "compile_flags.txt",
-                "configure.ac",
-                ".git"
-              }
-            }
-          }
-        }
-      })
+      lspconfig.clangd.setup({})
     end,
 
     dependencies = {
