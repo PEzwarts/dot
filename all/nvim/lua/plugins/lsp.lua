@@ -47,7 +47,7 @@ return {
               "-log=error",
               "--background-index",
               "completion-style=bundled"
-            }
+            },
 
             root_dir = {
               root_pattern = {
