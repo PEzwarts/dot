@@ -52,9 +52,9 @@ keymap.set("v", "<A-Down>", ":MoveBlock(1)<cr>", opts)
 
 -- Switch between modes
 
-keymap.set("n", "<A-z>", "<esc>i", opts)
-keymap.set("i", "<A-z>", "<esc>", opts)
-keymap.set("v", "<A-z>", "<esc>i", opts)
+keymap.set("n", "<A-z>", "<esc><esc>i", opts)
+keymap.set("i", "<A-z>", "<esc><esc>", opts)
+keymap.set("v", "<A-z>", "<esc><esc>i", opts)
 
 -- Terminal
 
