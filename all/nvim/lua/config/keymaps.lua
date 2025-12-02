@@ -72,12 +72,10 @@ if vim.g.term == false then
   keymap.set({ "i" }, "<A-x>", function()
     vim.cmd(":NeovimProjectDiscover")
     vim.cmd(":ToggleTerm")
-    require("neoranger").Close()
   end, opts)
 
   keymap.set({ "n", "v", "t" }, "<A-x>", function()
     vim.cmd(":ToggleTerm")
-    require("neoranger").Close()
   end, opts)
 end
 
