@@ -4,9 +4,9 @@ local opts = { remap = true, silent = true }
 -- Fuzzy
 
 if vim.g.term == false then
-  keymap.set({ "n", "i", "v" }, "<D-s>", "<esc><cmd>:NeovimProjectDiscover<cr>", opts)
+  keymap.set({ "n", "i", "v" }, "<A-s>", "<esc><cmd>:NeovimProjectDiscover<cr>", opts)
 
-  keymap.set({ "t" }, "<D-s>", function()
+  keymap.set({ "t" }, "<A-s>", function()
     vim.cmd(":ToggleTerm")
     vim.cmd(":NeovimProjectDiscover")
   end, opts)
@@ -14,37 +14,37 @@ end
 
 -- Neotree
 
-keymap.set({ "n", "i", "v", "t" }, "<D-c>", function()
+keymap.set({ "n", "i", "v", "t" }, "<A-c>", function()
   require("neoranger").toggleFloat()
 end, opts)
 
 -- Close an buffer
 
-keymap.set({ "n", "i", "v" }, "<D-d>", "<esc><leader>bd<cr><esc>", opts)
+keymap.set({ "n", "i", "v" }, "<A-d>", "<esc><leader>bd<cr><esc>", opts)
 
 -- Move around buffers
 
-keymap.set({ "n", "i", "v" }, "<D-Left>", function()
+keymap.set({ "n", "i", "v" }, "<A-Left>", function()
   -- vim.cmd(":w")
   vim.cmd(":bp")
 end, opts)
 
-keymap.set({ "n", "i", "v" }, "<D-Right>", function()
+keymap.set({ "n", "i", "v" }, "<A-Right>", function()
   -- vim.cmd(":w")
   vim.cmd(":bn")
 end, opts)
 
 -- Select all
 
-keymap.set({ "n", "i", "v" }, "<D-a>", "<esc>gg<S-v>G", opts)
+keymap.set({ "n", "i", "v" }, "<A-a>", "<esc>gg<S-v>G", opts)
 
 -- Move an line or char
 
-keymap.set({ "n", "i" }, "<D-Up>", "<esc>:MoveLine(-1)<cr>", opts)
-keymap.set({ "n", "i" }, "<D-Down>", "<esc>:MoveLine(1)<cr>", opts)
+keymap.set({ "n", "i" }, "<A-Up>", "<esc>:MoveLine(-1)<cr>", opts)
+keymap.set({ "n", "i" }, "<A-Down>", "<esc>:MoveLine(1)<cr>", opts)
 
-keymap.set("v", "<D-Up>", ":MoveBlock(-1)<cr>", opts)
-keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", opts)
+keymap.set("v", "<A-Up>", ":MoveBlock(-1)<cr>", opts)
+keymap.set("v", "<A-Down>", ":MoveBlock(1)<cr>", opts)
 
 -- Delete word
 
@@ -52,16 +52,16 @@ keymap.set("v", "<D-Down>", ":MoveBlock(1)<cr>", opts)
 
 -- Switch between modes
 
-keymap.set("n", "<D-z>", "<esc>i", opts)
-keymap.set("i", "<D-z>", "<esc>", opts)
-keymap.set("v", "<D-z>", "<esc>i", opts)
+keymap.set("n", "<A-z>", "<esc>i", opts)
+keymap.set("i", "<A-z>", "<esc>", opts)
+keymap.set("v", "<A-z>", "<esc>i", opts)
 
 -- Terminal
 
 keymap.set("t", "<S-Up>", [[<C-\><C-n><S-Up>]], opts)
 keymap.set("t", "<S-Down>", [[<C-\><C-n>]], opts)
 
-keymap.set("t", "<D-/>", [[<C-\><C-n>/]], opts)
+keymap.set("t", "<A-/>", [[<C-\><C-n>/]], opts)
 keymap.set({ "n", "t" }, "<S-bs>", "<C-bs>", opts)
 
 keymap.set("n", "<cr>", "<esc>a", opts)
@@ -69,23 +69,23 @@ keymap.set("n", "<cr>", "<esc>a", opts)
 if vim.g.term == false then
   vim.cmd(":NeovimProjectDiscover")
 
-  keymap.set({ "i" }, "<D-x>", function()
+  keymap.set({ "i" }, "<A-x>", function()
     vim.cmd(":NeovimProjectDiscover")
     vim.cmd(":ToggleTerm")
   end, opts)
 
-  keymap.set({ "n", "v", "t" }, "<D-x>", function()
+  keymap.set({ "n", "v", "t" }, "<A-x>", function()
     vim.cmd(":ToggleTerm")
   end, opts)
 end
 
-keymap.set({ "n", "i", "v" }, "<A-Up>", function()
-  require("dial.map").manipulate("increment", "normal")
-end, opts)
-
-keymap.set({ "n", "i", "v" }, "<A-Down>", function()
-  require("dial.map").manipulate("decrement", "normal")
-end, opts)
+-- keymap.set({ "n", "i", "v" }, "<A-Up>", function()
+--   require("dial.map").manipulate("increment", "normal")
+-- end, opts)
+--
+-- keymap.set({ "n", "i", "v" }, "<A-Down>", function()
+--   require("dial.map").manipulate("decrement", "normal")
+-- end, opts)
 
 -- Annoying
 
