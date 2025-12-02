@@ -52,6 +52,8 @@ return {
 
         single_file_support = true,
       })
+
+      lspconfig.lua_language_server.setup({})
     end,
 
     dependencies = {
