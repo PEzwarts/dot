@@ -14,12 +14,6 @@ function ma
     #     end
     # end
 
-    if [ ! -f ./conanfile.txt ]
-        touch conanfile.txt
-    else
-        conan install . --output-folder=./build --build=missing
-    end
-
     # meson wrap install $argv[1]
 
     #     cd ./subprojects
