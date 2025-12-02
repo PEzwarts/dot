@@ -43,7 +43,7 @@ function gd
 end
 
 alias gl "git log --graph --oneline --decorate | bat --pager=none"
-alias gt "git tag"
+alias gt "git tag | bat --no-pager"
 
 alias gco "git checkout"
 
