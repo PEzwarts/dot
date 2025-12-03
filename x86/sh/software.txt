@@ -47,4 +47,6 @@ ueberzugpp
 
 anki
 claws-mail
+zathura
+zathura-pdf-poppler
 librewolf
