@@ -1,7 +1,6 @@
 function m
     for file in (find . -maxdepth 2 -type f)
-        if [ (file $file | grep "ELF") ]
-
+        if [ file $file | grep ELF ]
             $file
         end
     end
@@ -30,18 +29,20 @@ function mr
 end
 
 function mc
-    if [ ! -f ./conanfile.txt ]
-        touch conanfile.txt
-    else
-        conan install . --output-folder=./build --build=missing
-    end
+    # if [ ! -f ./conanfile.txt ]
+    #     touch conanfile.txt
+    # else
+    #     conan install . --output-folder=./build --build=missing
+    # end
+    #
+    # if [ ! -f ./build/conan_meson_native.ini ]
+    #     meson setup --reconfigure --native-file conan_meson_native.ini build
+    #     meson compile -C build
+    # else
+    #     meson compile -C build
+    # end
 
-    if [ ! -f ./build/conan_meson_native.ini ]
-        meson setup --reconfigure --native-file conan_meson_native.ini build
-        meson compile -C build
-    else
-        meson compile -C build
-    end
+    meson compile -C build
 end
 
 function mn
