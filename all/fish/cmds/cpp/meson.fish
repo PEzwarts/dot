@@ -50,7 +50,7 @@ function mn
     cd $argv[1]
 
     meson init --language=$argv[2] --name=$argv[1]
-    meson setup build src
+    meson setup build
     meson compile -C build
 
     echo "project(
@@ -74,11 +74,11 @@ exe = executable(
   dependencies : deps,
 )
 
-# test('$argv[1]', exe)
-    " > ./meson.build
+# test('$argv[1]', exe)" > ./meson.build
 
-    mkdir build
     mkdir src
+
+    touch ./src/main.$argv[1]
 
     echo "int main() {}" >./src/main.$argv[2]
 end
