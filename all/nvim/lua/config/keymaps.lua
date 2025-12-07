@@ -70,7 +70,7 @@ if vim.g.term == false then
   vim.cmd(":NeovimProjectDiscover")
 
   keymap.set({ "i" }, "<A-x>", function()
-    vim.cmd(":NeovimProjectDiscover")
+    vim.cmd(":stopinsert")
     vim.cmd(":ToggleTerm")
   end, opts)
 
