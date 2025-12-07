@@ -49,10 +49,6 @@ function mn
     mkdir $argv[1]
     cd $argv[1]
 
-    # meson init --language=$argv[2] --name=$argv[1]
-    meson setup build
-    # meson compile -C build
-
     mkdir src
 
     touch ./meson.build
@@ -83,4 +79,6 @@ exe = executable(
 
 
     echo "int main() {}" >./src/main.$argv[2]
+
+    meson setup build
 end
