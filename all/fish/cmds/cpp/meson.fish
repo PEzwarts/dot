@@ -50,8 +50,35 @@ function mn
     cd $argv[1]
 
     meson init --language=$argv[2] --name=$argv[1]
-    meson setup build
+    meson setup build src
     meson compile -C build
 
-    echo "int main() {}" >./$argv[1].$argv[2]
+    echo "project(
+  '$argv[1]',
+  '$argv[2]',
+  version : '0.1',
+  meson_version : '>= 1.3.0',
+  default_options : ['warning_level=3', 'cpp_std=c++23'],
+)
+
+deps = []
+
+src = [
+  './src/main.$argv[2]',
+]
+
+exe = executable(
+  '$argv[1]',
+  [src],
+  install : true,
+  dependencies : deps,
+)
+
+# test('$argv[1]', exe)
+    " > ./meson.build
+
+    mkdir build
+    mkdir src
+
+    echo "int main() {}" >./src/main.$argv[2]
 end
