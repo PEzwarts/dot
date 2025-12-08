@@ -81,4 +81,6 @@ exe = executable(
     echo "int main() {}" >./src/main.$argv[2]
 
     meson setup build
+
+    cd ..
 end
