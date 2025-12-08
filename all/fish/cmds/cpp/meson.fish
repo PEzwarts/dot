@@ -77,7 +77,6 @@ exe = executable(
 
 # test('$argv[1]', exe)" > ./meson.build
 
-
     echo "int main() {}" >./src/main.$argv[2]
 
     meson setup build
