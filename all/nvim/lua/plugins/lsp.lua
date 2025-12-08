@@ -53,6 +53,14 @@ return {
         single_file_support = true,
       })
 
+      lspconfig.codelldb.setup({})
+      lspconfig.ast_grep.setup({})
+      lspconfig.cpptools.setup({})
+      lspconfig.trivy.setup({})
+      lspconfig.snyk.setup({})
+
+      lspconfig.phpactor.setup({})
+
       lspconfig.lua_language_server.setup({})
     end,
 
@@ -82,7 +90,7 @@ return {
         "trivy",
         "snyk",
 
-        "rust-analyzer",
+        "phpactor",
 
         "python-lsp-server",
 
@@ -102,7 +110,6 @@ return {
       mason_reg.refresh(function ()
         for _, pkg in ipairs(opts.ensured_installed) do
           local select_pkg = mason_reg.get_package(pkg)
-
           if not select_pkg:is_installed() then
             select_pkg:install()
           end
