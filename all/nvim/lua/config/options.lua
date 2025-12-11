@@ -27,6 +27,6 @@ if vim.g.neovide then
 
   vim.g.neovide_confirm_quit = false
 
-  vim.g.neovide_padding_left = 600
-  vim.g.neovide_padding_right = 600
+  vim.g.neovide_padding_left = 700
+  vim.g.neovide_padding_right = 700
 end
