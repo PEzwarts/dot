@@ -3,7 +3,7 @@ live_config_reload = true
 ipc_socket = false
 
 [window]
-padding = { x = 600 }
+padding = { x = 700 }
 opacity = 1
 
 [colors]
