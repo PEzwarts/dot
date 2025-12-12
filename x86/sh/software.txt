@@ -4,6 +4,7 @@ ttf-jetbrains-mono-nerd
 neovim
 neovide
 alacritty
+ghostty
 
 rustup
 
@@ -15,7 +16,7 @@ valgrind
 
 hyprland
 gtklock
-ly
+sddm
 wev
 
 lxsession
@@ -24,7 +25,6 @@ pavucontrol
 fuzzel
 waypaper
 swaybg
-grim
 
 fish
 
