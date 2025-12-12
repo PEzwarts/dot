@@ -1,3 +1,5 @@
 for pkg in $(cat ./x86/sh/software.txt); do
-  sudo pacman -S --noconfirm $pkg
+  if [[ ! $($pkg | grep "//") ]]; then
+    sudo pacman -S --noconfirm $pkg
+  fi
 done
