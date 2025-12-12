@@ -20,6 +20,11 @@ else
     ./x86/sh/fish.sh
     ./update.sh
 
+    sudo systemctl enable --now libvirtd
+
+    virsh net-autostart default
+    virsh net-start default
+
     sudo usermod -aG kvm $(whoami)
     sudo usermod -aG libvirt $(whoami)
     sudo usermod -aG input $(whoami)

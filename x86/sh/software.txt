@@ -45,8 +45,16 @@ eza
 ranger
 ueberzugpp
 
-anki
-claws-mail
 zathura
 zathura-pdf-poppler
+
+virt-manager
+qemu-desktop
+libvirt
+edk2-ovmf
+dnsmasq
+swtpm
+
+anki
+claws-mail
 librewolf
