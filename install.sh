@@ -25,6 +25,8 @@ else
     virsh net-autostart default
     virsh net-start default
 
+    sudo systemctl enable sddm
+
     sudo usermod -aG kvm $(whoami)
     sudo usermod -aG libvirt $(whoami)
     sudo usermod -aG input $(whoami)
