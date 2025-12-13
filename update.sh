@@ -39,6 +39,8 @@ if [[ $(uname -a | grep "Debian") ]]; then
   cp -r ./all/gtk-3.0/ ~/.config/
   cp -r ./all/gtk-4.0/ ~/.config/
 
+  ./git.sh
+
   hyprctl reload
 else
   # Neovim
@@ -61,6 +63,8 @@ else
 
   cp -r ./all/gtk-3.0/ ~/.config/
   cp -r ./all/gtk-4.0/ ~/.config/
+
+  ./git.sh
 
   hyprctl reload
 fi
