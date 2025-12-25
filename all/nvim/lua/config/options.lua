@@ -11,6 +11,8 @@ vim.opt.confirm = false
 vim.opt.hidden = true
 vim.opt.swapfile = false
 
+vim.opt.fillchars:append("vert: ")
+
 -- vim.opt.laststatus = 0
 
 vim.g.floaterm_borderchars = " "
@@ -30,7 +32,4 @@ if vim.g.neovide then
   vim.g.neovide_scroll_animation_far_lines = 0
 
   vim.g.neovide_confirm_quit = false
-
-  vim.g.neovide_padding_left = 700
-  vim.g.neovide_padding_right = 700
 end
