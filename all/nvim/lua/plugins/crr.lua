@@ -1,25 +1,25 @@
 return {
-  {
-    "sphamba/smear-cursor.nvim",
-
-    opts = {
-      stiffness = 0.8,
-      trailing_stiffness = 0.6,
-      stiffness_insert_mode = 0.7,
-      trailing_stiffness_insert_mode = 0.7,
-      damping = 0.95,
-      damping_insert_mode = 0.95,
-      distance_stop_animating = 0.5,
-
-      legacy_computing_symbols_support = true,
-      legacy_computing_symbols_support_vertical_bars = true,
-      use_diagonally_blocks = true,
-
-      smear_between_buffers = false,
-
-      smear_vertically = false,
-      smear_horizontally = true,
-      smear_diagonally = false
-    }
-  }
+  -- {
+  --   "sphamba/smear-cursor.nvim",
+  --
+  --   opts = {
+  --     stiffness = 0.8,
+  --     trailing_stiffness = 0.6,
+  --     stiffness_insert_mode = 0.7,
+  --     trailing_stiffness_insert_mode = 0.7,
+  --     damping = 0.95,
+  --     damping_insert_mode = 0.95,
+  --     distance_stop_animating = 0.5,
+  --
+  --     legacy_computing_symbols_support = true,
+  --     legacy_computing_symbols_support_vertical_bars = true,
+  --     use_diagonally_blocks = true,
+  --
+  --     smear_between_buffers = false,
+  --
+  --     smear_vertically = false,
+  --     smear_horizontally = true,
+  --     smear_diagonally = false
+  --   }
+  -- }
 }
