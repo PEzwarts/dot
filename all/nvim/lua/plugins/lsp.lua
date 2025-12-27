@@ -59,6 +59,7 @@ return {
       lspconfig.trivy.setup({})
       lspconfig.snyk.setup({})
 
+      lspconfig.intelephense.setup({})
       lspconfig.phpactor.setup({})
 
       lspconfig.lua_language_server.setup({})
