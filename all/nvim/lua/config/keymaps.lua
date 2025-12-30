@@ -13,9 +13,9 @@ if vim.g.term == false then
 
   -- Neoranger
   keymap.set({ "n", "i", "v", "t" }, "<A-c>", function()
-    -- require("neoranger").toggleFloat()
+    require("neoranger").toggleFloat()
 
-    vim.cmd(":Neotree toggle position=current")
+    -- vim.cmd(":Neotree toggle position=current")
   end, opts)
 end
 

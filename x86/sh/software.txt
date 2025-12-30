@@ -24,7 +24,6 @@ lxsession
 pavucontrol
 
 fuzzel
-waypaper
 swaybg
 
 fish
