@@ -5,7 +5,7 @@ return {
     config = function()
       require("neoranger").setup({
         width = 1,
-        height = 1,
+        height = 0.96,
 
         border = "solid"
       })
