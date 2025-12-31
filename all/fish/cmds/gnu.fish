@@ -53,6 +53,12 @@ alias cl "wc -l"
 
 alias i "/bin/bash ./install.sh"
 
+function hu
+  rmd ~/.local/share/nvim/
+  bash ./update.sh
+  clear
+end
+
 function u
   bash ./update.sh
   clear
