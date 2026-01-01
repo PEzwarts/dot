@@ -23,7 +23,7 @@ wev
 lxsession
 pavucontrol
 
-fuzzel
+rofi
 swaybg
 
 fish
