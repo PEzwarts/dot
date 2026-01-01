@@ -3,9 +3,9 @@ return {
     "sphamba/smear-cursor.nvim",
 
     opts = {
-      stiffness = 1,
+      stiffness = 0.8,
       trailing_stiffness = 0.6,
-      stiffness_insert_mode = 1,
+      stiffness_insert_mode = 0.8,
       trailing_stiffness_insert_mode = 0.6,
       damping = 0.95,
       damping_insert_mode = 0.95,

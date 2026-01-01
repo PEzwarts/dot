@@ -1,9 +1,13 @@
 require("config.lazy")
 
-vim.cmd(":set nonumber")
-vim.cmd(":set nocursorline")
+-- vim.cmd(":set nonumber")
+-- vim.cmd(":set nocursorline")
+--
+-- vim.cmd(":Neominimap Disable")
 
-vim.cmd(":Neominimap Disable")
+if not vim.g.neovide then
+  require("smear_cursor").enabled = true
+end
 
 vim.cmd(":NoNeckPain")
 
