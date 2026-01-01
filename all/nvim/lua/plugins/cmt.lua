@@ -4,11 +4,11 @@ return {
 
     opts = {
       toggler = {
-      line = "<leader>v",
+        line = "<A-S-Down>",
       },
 
       opleader = {
-        line = "<leader>v",
+        line = "<A-S-Down>",
       },
     }
   }
