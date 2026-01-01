@@ -73,13 +73,13 @@ if vim.g.term == false then
   keymap.set({ "i" }, "<A-x>", function()
     vim.cmd(":stopinsert")
     vim.cmd(":ToggleTerm")
-    -- vim.cmd(":NoNeckPain")
+    vim.cmd(":NoNeckPain")
     vim.cmd(":startinsert")
   end, opts)
 
   keymap.set({ "n", "v", "t" }, "<A-x>", function()
     vim.cmd(":ToggleTerm")
-    -- vim.cmd(":NoNeckPain")
+    vim.cmd(":NoNeckPain")
     vim.cmd(":startinsert")
   end, opts)
 end
