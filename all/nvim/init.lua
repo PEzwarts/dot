@@ -5,7 +5,9 @@ require("config.lazy")
 --
 -- vim.cmd(":Neominimap Disable")
 
-if not vim.g.neovide then
+if vim.g.neovide then
+  require("smear_cursor").enabled = false
+else
   require("smear_cursor").enabled = true
 end
 
