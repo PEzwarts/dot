@@ -31,7 +31,6 @@ fish
 torsocks
 
 fastfetch
-dysk
 btop
 
 ripgrep

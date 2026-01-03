@@ -33,7 +33,7 @@ alias ff fd
 alias b "bat --pager=none"
 alias r ranger
 
-alias d "dysk"
+alias d "lsblk"
 alias f fastfetch
 
 function x
