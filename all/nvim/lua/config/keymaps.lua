@@ -67,7 +67,6 @@ if vim.g.term == false then
   vim.cmd(":NeovimProjectDiscover")
 
   keymap.set({ "i" }, "<A-x>", function()
-    vim.cmd(":stopinsert")
     vim.cmd(":ToggleTerm")
     vim.cmd(":NoNeckPain")
     vim.cmd(":startinsert")
