@@ -47,10 +47,6 @@ keymap.set({ "n", "i" }, "<A-Down>", "<esc>:MoveLine(1)<cr>", opts)
 keymap.set("v", "<A-Up>", ":MoveBlock(-1)<cr>", opts)
 keymap.set("v", "<A-Down>", ":MoveBlock(1)<cr>", opts)
 
--- Delete word
-
--- keymap.set({ "n" }, "<S-bs>", "caw", opts)
-
 -- Switch between modes
 
 keymap.set("n", "<A-z>", "<esc><esc>i", opts)
@@ -84,13 +80,12 @@ if vim.g.term == false then
   end, opts)
 end
 
--- keymap.set({ "n", "i", "v" }, "<A-Up>", function()
---   require("dial.map").manipulate("increment", "normal")
--- end, opts)
---
--- keymap.set({ "n", "i", "v" }, "<A-Down>", function()
---   require("dial.map").manipulate("decrement", "normal")
--- end, opts)
+-- Neovide
+
+if vim.g.neovide then
+  vim.keymap.set({"n", "i", "v"}, "<A-=>", "<cmd>:lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<cr>", opts)
+  vim.keymap.set({"n", "i", "v"}, "<A-->", "<cmd>:lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<cr>", opts)
+end
 
 -- Annoying
 
