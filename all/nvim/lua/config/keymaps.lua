@@ -82,8 +82,8 @@ end
 -- Neovide
 
 if vim.g.neovide then
-  vim.keymap.set({"n", "i", "v"}, "<A-=>", "<cmd>:lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<cr>", opts)
-  vim.keymap.set({"n", "i", "v"}, "<A-->", "<cmd>:lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<cr>", opts)
+  vim.keymap.set({"n", "i", "v", "t"}, "<A-=>", "<cmd>:lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<cr>", opts)
+  vim.keymap.set({"n", "i", "v", "t"}, "<A-->", "<cmd>:lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<cr>", opts)
 end
 
 -- Annoying
