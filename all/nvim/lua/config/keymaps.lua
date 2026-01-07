@@ -39,6 +39,10 @@ end, opts)
 
 keymap.set({ "n", "i", "v" }, "<A-a>", "<esc>gg<S-v>G", opts)
 
+-- Remap dw
+
+keymap.set({ "n" }, "dw", "diw", opts)
+
 -- Move an line or char
 
 keymap.set({ "n", "i" }, "<A-Up>", "<esc>:MoveLine(-1)<cr>", opts)
