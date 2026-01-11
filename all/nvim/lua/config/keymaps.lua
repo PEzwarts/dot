@@ -26,12 +26,10 @@ keymap.set({ "n", "i", "v" }, "<A-d>", "<esc><leader>bd<cr><esc>", opts)
 -- Move around buffers
 
 keymap.set({ "n", "i", "v" }, "<A-Left>", function()
-  vim.cmd(":w")
   vim.cmd(":bp")
 end, opts)
 
 keymap.set({ "n", "i", "v" }, "<A-Right>", function()
-  vim.cmd(":w")
   vim.cmd(":bn")
 end, opts)
 

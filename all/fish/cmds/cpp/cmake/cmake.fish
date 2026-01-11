@@ -33,35 +33,21 @@ function mn
         return 0
     end
 
-    if [ ! $argv[2] ]
-        return 0
-    end
-
     mkdir $argv[1]
     cd $argv[1]
 
     mkdir build
+    mkdir lib
     mkdir src
 
     touch ./CMakeLists.txt
-    touch ./src/main.$argv[2]
+    touch ./src/main.c
 
-    cmake -B ./build/ -S .
+    cmake -S ./ -B ./build/
 
-    echo "cmake_minimum_required(VERSION 4.1)
-project($argv[1])
+    echo "int main() {}" > ./src/main.c
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-find_package()
-target_link_libraries()
-
-# include_directories($argv[1] PRIVATE ./lib/)
-# add_subdirectory()
-
-add_executable($argv[1] ./src/main.$argv[2])" >./CMakeLists.txt
-
-    echo "int main() {}" >./src/main.$argv[2]
+    cat ~/.config/fish/cmds/cpp/cmake/CMakeLists.txt > ./CMakeLists.txt
 
     cd ..
 end

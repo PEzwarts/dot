@@ -1,8 +1,8 @@
 set -U fish_greeting
 
-# source ~/.config/fish/cmds/cpp/make.fish
-source ~/.config/fish/cmds/cpp/cmake.fish
+source ~/.config/fish/cmds/cpp/cmake/cmake.fish
 # source ~/.config/fish/cmds/cpp/meson.fish
+# source ~/.config/fish/cmds/cpp/make.fish
 
 source ~/.config/fish/cmds/rst.fish
 
