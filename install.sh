@@ -7,18 +7,9 @@ if [[ ! $(uname -a | grep "Debian") ]]; then
       mkdir ~/Music/
       mkdir ~/Pictures/
       mkdir ~/Videos/
-
     fi
 
     git clone https://github.com/PEzwarts/wall ~/
-
-    sudo touch /etc/modprobe.d/hid_apple.conf
-
-    sudo echo "options hid_apple fnmode=2
-options hid_apple swap_fn_leftctrl=1
-options hid_apple swap_opt_cmd=1
-options hid_apple rightalt_as_rightctrl=1
-options hid_apple ejectcd_as_delete=1" > /etc/modprobe.d/hid_apple.conf
 
     ./x86/sh/software.sh
     ./x86/sh/fish.sh
