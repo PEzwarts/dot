@@ -1,3 +1,0 @@
-return {
-  { "Isrothy/neominimap.nvim" }
-}

@@ -1,8 +1,5 @@
-![Alt text](https://github.com/PEzwarts/dot/blob/main/img/wm.png)
 
-![Alt text](https://github.com/PEzwarts/dot/blob/main/img/nvim.png)
-
-# Personal dotfiles.
+# Personal dotfiles
 
 * Hyprland
 * GTK-3
