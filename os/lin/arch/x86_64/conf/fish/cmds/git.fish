@@ -2,6 +2,7 @@ alias g git
 alias gi "git init -b"
 
 alias gb "git branch"
+alias gbl "git branch -a"
 alias gbb "git checkout -b"
 alias gbd "git branch -d"
 
