@@ -16,14 +16,15 @@ alias gbd "git branch -d"
 alias gm "git merge"
 
 function ga.
-  git diff | bat --pager=none
-  git diff --name-status | bat --pager=none
+  git diff | bat -p --pager=none
+  echo ""
+  git diff --name-status
   git add .
 end
 
 function ga
-  git diff | bat --pager=none
-  git diff --name-status | bat --pager=none
+  # git diff | bat -p --pager=none
+  git diff --name-status
   git add $argv[1]
 end
 
@@ -56,8 +57,9 @@ function gc
 end
 
 function gd
-  git diff | bat --pager=none
-  git diff --name-status | bat --pager=none
+  git diff | bat -p --pager=none
+  echo ""
+  git diff --name-status
 end
 
 alias gl "git log --graph --oneline --decorate | bat --pager=none"
