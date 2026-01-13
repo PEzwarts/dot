@@ -1,6 +1,6 @@
 if [[ ! $(uname -a | grep "Debian") ]]; then
-  if [[ -f /usr/bin/hyprctl ]]; then
-    sudo pacman -S --no-confirm hyprland
+  if [[ ! -f /usr/bin/hyprctl ]]; then
+    sudo pacman -S --noconfirm hyprland
   fi
 
   if [[ ! -f ~/Desktop/ ]]; then
