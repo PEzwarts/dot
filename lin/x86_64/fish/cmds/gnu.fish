@@ -51,15 +51,15 @@ end
 alias cla "wc -l ./**"
 alias cl "wc -l"
 
-alias i "/bin/bash ./install.sh"
+alias i "/bin/bash ./bash/install.sh"
 
 function hu
   rmd ~/.local/share/nvim/
-  bash ./update.sh
+  /bin/bash ./bash/update.sh
   clear
 end
 
 function u
-  bash ./update.sh
+  /bin/bash ./bash/update.sh
   clear
 end
