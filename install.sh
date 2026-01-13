@@ -11,14 +11,14 @@ if [[ ! $(uname -a | grep "Debian") ]]; then
 
     git clone https://github.com/PEzwarts/wall ~/
 
-    ./x86/sh/software.sh
-    ./x86/sh/fish.sh
+    ./os/lin/arch/x86_64/bash/software.sh
+    ./os/lin/arch/x86_64/bash/shell.sh
     ./update.sh
 
     sudo systemctl enable --now libvirtd
 
-    virsh net-autostart default
-    virsh net-start default
+    sudo virsh net-autostart default
+    sudo virsh net-start default
 
     sudo systemctl enable sddm
 
@@ -33,8 +33,8 @@ if [[ $(uname -a | grep "Darwin") ]]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
-  ./osx/sh/software.sh
-  ./osx/sh/fish.sh
+  ./os/osx/arm64/bash/software.sh
+  ./os/osx/arm64/bash/shell.sh
   ./update.sh
 
   defaults write com.apple.dock persistent-others -array
