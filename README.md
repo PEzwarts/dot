@@ -5,7 +5,7 @@
 
 * Linux
 * OSX
-* BSD; coming soon!
+* BSD? Maybe
 
 ## Architectures
 
