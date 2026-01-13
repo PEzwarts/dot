@@ -15,7 +15,6 @@ python-virtualenv
 cmake
 valgrind
 
-hyprland
 gtklock
 sddm
 wev

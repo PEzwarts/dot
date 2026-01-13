@@ -1,31 +1,33 @@
 if [[ ! $(uname -a | grep "Debian") ]]; then
   if [[ -f /usr/bin/hyprctl ]]; then
-    if [[ ! -f ~/Desktop/ ]]; then
-      mkdir ~/Desktop/
-      mkdir ~/Downloads/
-      mkdir ~/Documents/
-      mkdir ~/Music/
-      mkdir ~/Pictures/
-      mkdir ~/Videos/
-    fi
-
-    git clone https://github.com/PEzwarts/wall ~/
-
-    ./os/lin/arch/x86_64/bash/software.sh
-    ./os/lin/arch/x86_64/bash/shell.sh
-    ./update.sh
-
-    sudo systemctl enable --now libvirtd
-
-    sudo virsh net-autostart default
-    sudo virsh net-start default
-
-    sudo systemctl enable sddm
-
-    sudo usermod -aG kvm $(whoami)
-    sudo usermod -aG libvirt $(whoami)
-    sudo usermod -aG input $(whoami)
+    sudo pacman -S --no-confirm hyprland
   fi
+
+  if [[ ! -f ~/Desktop/ ]]; then
+    mkdir ~/Desktop/
+    mkdir ~/Downloads/
+    mkdir ~/Documents/
+    mkdir ~/Music/
+    mkdir ~/Pictures/
+    mkdir ~/Videos/
+  fi
+
+  git clone https://github.com/PEzwarts/wall ~/
+
+  ./os/lin/arch/x86_64/bash/software.sh
+  ./os/lin/arch/x86_64/bash/shell.sh
+  ./update.sh
+
+  sudo systemctl enable --now libvirtd
+
+  sudo virsh net-autostart default
+  sudo virsh net-start default
+
+  sudo systemctl enable sddm
+
+  sudo usermod -aG kvm $(whoami)
+  sudo usermod -aG libvirt $(whoami)
+  sudo usermod -aG input $(whoami)
 fi
 
 if [[ $(uname -a | grep "Darwin") ]]; then
