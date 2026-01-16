@@ -4,12 +4,12 @@ return {
 
     opts = {
       colorscheme = "base16-3024"
-      -- colorscheme = "base16-gruvbox-dark"
+      -- colorscheme = "darkbox"
       -- colorscheme = "elflord"
     }
   },
 
   { "RRethy/base16-nvim" },
 
-  -- { "xiyaowong/transparent.nvim" }
+  { "timmypidashev/darkbox.nvim" }
 }
