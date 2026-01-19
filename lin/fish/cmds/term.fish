@@ -1,6 +1,6 @@
 function v
     if [ "$(uname)" = Linux ]
-        neovide --no-idle -- -c ":lua vim.g.term = false" & disown
+        neovide -- -c ":lua vim.g.term = false" & disown
         # alacritty -e nvim -c ":lua vim.g.term = false" & disown
         # rio -e nvim -c ":lua vim.g.term = false" & disown
 
