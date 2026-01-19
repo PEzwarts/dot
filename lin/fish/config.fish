@@ -12,6 +12,4 @@ source ~/.config/fish/cmds/gpg.fish
 source ~/.config/fish/cmds/gnu.fish
 source ~/.config/fish/cmds/git.fish
 
-source ~/.config/fish/cmds/term.fish
-
 # export VCPKG_MAX_CONCURRENCY=4

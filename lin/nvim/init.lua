@@ -15,9 +15,21 @@ end
 
 vim.api.nvim_create_autocmd("SessionLoadPost", {
   callback = function()
+    local keymap = vim.keymap
+    local opts = { remap = true, silent = true }
+
     vim.cmd(":set number")
     vim.cmd(":set cursorline")
-
     vim.cmd(":Neominimap Enable")
+
+    keymap.set({ "n", "i", "v", "t" }, "<A-c>", function()
+      vim.cmd(":Neotree toggle position=current")
+    end, opts)
+
+    keymap.set({ "n", "i", "v", "t" }, "<A-x>", function()
+      vim.cmd(":ToggleTerm")
+      -- vim.cmd(":NoNeckPain")
+      vim.cmd(":startinsert")
+    end, opts)
   end
 })

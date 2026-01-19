@@ -1,5 +1,4 @@
 vim.g.autoformat = false
-vim.g.term = true
 
 vim.opt.autoindent = true
 vim.opt.breakindent = true

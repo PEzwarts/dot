@@ -1,23 +1,14 @@
 local keymap = vim.keymap
 local opts = { remap = true, silent = true }
 
--- Fuzzy
+-- Session
 
-if vim.g.term == false then
-  keymap.set({ "n", "i", "v" }, "<A-s>", "<esc><cmd>:NeovimProjectDiscover<cr>", opts)
+keymap.set({ "n", "i", "v" }, "<A-s>", "<esc><cmd>:NeovimProjectDiscover<cr>", opts)
 
-  keymap.set({ "t" }, "<A-s>", function()
-    vim.cmd(":ToggleTerm")
-    vim.cmd(":NeovimProjectDiscover")
-  end, opts)
-
-  -- Neoranger
-  keymap.set({ "n", "i", "v", "t" }, "<A-c>", function()
-    -- require("neoranger").toggleFloat()
-
-    vim.cmd(":Neotree toggle position=current")
-  end, opts)
-end
+keymap.set({ "t" }, "<A-s>", function()
+  vim.cmd(":ToggleTerm")
+  vim.cmd(":NeovimProjectDiscover")
+end, opts)
 
 -- Close an buffer
 
@@ -64,22 +55,6 @@ keymap.set("t", "<A-/>", [[<C-\><C-n>/]], opts)
 keymap.set({ "n", "t" }, "<S-bs>", "<C-bs>", opts)
 
 keymap.set("n", "<cr>", "<esc>a", opts)
-
-if vim.g.term == false then
-  vim.cmd(":NeovimProjectDiscover")
-
-  -- keymap.set({ "i" }, "<A-x>", function()
-  --   vim.cmd(":ToggleTerm")
-  --   vim.cmd(":NoNeckPain")
-  --   vim.cmd(":startinsert")
-  -- end, opts)
-
-  keymap.set({ "n", "i", "v", "t" }, "<A-x>", function()
-    vim.cmd(":ToggleTerm")
-    -- vim.cmd(":NoNeckPain")
-    vim.cmd(":startinsert")
-  end, opts)
-end
 
 -- Neovide
 
