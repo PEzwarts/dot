@@ -11,7 +11,7 @@ else
   require("smear_cursor").enabled = true
 end
 
-vim.cmd(":NoNeckPain")
+-- vim.cmd(":NoNeckPain")
 
 vim.api.nvim_create_autocmd("SessionLoadPost", {
   callback = function()

@@ -13,9 +13,9 @@ if vim.g.term == false then
 
   -- Neoranger
   keymap.set({ "n", "i", "v", "t" }, "<A-c>", function()
-    -- require("neoranger").toggleFloat()
+    require("neoranger").toggleFloat()
 
-    vim.cmd(":Neotree toggle position=current")
+    -- vim.cmd(":Neotree toggle position=current")
   end, opts)
 end
 
@@ -76,7 +76,7 @@ if vim.g.term == false then
 
   keymap.set({ "n", "i", "v", "t" }, "<A-x>", function()
     vim.cmd(":ToggleTerm")
-    vim.cmd(":NoNeckPain")
+    -- vim.cmd(":NoNeckPain")
     vim.cmd(":startinsert")
   end, opts)
 end
