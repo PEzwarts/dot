@@ -1,6 +1,6 @@
 # install
 
-./lin/x86_64/software.sh
+./lin/software.sh
 
 # config
 

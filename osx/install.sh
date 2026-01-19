@@ -4,7 +4,7 @@ if [[ ! -f /opt/homebrew/bin/brew ]]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-./osx/arm64/software.sh
+./osx/software.sh
 
 # config
 
