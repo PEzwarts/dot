@@ -10,6 +10,8 @@ rio
 rustup
 
 python
+python-pip
+python-pipx
 python-virtualenv
 
 cmake
@@ -23,7 +25,7 @@ wev
 lxsession
 pavucontrol
 
-rofi
+fuzzel
 swaybg
 
 fish
@@ -54,6 +56,5 @@ edk2-ovmf
 dnsmasq
 swtpm
 
-anki
 thunderbird
 librewolf

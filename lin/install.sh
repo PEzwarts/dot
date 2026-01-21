@@ -2,6 +2,10 @@
 
 ./lin/software.sh
 
+# Neovim
+
+pipx install neovim-remote
+
 # config
 
 if [[ ! -f ~/Desktop/ ]]; then
