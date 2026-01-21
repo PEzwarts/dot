@@ -5,10 +5,10 @@ local opts = { remap = true, silent = true }
 
 keymap.set({ "n", "i", "v" }, "<A-s>", "<esc><cmd>:NeovimProjectDiscover<cr>", opts)
 
-keymap.set({ "t" }, "<A-s>", function()
-  vim.cmd(":ToggleTerm")
-  vim.cmd(":NeovimProjectDiscover")
-end, opts)
+-- keymap.set({ "t" }, "<A-s>", function()
+--   vim.cmd(":ToggleTerm")
+--   vim.cmd(":NeovimProjectDiscover")
+-- end, opts)
 
 -- Close an buffer
 

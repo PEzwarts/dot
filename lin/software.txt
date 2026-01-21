@@ -1,11 +1,17 @@
-github-cli
-
 ttf-jetbrains-mono-nerd
 neovim
-vulkan-radeon
-alacritty
+
 neovide
+alacritty
+
 rio
+vulkan-radeon
+
+llvm
+llvm-mingw
+
+cmake
+meson
 
 rustup
 
@@ -13,9 +19,6 @@ python
 python-pip
 python-pipx
 python-virtualenv
-
-cmake
-valgrind
 
 hyprland
 gtklock
@@ -30,7 +33,10 @@ swaybg
 
 fish
 
+github-cli
 torsocks
+
+hyprpicker
 
 fastfetch
 btop
