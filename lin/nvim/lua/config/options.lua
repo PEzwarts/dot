@@ -30,8 +30,8 @@ if vim.g.neovide then
   vim.g.neovide_cursor_animate_command_line = false
   vim.g.neovide_scroll_animation_far_lines = 0
 
-  vim.g.neovide_padding_left = 700
-  vim.g.neovide_padding_right = 700
+  -- vim.g.neovide_padding_left = 700
+  -- vim.g.neovide_padding_right = 700
 
   vim.g.neovide_cursor_trail_size = 0
 

@@ -8,6 +8,7 @@ return {
 
         autocmds = {
           enableOnTabEnter = true,
+          enableOnVimEnter = true,
         }
       })
     end
