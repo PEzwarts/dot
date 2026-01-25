@@ -15,6 +15,7 @@ vim.opt.fillchars:append("vert: ")
 -- vim.opt.laststatus = 0
 
 vim.g.floaterm_borderchars = " "
+vim.g.floaterm_title = " "
 
 vim.wo.relativenumber = false
 

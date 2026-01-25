@@ -24,17 +24,18 @@ vim.api.nvim_create_autocmd("SessionLoadPost", {
       vim.cmd(":Neotree toggle position=current")
     end, opts)
 
-    vim.cmd(":FloatermNew --width=0.44 --height=1.0 --silent")
+    -- vim.cmd(":FloatermNew --width=0.44 --height=1.0 --silent")
 
     keymap.set({ "n", "i", "v", "t" }, "<A-x>", function()
-      vim.cmd(":FloatermToggle")
+      vim.cmd(":ToggleTerm")
+      vim.cmd(":NoNeckPain")
       vim.cmd(":startinsert")
     end, opts)
   end
 })
 
-vim.api.nvim_create_autocmd("VimResized", {
-  callback = function()
-    vim.cmd(":FloatermUpdate --width=0.44 --height=1.0 --silent")
-  end
-})
+-- vim.api.nvim_create_autocmd("VimResized", {
+--   callback = function()
+--     vim.cmd(":FloatermUpdate --width=0.44 --height=1.0 --silent")
+--   end
+-- })
