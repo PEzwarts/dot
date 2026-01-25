@@ -34,8 +34,12 @@ vim.api.nvim_create_autocmd("SessionLoadPost", {
   end
 })
 
--- vim.api.nvim_create_autocmd("VimResized", {
---   callback = function()
---     vim.cmd(":FloatermUpdate --width=0.44 --height=1.0 --silent")
---   end
--- })
+vim.api.nvim_create_autocmd("VimResized", {
+  callback = function()
+    if vim.o.columns >= 170 then
+      vim.cmd(":FloatermUpdate --width=0.44 --height=1.0 --silent")
+    else
+      vim.cmd(":FloatermUpdate --width=1.0 --height=1.0 --silent")
+    end
+  end
+})
