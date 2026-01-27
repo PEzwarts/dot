@@ -37,6 +37,7 @@ github-cli
 torsocks
 
 hyprpicker
+solaar
 
 fastfetch
 btop
