@@ -8,7 +8,7 @@ rio
 vulkan-radeon
 
 llvm
-llvm-mingw
+mingw-w64
 
 cmake
 meson
