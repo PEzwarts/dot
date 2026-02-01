@@ -38,7 +38,7 @@ vim.api.nvim_create_autocmd("SessionLoadPost", {
     vim.cmd(":set cursorline")
     vim.cmd(":Neominimap Enable")
 
-    vim.cmd(":FloatermUpdate --width=1.0 --height=1.1 --silent")
+    vim.cmd(":FloatermNew --width=1.0 --height=1.1 --silent")
 
     -- if #wins >= 2 then
     -- else
