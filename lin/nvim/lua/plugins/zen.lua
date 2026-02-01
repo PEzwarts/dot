@@ -9,7 +9,17 @@ return {
   --       autocmds = {
   --         enableOnTabEnter = true,
   --         enableOnVimEnter = true,
-  --       }
+  --       },
+  --
+  --       -- callbacks = {
+  --         -- postEnable = function()
+  --         --   vim.cmd(":FloatermUpdate --width=0.44 --height=1.1 --silent")
+  --         -- end,
+  --         --
+  --         -- postDisable = function()
+  --         --   vim.cmd(":FloatermUpdate --width=1.0 --height=1.0 --silent")
+  --         -- end
+  --       -- }
   --     })
   --   end
   -- }
