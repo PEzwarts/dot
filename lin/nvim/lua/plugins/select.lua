@@ -9,7 +9,7 @@ return {
         layout_config = {
           horizontal = {
             prompt_position = "top",
-            -- width = { padding = 96 },
+            width = { padding = 0 },
             height = { padding = 0 },
           },
         },
