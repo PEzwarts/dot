@@ -46,9 +46,9 @@ vim.api.nvim_create_autocmd("SessionLoadPost", {
     -- end
 
     keymap.set({ "n", "i", "v", "t" }, "<A-c>", function()
-      -- require("neoranger").toggleFloat()
+      require("neoranger").toggleFloat()
 
-      vim.cmd(":Neotree toggle position=current")
+      -- vim.cmd(":Neotree toggle position=current")
     end, opts)
 
     keymap.set({ "n", "i", "v", "t" }, "<A-x>", function()
