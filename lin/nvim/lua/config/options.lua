@@ -15,8 +15,6 @@ vim.opt.fillchars:append("vert: ")
 -- vim.opt.laststatus = 0
 
 vim.g.floaterm_borderchars = " "
-vim.g.floaterm_title = " "
-vim.g.floaterm_wintype = "float"
 
 vim.wo.relativenumber = false
 
@@ -31,9 +29,6 @@ if vim.g.neovide then
   vim.g.neovide_cursor_animate_in_insert_mode = true
   vim.g.neovide_cursor_animate_command_line = false
   vim.g.neovide_scroll_animation_far_lines = 0
-
-  vim.g.neovide_padding_left = 700
-  vim.g.neovide_padding_right = 700
 
   vim.g.neovide_cursor_trail_size = 0
 
