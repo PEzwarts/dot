@@ -1,9 +1,5 @@
 require("config.lazy")
 
-vim.cmd(":set number")
-vim.cmd(":set cursorline")
-vim.cmd(":Neominimap Enable")
-
 if vim.g.neovide then
   require("smear_cursor").enabled = false
 else
@@ -38,18 +34,21 @@ vim.api.nvim_create_autocmd("SessionLoadPost", {
 
 vim.api.nvim_create_autocmd("BufNew", {
   callback = function()
-    -- local buf = vim.api.nvim_get_current_buf()
-    --
-    -- if not vim.bo[buf].buftype == "terminal" then
-    --   vim.cmd(":set number")
-    --   vim.cmd(":set cursorline")
-    --   vim.cmd(":Neominimap Enable")
-    -- end
+    if vim.bo.buftype == "terminal" then
+      vim.cmd(":set nonumber")
+      vim.cmd(":set nocursorline")
+    else
+      vim.cmd(":set number")
+      vim.cmd(":set cursorline")
+    end
   end
 })
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
+    vim.cmd(":set nonumber")
+    vim.cmd(":set nocursorline")
+    
     vim.cmd(":NoNeckPain")
   end
 })
