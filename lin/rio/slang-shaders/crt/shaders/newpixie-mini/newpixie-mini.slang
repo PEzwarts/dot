@@ -131,13 +131,13 @@ void main()
     float o =sin(gl_FragCoord.y*1.5)/resolution.x;
     float x = o*0.25;
 
-    col.r = tsample(Source,vec2(x+scuv.x+0.0003,scuv.y+0.0003),resolution.y/800.0, resolution ).x;
-    col.g = tsample(Source,vec2(x+scuv.x+0.0000,scuv.y-0.0003),resolution.y/800.0, resolution ).y;
-    col.b = tsample(Source,vec2(x+scuv.x-0.0003,scuv.y+0.0000),resolution.y/800.0, resolution ).z;
+    // col.r = tsample(Source,vec2(x+scuv.x+0.0003,scuv.y+0.0003),resolution.y/800.0, resolution ).x;
+    // col.g = tsample(Source,vec2(x+scuv.x+0.0000,scuv.y-0.0003),resolution.y/800.0, resolution ).y;
+    // col.b = tsample(Source,vec2(x+scuv.x-0.0003,scuv.y+0.0000),resolution.y/800.0, resolution ).z;
 
-    // col.r = tsample(Source,vec2(x+scuv.x,scuv.y),resolution.y/800.0, resolution ).x;
-    // col.g = tsample(Source,vec2(x+scuv.x,scuv.y),resolution.y/800.0, resolution ).y;
-    // col.b = tsample(Source,vec2(x+scuv.x,scuv.y),resolution.y/800.0, resolution ).z;
+    col.r = tsample(Source,vec2(x+scuv.x,scuv.y),resolution.y/800.0, resolution ).x;
+    col.g = tsample(Source,vec2(x+scuv.x,scuv.y),resolution.y/800.0, resolution ).y;
+    col.b = tsample(Source,vec2(x+scuv.x,scuv.y),resolution.y/800.0, resolution ).z;
 
     /* Level adjustment (curves) */
     col = clamp(col + col*col + col*col*col*col*col,vec3(0.0),vec3(10.0));
