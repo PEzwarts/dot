@@ -1,4 +1,6 @@
 alias g git
+alias git "git --no-pager"
+
 alias gi "git init -b"
 
 alias gb "git branch"
@@ -16,14 +18,13 @@ alias gbd "git branch -d"
 alias gm "git merge"
 
 function ga.
-  git diff | bat -p --pager=none
+  git diff
   echo ""
   git diff --name-status
   git add .
 end
 
 function ga
-  # git diff | bat -p --pager=none
   git diff --name-status
   git add $argv[1]
 end
@@ -57,13 +58,17 @@ function gc
 end
 
 function gd
-  git diff | bat -p --pager=none
+  git diff
   echo ""
   git diff --name-status
 end
 
+function gdf
+  git diff --name-status
+end
+
 alias gl "git log --graph --oneline --decorate"
-alias gt "git tag | bat --no-pager"
+alias gt "git tag"
 
 alias gco "git checkout"
 
