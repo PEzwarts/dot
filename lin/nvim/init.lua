@@ -2,8 +2,10 @@ require("config.lazy")
 
 if vim.g.neovide then
   require("smear_cursor").enabled = false
+  vim.cmd(":Neominimap Disable")
 else
   require("smear_cursor").enabled = true
+  vim.cmd(":Neominimap Enable")
 end
 
 vim.api.nvim_create_autocmd("SessionLoadPost", {
