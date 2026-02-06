@@ -9,9 +9,13 @@ return {
         layout_config = {
           horizontal = {
             prompt_position = "bottom",
-            width = { padding = 0 },
+            
+            width = function()
+              return vim.api.nvim_win_get_width(0)
+            end,
+
             height = { padding = 0 },
-            preview_width = 0.5,
+            preview_width = 0.4,
           },
         },
       },
