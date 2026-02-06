@@ -31,7 +31,7 @@ function base()
   end
 end
 
-function binds()
+function keys()
   local keymap = vim.keymap
   local opts = { remap = true, silent = true }
 
