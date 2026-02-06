@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 function base()
   vim.cmd(":set nonumber")
   vim.cmd(":set nocursorline")
-  
+
   if vim.g.neovide then
     require("smear_cursor").enabled = false
     -- vim.cmd(":Neominimap Disable")
