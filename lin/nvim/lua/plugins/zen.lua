@@ -13,9 +13,7 @@ return {
 
         callbacks = {
           postEnable = function()
-            local buf = vim.api.nvim_get_current_buf()
-
-            if buf == "TelescopePrompt" or "terminal" then
+            if vim.bo.buftype == "TelescopePrompt" or "terminal" then
               vim.cmd(":set nonumber")
               vim.cmd(":set nocursorline")
             else
