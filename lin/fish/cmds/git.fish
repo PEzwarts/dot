@@ -17,6 +17,12 @@ alias gbd "git branch -d"
 
 alias gm "git merge"
 
+function gm
+  gbl
+  gco main
+  git merge $argv[1]
+end
+
 function ga.
   git diff
   echo ""
@@ -25,6 +31,8 @@ function ga.
 end
 
 function ga
+  git diff
+  echo ""
   git diff --name-status
   git add $argv[1]
 end
@@ -33,6 +41,13 @@ alias gr "git reset"
 
 alias gcm "git commit -m"
 alias gcma "git commit --amend -m"
+
+function gcm
+  set msg "Update $(basename $(git rev-parse --show-toplevel)); $argv[1]"
+
+  git commit -m $msg
+end
+
 # alias gr "git revert"
 
 alias gph "git reset --hard HEAD && git pull"
