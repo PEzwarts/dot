@@ -14,8 +14,6 @@ vim.opt.fillchars:append("vert: ")
 
 -- vim.opt.laststatus = 0
 
-vim.g.floaterm_borderchars = " "
-
 vim.wo.relativenumber = false
 
 if vim.g.neovide then

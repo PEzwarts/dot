@@ -43,9 +43,15 @@ function keys()
   end, opts)
 
   keymap.set({ "n", "i", "v", "t" }, "<A-c>", function()
-    -- require("neoranger").toggleFloat()
-
     vim.cmd(":Neotree toggle position=current")
+  end, opts)
+
+  keymap.set("n", "s", function()
+    vim.cmd(":Telescope find_files")
+  end, opts)
+
+  keymap.set("n", "sd", function()
+    vim.cmd(":Telescope current_buffer_fuzzy_find")
   end, opts)
 
   keymap.set({ "n", "i", "v", "t" }, "<A-x>", function()
