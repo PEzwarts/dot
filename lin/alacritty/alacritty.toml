@@ -14,7 +14,7 @@ primary.background = "#060200"
 style = { shape = "Block", blinking = "On" }
 
 [font]
-normal.family = "JetBrainsMono Nerd Font"
+normal.family = "BigBlueTerm437 Nerd Font"
 normal.style = "Bold"
 size = 9
 
