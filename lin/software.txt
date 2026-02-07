@@ -1,4 +1,4 @@
-ttf-jetbrains-mono-nerd
+ttf-bigblueterminal-nerd
 neovim
 
 neovide
