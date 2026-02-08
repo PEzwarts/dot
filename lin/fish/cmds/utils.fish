@@ -30,9 +30,7 @@ alias 9 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
 
 alias ff fd
 
-alias b "bat --pager=none"
 alias r ranger
-
 alias d "lsblk --fs --all --perms"
 alias f fastfetch
 

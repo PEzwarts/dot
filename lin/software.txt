@@ -44,7 +44,6 @@ fastfetch
 btop
 
 ripgrep
-bat
 
 zip
 unzip
@@ -64,5 +63,5 @@ edk2-ovmf
 dnsmasq
 swtpm
 
-thunderbird
+claws-mail
 librewolf
