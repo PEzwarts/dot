@@ -14,6 +14,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
+    vim.cmd(":set nohidden")
     vim.cmd(":NoNeckPain")
   end
 })
