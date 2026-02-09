@@ -28,11 +28,21 @@ alias 7 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 8"
 alias 8 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 9"
 alias 9 "eza -lagM --icons --follow-symlinks --show-symlinks --hyperlink -TL 10"
 
-alias ff fd
+function f
+  if [ "$argv[1]" = "" ];
+    fd
+  end
+
+  if [ "$argv[1]" = "." ];
+    file ./*
+  else if [ ! "$argv[1]" = "" ];
+    file $argv[1]
+  end
+end
 
 alias r ranger
 alias d "lsblk --fs --all --perms"
-alias f fastfetch
+alias ff fastfetch
 
 function x
     if [ "$(uname)" = Linux ]
