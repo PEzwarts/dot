@@ -11,6 +11,7 @@ source ~/.config/fish/cmds/rst.fish
 source ~/.config/fish/cmds/py.fish
 
 source ~/.config/fish/cmds/utils.fish
+source ~/.config/fish/cmds/prgs.fish
 source ~/.config/fish/cmds/gpg.fish
 source ~/.config/fish/cmds/git.fish
 
