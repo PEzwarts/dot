@@ -63,5 +63,5 @@ edk2-ovmf
 dnsmasq
 swtpm
 
-claws-mail
+thunderbird
 librewolf
