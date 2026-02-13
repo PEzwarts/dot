@@ -19,14 +19,4 @@ return {
       aggressive_mode = true,
     }
   },
-
-  -- {
-  --   "hinell/lsp-timeout.nvim",
-  --
-  --   dependencies = {
-  --     "neovim/nvim-lspconfig",
-  --   }
-  --
-  --   opts = {}
-  -- }
 }
