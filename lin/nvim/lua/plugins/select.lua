@@ -51,7 +51,7 @@ return {
 
       projects = {
         "/run/media/admin/d0/*",
-        "~/Desktop/*"
+        "~/prj/*"
       },
     },
 
