@@ -50,7 +50,7 @@ return {
       },
 
       projects = {
-        "/run/media/admin/d0/*",
+        "/run/media/admin/d0/prj/*",
         "~/prj/*"
       },
     },
