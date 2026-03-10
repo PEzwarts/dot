@@ -16,7 +16,7 @@ return {
     },
 
     opts = {
-      aggressive_mode = true,
+      aggressive_mode = false,
     }
   },
 }
