@@ -2,7 +2,7 @@ ttf-bigblueterminal-nerd
 neovim
 
 neovide
-alacritty
+foot
 
 rio
 vulkan-radeon
